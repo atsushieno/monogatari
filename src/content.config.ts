@@ -6,7 +6,14 @@ import config from "@/config";
 export const BLOG_PATH = "src/content/posts";
 
 const posts = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),
+  // Only load the imported blog content. The AstroPaper demo/doc posts that
+  // ship at the top level (and under examples/) are left in place untouched so
+  // upstream merges stay clean, but they are excluded from the site by scoping
+  // the glob to the import directories. Add new post folders here as needed.
+  loader: glob({
+    pattern: "{hatenadiary,hatenablog,monogatari-ng}/**/[^_]*.{md,mdx}",
+    base: `./${BLOG_PATH}`,
+  }),
   schema: ({ image }) =>
     z.object({
       author: z.string().default(config.site.author),

@@ -1,0 +1,68 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getPostsByGroupCondition } from "./_utils/getPostsByGroupCondition";
+import { getPostYear, getPostMonth, monthName } from "./_utils/archiveDate";
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+const locale = Astro.currentLocale ?? config.site.lang;
+
+// Redirect to 404 page if `showArchives` config is false
+const notFoundUrl = getRelativeLocaleUrl(locale, "404");
+if (!config.features.showArchives && notFoundUrl) {
+  return Astro.rewrite(notFoundUrl);
+}
+
+const t = useTranslations(locale);
+
+const posts = getSortedPosts(await getCollection("posts"));
+const byYear = getPostsByGroupCondition(posts, post => getPostYear(post));
+---
+
+<Layout title={`${t.pages.archivesTitle} | ${config.site.title}`}>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={t.pages.archivesTitle} pageDesc={t.pages.archivesDesc}>
+    {
+      Object.entries(byYear)
+        .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
+        .map(([year, yearGroup]) => (
+          <div>
+            <span class="text-2xl font-bold">{year}</span>
+            <sup class="text-muted-foreground text-sm">{yearGroup.length}</sup>
+            {Object.entries(
+              getPostsByGroupCondition(yearGroup, post => getPostMonth(post))
+            )
+              .sort(([monthA], [monthB]) => Number(monthB) - Number(monthA))
+              .map(([month, monthGroup]) => (
+                <div class="flex flex-col sm:flex-row">
+                  <div class="mt-6 min-w-36 text-lg sm:my-6">
+                    <span class="font-bold">{monthName(month, locale)}</span>
+                    <sup class="text-muted-foreground text-xs">
+                      {monthGroup.length}
+                    </sup>
+                  </div>
+                  <ul>
+                    {monthGroup.map(data => (
+                      <Card {...data} />
+                    ))}
+                  </ul>
+                </div>
+              ))}
+          </div>
+        ))
+    }
+  </Main>
+
+  <Footer />
+</Layout>

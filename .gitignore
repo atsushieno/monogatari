@@ -29,5 +29,8 @@ public/pagefind
 # pnpm
 .pnpm-store
 
+# hatena import tooling (one-off venv)
+.import-venv/
+
 # docker compose
 compose.override.yaml
