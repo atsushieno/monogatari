@@ -113,7 +113,7 @@ const ogImage = ogImageUrl
   >
     <h1
       style={{ viewTransitionName: toTransitionName(title) }}
-      class="text-accent inline-block text-2xl font-bold sm:text-3xl"
+      class="text-heading inline-block text-2xl font-bold sm:text-3xl"
     >
       {title}
     </h1>
@@ -214,6 +214,44 @@ const ogImage = ogImageUrl
     }
   }
   addHeadingLinks();
+
+  function enhanceHatenaEmbeds() {
+    const embeds = Array.from(document.querySelectorAll("a.hatena-embed"));
+    for (const embed of embeds) {
+      const href = embed.getAttribute("href");
+      if (!href) continue;
+
+      const title =
+        embed.querySelector(".hatena-embed-title")?.textContent?.trim() ||
+        embed.textContent?.trim() ||
+        href;
+      const domain =
+        embed.querySelector(".hatena-embed-domain")?.textContent?.trim() ||
+        new URL(href, window.location.href).hostname;
+
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://hatenablog-parts.com/embed?url=${encodeURIComponent(
+        href
+      )}`;
+      iframe.title = title;
+      iframe.className = "hatena-embed-frame";
+      iframe.loading = "lazy";
+      iframe.setAttribute("scrolling", "no");
+      iframe.setAttribute("frameborder", "0");
+
+      const cite = document.createElement("cite");
+      cite.className = "hatena-citation";
+      const link = document.createElement("a");
+      link.href = href;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = domain;
+      cite.appendChild(link);
+
+      embed.replaceWith(iframe, cite);
+    }
+  }
+  enhanceHatenaEmbeds();
 
   function attachCopyButtons() {
     const copyButtonLabel = "Copy";

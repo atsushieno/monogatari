@@ -2,19 +2,27 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  /* Sans-serif stack matching the original Hatena "darkroom" theme
+     (Courier/Google Sans Code is kept only for code blocks). */
+  --font-app:
+    "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Kaku Gothic Pro", "Hiragino Sans", Meiryo, "MS PGothic",
+    sans-serif;
 }
 
-/* Light theme values */
+/* Light theme values. The original Hatena blog has no light theme, and its
+   gold accent is illegible on white, so light mode keeps a blue accent. */
 :root,
 [data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
+  --heading: #161616;
   --accent: #006cac;
   --accent-foreground: #ffffff;
   --muted: #e6e6e6;
@@ -22,14 +30,14 @@
   --border: #ece9e9;
 }
 
-/* Dark theme values: a neutral-dark mirror of the white/blue light theme
-   (rather than the original navy + orange identity), so the two modes match. */
+/* Dark theme values: matched to the original Hatena "darkroom" theme. */
 [data-theme="dark"] {
-  --background: #1c1c1e;
-  --foreground: #ebeaea;
-  --accent: #4ca6e8;
-  --accent-foreground: #0b1a2b;
-  --muted: #2b2b2f;
-  --muted-foreground: #a6a6ae;
-  --border: #34343a;
+  --background: #000000;
+  --foreground: #eeeeee;
+  --heading: #ffffff;
+  --accent: #ffe295;
+  --accent-foreground: #1c1c1c;
+  --muted: #333333;
+  --muted-foreground: #aaaaaa;
+  --border: #333333;
 }

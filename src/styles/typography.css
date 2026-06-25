@@ -4,13 +4,23 @@
   /* ===== Override default Tailwind Typography styles ===== */
   .app-prose {
     @apply prose;
+    max-width: none;
+    color: var(--foreground);
+    font-size: 1rem;
+    line-height: 1.8;
 
     h1,
     h2,
     h3,
     h4,
     th {
-      @apply text-foreground mb-3;
+      @apply text-heading mb-3;
+    }
+
+    /* Section headers get an underline. */
+    h2,
+    h3 {
+      @apply border-border border-b pb-1;
     }
 
     h3 {
@@ -28,7 +38,32 @@
     }
 
     a {
-      @apply text-foreground hover:text-accent wrap-break-word decoration-dashed underline-offset-4 focus-visible:no-underline;
+      @apply text-muted-foreground hover:text-accent wrap-break-word decoration-dashed underline-offset-4 focus-visible:no-underline;
+    }
+
+    /* Fallback for imported Hatena embed cards before iframe enhancement runs. */
+    a.hatena-embed {
+      @apply border-border bg-background hover:border-accent my-4 block max-w-[500px] rounded-md border px-4 py-3 not-italic no-underline;
+    }
+
+    a.hatena-embed .hatena-embed-title {
+      @apply text-heading block font-medium;
+    }
+
+    a.hatena-embed:hover .hatena-embed-title {
+      @apply text-accent;
+    }
+
+    a.hatena-embed .hatena-embed-domain {
+      @apply text-muted-foreground mt-1 block text-sm;
+    }
+
+    .hatena-embed-frame {
+      @apply my-2.5 block h-[155px] w-full max-w-[500px] border-0 bg-transparent;
+    }
+
+    .hatena-citation {
+      @apply mt-1 block text-sm not-italic;
     }
 
     ul {

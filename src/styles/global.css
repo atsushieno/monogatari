@@ -22,7 +22,7 @@
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  max-width: 57rem;
 }
 
 @utility app-layout {

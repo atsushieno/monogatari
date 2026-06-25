@@ -10,6 +10,7 @@ import sys
 import os
 import re
 import html
+import urllib.parse
 import argparse
 from datetime import datetime, timezone, timedelta
 
@@ -143,14 +144,37 @@ def preprocess_html(raw_html):
             a.replace_with(f"[^{fid}]")
 
     # 3. iframe embeds.
-    #    Hatena embed cards (hatenablog-parts.com/embed?url=...) are always
-    #    followed by a <cite class="hatena-citation"> with the canonical link,
-    #    so drop the iframe and keep the cite. Other embeds (YouTube, Speaker-
-    #    Deck, SoundCloud, ...) become plain links since markdownify drops them.
+    #    Hatena embed cards (hatenablog-parts.com/embed?url=...) carry the page
+    #    title in the iframe's `title` attribute and are followed by a
+    #    <cite class="hatena-citation"> with the canonical link. Turn them into a
+    #    link card (title + domain) so the link overview survives. Other embeds
+    #    (YouTube, SpeakerDeck, SoundCloud, ...) become plain links.
+    cards = []  # collected link-card data; emitted as @@HATENACARD:n@@ placeholders
     for iframe in soup.find_all("iframe"):
         src = iframe.get("src", "") or ""
         if "hatenablog-parts.com" in src:
-            iframe.decompose()
+            title = (iframe.get("title") or "").strip()
+            url = domain = None
+            # Prefer the adjacent <cite class="hatena-citation"> for the real URL.
+            cite = _adjacent_citation(iframe)
+            if cite and cite.find("a"):
+                anchor = cite.find("a")
+                url = anchor.get("href")
+                domain = anchor.get_text(strip=True)
+                cite.decompose()
+            if not url:
+                params = urllib.parse.parse_qs(urllib.parse.urlparse(src).query)
+                url = (params.get("url") or [""])[0]
+            if url and not domain:
+                domain = urllib.parse.urlparse(url).netloc
+            if url:
+                idx = len(cards)
+                cards.append(
+                    {"url": url, "title": title or domain or url, "domain": domain or ""}
+                )
+                iframe.replace_with(f"@@HATENACARD:{idx}@@")
+            else:
+                iframe.decompose()
             continue
         if src.startswith("//"):
             src = "https:" + src
@@ -161,11 +185,38 @@ def preprocess_html(raw_html):
         else:
             iframe.decompose()
 
-    return str(soup), footnote_defs
+    return str(soup), footnote_defs, cards
+
+
+def _adjacent_citation(iframe):
+    """Find the hatena-citation <cite> that belongs to this embed iframe."""
+    sib = iframe.next_sibling
+    while sib is not None:
+        name = getattr(sib, "name", None)
+        if name == "cite" and "hatena-citation" in (sib.get("class") or []):
+            return sib
+        if name == "iframe":
+            break
+        sib = sib.next_sibling
+    return None
+
+
+def render_link_card(card):
+    title = html.escape(card["title"])
+    url = html.escape(card["url"], quote=True)
+    domain = html.escape(card["domain"])
+    return (
+        f'<iframe src="https://hatenablog-parts.com/embed?url='
+        f'{urllib.parse.quote(card["url"], safe="")}" title="{title}" '
+        f'class="hatena-embed-frame" scrolling="no" frameborder="0" '
+        f'loading="lazy"></iframe>'
+        f'<cite class="hatena-citation"><a href="{url}" target="_blank" '
+        f'rel="noopener noreferrer">{domain}</a></cite>'
+    )
 
 
 def html_to_markdown(raw_html):
-    cleaned, footnote_defs = preprocess_html(raw_html)
+    cleaned, footnote_defs, cards = preprocess_html(raw_html)
     text = md(
         cleaned,
         heading_style="ATX",
@@ -174,6 +225,14 @@ def html_to_markdown(raw_html):
     )
     # Collapse excessive blank lines.
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
+
+    # Expand link-card placeholders into raw HTML (markdownify leaves them alone).
+    if cards:
+        text = re.sub(
+            r"@@HATENACARD:(\d+)@@",
+            lambda m: render_link_card(cards[int(m.group(1))]),
+            text,
+        )
 
     if footnote_defs:
         text += "\n\n"
@@ -185,8 +244,9 @@ def html_to_markdown(raw_html):
 
 def make_description(markdown_text):
     """First paragraph-ish chunk of plain text, trimmed to ~160 chars."""
-    # Drop footnote defs and markdown image/link syntax noise for the summary.
-    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", markdown_text)
+    # Drop raw HTML (e.g. link cards), footnote defs and markdown syntax noise.
+    text = re.sub(r"<[^>]+>", "", markdown_text)
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
     text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
     text = re.sub(r"[#>*`_\-]", "", text)
     text = re.sub(r"\s+", " ", text).strip()
