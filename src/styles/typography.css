@@ -6,8 +6,8 @@
     @apply prose;
     max-width: none;
     color: var(--foreground);
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.125rem;
+    line-height: 1.75;
 
     h1,
     h2,
@@ -44,12 +44,24 @@
     /* Readable local replacement for imported Hatena link cards. */
     a.hatena-embed,
     a.hatena-link-card {
-      @apply border-border my-4 block max-w-[500px] rounded-sm border bg-white px-3 py-3 not-italic no-underline shadow-sm;
+      @apply border-border my-4 flex min-h-[146px] max-w-[500px] flex-col rounded-sm border bg-white px-3 py-3 not-italic no-underline shadow-sm;
+    }
+
+    a.hatena-link-card .hatena-link-card-body {
+      @apply flex min-h-24 gap-3;
+    }
+
+    a.hatena-link-card .hatena-link-card-text {
+      @apply min-w-0 flex-1;
     }
 
     a.hatena-embed .hatena-embed-title,
     a.hatena-link-card .hatena-link-card-title {
-      @apply block text-base font-semibold text-[#3d4449];
+      @apply block text-lg leading-snug font-semibold text-[#3d4449];
+    }
+
+    a.hatena-link-card .hatena-link-card-description {
+      @apply mt-1 block text-xs leading-5 text-[#6b7280];
     }
 
     a.hatena-embed:hover .hatena-embed-title,
@@ -59,11 +71,60 @@
 
     a.hatena-embed .hatena-embed-domain,
     a.hatena-link-card .hatena-link-card-footer {
-      @apply mt-16 flex items-center gap-1.5 text-xs text-[#5f6b73];
+      @apply mt-auto flex items-center gap-1.5 pt-3 text-xs text-[#5f6b73];
     }
 
     .hatena-link-card-favicon {
       @apply m-0 size-4 border-0;
+    }
+
+    .hatena-link-card-image {
+      @apply m-0 h-24 w-[128px] shrink-0 self-start rounded-none border-0 object-contain;
+    }
+
+    .hatena-media-embed {
+      @apply my-5 mx-0 max-w-[710px];
+    }
+
+    .hatena-media-embed-frame {
+      @apply relative w-full overflow-hidden bg-black;
+      aspect-ratio: 16 / 9;
+    }
+
+    .hatena-media-embed iframe {
+      @apply absolute inset-0 m-0 h-full w-full border-0;
+    }
+
+    .hatena-media-embed figcaption {
+      @apply mt-2 text-sm leading-normal opacity-100;
+    }
+
+    .hatena-media-embed-youtube {
+      @apply max-w-[560px];
+    }
+
+    .hatena-media-embed-soundcloud {
+      @apply max-w-[560px];
+    }
+
+    .hatena-media-embed-soundcloud .hatena-media-embed-frame {
+      @apply bg-transparent;
+      aspect-ratio: auto;
+      height: 450px;
+    }
+
+    .hatena-media-embed-fediverse {
+      @apply max-w-[500px];
+    }
+
+    .hatena-media-embed-fediverse .hatena-media-embed-frame {
+      @apply bg-transparent;
+      aspect-ratio: auto;
+      height: 520px;
+    }
+
+    .hatena-imgur-embed {
+      @apply my-5 mx-0 max-w-[542px] border-0 p-0 opacity-100;
     }
 
     img.hatena-fotolife-thumbnail {
