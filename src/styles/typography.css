@@ -41,29 +41,33 @@
       @apply text-muted-foreground hover:text-accent wrap-break-word decoration-dashed underline-offset-4 focus-visible:no-underline;
     }
 
-    /* Fallback for imported Hatena embed cards before iframe enhancement runs. */
-    a.hatena-embed {
-      @apply border-border bg-background hover:border-accent my-4 block max-w-[500px] rounded-md border px-4 py-3 not-italic no-underline;
+    /* Readable local replacement for imported Hatena link cards. */
+    a.hatena-embed,
+    a.hatena-link-card {
+      @apply border-border my-4 block max-w-[500px] rounded-sm border bg-white px-3 py-3 not-italic no-underline shadow-sm;
     }
 
-    a.hatena-embed .hatena-embed-title {
-      @apply text-heading block font-medium;
+    a.hatena-embed .hatena-embed-title,
+    a.hatena-link-card .hatena-link-card-title {
+      @apply block text-base font-semibold text-[#3d4449];
     }
 
-    a.hatena-embed:hover .hatena-embed-title {
-      @apply text-accent;
+    a.hatena-embed:hover .hatena-embed-title,
+    a.hatena-link-card:hover .hatena-link-card-title {
+      @apply text-[#111827] underline;
     }
 
-    a.hatena-embed .hatena-embed-domain {
-      @apply text-muted-foreground mt-1 block text-sm;
+    a.hatena-embed .hatena-embed-domain,
+    a.hatena-link-card .hatena-link-card-footer {
+      @apply mt-16 flex items-center gap-1.5 text-xs text-[#5f6b73];
     }
 
-    .hatena-embed-frame {
-      @apply my-2.5 block h-[155px] w-full max-w-[500px] border-0 bg-transparent;
+    .hatena-link-card-favicon {
+      @apply m-0 size-4 border-0;
     }
 
-    .hatena-citation {
-      @apply mt-1 block text-sm not-italic;
+    img.hatena-fotolife-thumbnail {
+      @apply mx-0 inline-block size-16 align-middle;
     }
 
     ul {

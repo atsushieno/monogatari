@@ -215,11 +215,143 @@ const ogImage = ogImageUrl
   }
   addHeadingLinks();
 
+  function enhanceBlueskyEmbeds() {
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    const blocks = Array.from(article.querySelectorAll("blockquote"));
+    let foundEmbed = false;
+
+    for (const block of blocks) {
+      const postLink = block.querySelector(
+        'a[href*="bsky.app/"][href*="/post/"]'
+      );
+      if (!postLink) continue;
+
+      const authorLink = block.querySelector(
+        'a[href*="bsky.app/profile/did:"]'
+      );
+      if (!authorLink) continue;
+
+      const authorUrl = new URL(authorLink.href);
+      const postUrl = new URL(postLink.href);
+      const did = authorUrl.pathname.match(/\/profile\/([^/?#]+)/)?.[1];
+      const postId = postUrl.pathname.match(/\/post\/([^/?#]+)/)?.[1];
+      if (!did || !postId) continue;
+
+      block.classList.add("bluesky-embed");
+      block.dataset.blueskyUri = `at://${did}/app.bsky.feed.post/${postId}`;
+      block.dataset.blueskyEmbedColorMode = "light";
+      foundEmbed = true;
+
+      const next = block.nextElementSibling;
+      const duplicateLink = next?.matches("p")
+        ? next.querySelector(":scope > a[href*='bsky.app/']")
+        : null;
+      if (
+        duplicateLink &&
+        next.textContent.trim() === duplicateLink.textContent.trim()
+      ) {
+        next.remove();
+      }
+    }
+
+    if (!foundEmbed) return;
+
+    if (window.bluesky?.scan) {
+      window.bluesky.scan(article);
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://embed.bsky.app/static/embed.js";
+    script.setAttribute("charset", "utf-8");
+    document.body.appendChild(script);
+  }
+  enhanceBlueskyEmbeds();
+
+  async function enhanceHatenaImages() {
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    let manifest = {};
+    try {
+      const response = await fetch("/hatena-images/manifest.json");
+      if (!response.ok) return;
+      manifest = await response.json();
+    } catch {
+      return;
+    }
+
+    const images = Array.from(article.querySelectorAll("img"));
+    for (const image of images) {
+      const src = image.getAttribute("src");
+      if (
+        !src ||
+        !src.startsWith("https://cdn-ak.f.st-hatena.com/images/fotolife/")
+      ) {
+        continue;
+      }
+
+      const localSrc = manifest[src];
+      if (!localSrc) continue;
+
+      image.dataset.remoteSrc = src;
+      image.src = localSrc;
+
+      const link = image.closest("a");
+      if (link) {
+        try {
+          const href = new URL(link.href);
+          if (href.hostname === "f.hatena.ne.jp") {
+            link.href = localSrc;
+            image.classList.add("hatena-fotolife-thumbnail");
+          }
+        } catch {
+          // Leave non-URL links unchanged.
+        }
+      }
+    }
+  }
+  enhanceHatenaImages();
+
   function enhanceHatenaEmbeds() {
-    const embeds = Array.from(document.querySelectorAll("a.hatena-embed"));
+    function isStandaloneDomainLink(anchor) {
+      const parent = anchor.parentElement;
+      if (!parent || parent.tagName !== "P") return false;
+      if (anchor.querySelector("img")) return false;
+
+      const meaningfulNodes = Array.from(parent.childNodes).filter(node => {
+        return node.nodeType !== Node.TEXT_NODE || node.textContent.trim();
+      });
+      if (meaningfulNodes.length !== 1 || meaningfulNodes[0] !== anchor) {
+        return false;
+      }
+
+      try {
+        const url = new URL(anchor.href);
+        const linkText = anchor.textContent.trim().replace(/^www\./, "");
+        const hostname = url.hostname.replace(/^www\./, "");
+        return linkText === hostname;
+      } catch {
+        return false;
+      }
+    }
+
+    const embeds = Array.from(
+      document.querySelectorAll("a.hatena-embed, #article p > a")
+    ).filter(embed => {
+      return (
+        embed.classList.contains("hatena-embed") ||
+        isStandaloneDomainLink(embed)
+      );
+    });
+
     for (const embed of embeds) {
       const href = embed.getAttribute("href");
       if (!href) continue;
+      const url = new URL(href, window.location.href);
 
       const title =
         embed.querySelector(".hatena-embed-title")?.textContent?.trim() ||
@@ -227,28 +359,48 @@ const ogImage = ogImageUrl
         href;
       const domain =
         embed.querySelector(".hatena-embed-domain")?.textContent?.trim() ||
-        new URL(href, window.location.href).hostname;
+        url.hostname;
+      const path = decodeURIComponent(url.pathname)
+        .replace(/^\/|\/$/g, "")
+        .replaceAll("/", " / ");
+      const cardTitle =
+        title.replace(/^www\./, "") === domain.replace(/^www\./, "") && path
+          ? `${domain} / ${path}`
+          : title;
 
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://hatenablog-parts.com/embed?url=${encodeURIComponent(
+      const card = document.createElement("a");
+      card.href = href;
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
+      card.className = "hatena-link-card";
+      card.setAttribute("aria-label", `${cardTitle} (${domain})`);
+
+      const titleEl = document.createElement("span");
+      titleEl.className = "hatena-link-card-title";
+      titleEl.textContent = cardTitle;
+
+      const footer = document.createElement("span");
+      footer.className = "hatena-link-card-footer";
+
+      const favicon = document.createElement("img");
+      favicon.className = "hatena-link-card-favicon";
+      favicon.src = `https://www.google.com/s2/favicons?domain_url=${encodeURIComponent(
         href
-      )}`;
-      iframe.title = title;
-      iframe.className = "hatena-embed-frame";
-      iframe.loading = "lazy";
-      iframe.setAttribute("scrolling", "no");
-      iframe.setAttribute("frameborder", "0");
+      )}&sz=32`;
+      favicon.alt = "";
+      favicon.loading = "lazy";
+      favicon.addEventListener("error", () => favicon.remove(), { once: true });
 
-      const cite = document.createElement("cite");
-      cite.className = "hatena-citation";
-      const link = document.createElement("a");
-      link.href = href;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = domain;
-      cite.appendChild(link);
+      const domainEl = document.createElement("span");
+      domainEl.textContent = domain;
 
-      embed.replaceWith(iframe, cite);
+      footer.append(favicon, domainEl);
+      card.append(titleEl, footer);
+
+      const replaceTarget = isStandaloneDomainLink(embed)
+        ? embed.parentElement
+        : embed;
+      replaceTarget?.replaceWith(card);
     }
   }
   enhanceHatenaEmbeds();
