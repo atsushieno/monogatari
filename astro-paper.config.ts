@@ -2,13 +2,13 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
-    title: "AstroPaper",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
-    profile: "https://satna.ing",
+    url: "https://atsushieno.github.io/",
+    title: "ものがたり",
+    description: "atsushieno の開発記録。MIDI 2.0、オーディオプラグイン、Android、.NET/mono などの話題。",
+    author: "atsushieno",
+    profile: "https://github.com/atsushieno",
     ogImage: "default-og.jpg",
-    lang: "en",
+    lang: "ja",
     timezone: "Asia/Tokyo",
     dir: "ltr",
   },
@@ -23,23 +23,16 @@ export default defineAstroPaperConfig({
     showArchives: true,
     showBackButton: true,
     editPost: {
-      enabled: true,
-      url: "https://github.com/satnaing/astro-paper/edit/main/",
+      enabled: false,
     },
     search: "pagefind",
   },
   socials: [
-    { name: "github",   url: "https://github.com/satnaing/astro-paper" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/username/" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "github", url: "https://github.com/atsushieno" },
   ],
   shareLinks: [
-    { name: "whatsapp", url: "https://wa.me/?text=" },
-    { name: "facebook", url: "https://www.facebook.com/sharer.php?u=" },
-    { name: "x",        url: "https://x.com/intent/post?url=" },
-    { name: "telegram", url: "https://t.me/share/url?url=" },
-    { name: "pinterest", url: "https://pinterest.com/pin/create/button/?url=" },
-    { name: "mail",     url: "mailto:?subject=See%20this%20post&body=" },
+    { name: "hatena",   url: "https://b.hatena.ne.jp/add?mode=confirm&url=" },
+    { name: "bluesky",  url: "https://bsky.app/intent/compose?text=" },
+    { name: "mastodon", url: "https://toot.kytta.dev/?text=" },
   ],
 });

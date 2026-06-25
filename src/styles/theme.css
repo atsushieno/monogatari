@@ -22,13 +22,14 @@
   --border: #ece9e9;
 }
 
-/* Dark theme values */
+/* Dark theme values: a neutral-dark mirror of the white/blue light theme
+   (rather than the original navy + orange identity), so the two modes match. */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #1c1c1e;
+  --foreground: #ebeaea;
+  --accent: #4ca6e8;
+  --accent-foreground: #0b1a2b;
+  --muted: #2b2b2f;
+  --muted-foreground: #a6a6ae;
+  --border: #34343a;
 }
