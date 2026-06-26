@@ -16,8 +16,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BASE_PATH: /monogatari
-  SITE_URL: https://atsushieno.github.io/monogatari/
+  BASE_PATH: /
+  SITE_URL: http://monogatari.audiopluginlab.com/
 
 jobs:
   build:
