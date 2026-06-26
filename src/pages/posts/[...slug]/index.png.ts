@@ -1,19 +1,18 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { readFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { join } from "node:path";
 import satori from "satori";
 import sharp from "sharp";
 import { getPostSlug } from "@/utils/getPostPaths";
 import { getDisplayPostTitle } from "@/utils/postTitle";
 import config from "@/config";
 
-const regularFontPath = fileURLToPath(
-  new URL("../../../assets/fonts/NotoSansJP-Regular.ttf", import.meta.url)
+const regularFontPath = join(
+  process.cwd(),
+  "src/assets/fonts/NotoSansJP-Regular.ttf"
 );
-const boldFontPath = fileURLToPath(
-  new URL("../../../assets/fonts/NotoSansJP-Bold.ttf", import.meta.url)
-);
+const boldFontPath = join(process.cwd(), "src/assets/fonts/NotoSansJP-Bold.ttf");
 
 export async function getStaticPaths() {
   if (!config.features.dynamicOgImage) {
