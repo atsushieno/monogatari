@@ -1,8 +1,10 @@
 import { defineAstroPaperConfig } from "./src/types/config";
 
+const siteUrl = process.env.SITE_URL ?? "https://atsushieno.github.io/";
+
 export default defineAstroPaperConfig({
   site: {
-    url: "https://atsushieno.github.io/",
+    url: siteUrl,
     title: "ものがたり",
     description: "atsushieno の開発記録。MIDI 2.0、オーディオプラグイン、Android、.NET/mono などの話題。",
     author: "atsushieno",
