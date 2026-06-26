@@ -34,3 +34,10 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
+
+
+# misc
+.claude/
+.nvmrc
+scripts/__pycache__/
+
