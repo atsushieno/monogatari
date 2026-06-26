@@ -1,12 +1,19 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import { fontData, experimental_getFontFileURL } from "astro:assets";
+import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import satori from "satori";
 import sharp from "sharp";
-import { getFontPathByWeight } from "@/utils/getFontPathByWeight";
 import { getPostSlug } from "@/utils/getPostPaths";
 import { getDisplayPostTitle } from "@/utils/postTitle";
 import config from "@/config";
+
+const regularFontPath = fileURLToPath(
+  new URL("../../../assets/fonts/NotoSansJP-Regular.ttf", import.meta.url)
+);
+const boldFontPath = fileURLToPath(
+  new URL("../../../assets/fonts/NotoSansJP-Bold.ttf", import.meta.url)
+);
 
 export async function getStaticPaths() {
   if (!config.features.dynamicOgImage) {
@@ -23,26 +30,14 @@ export async function getStaticPaths() {
   }));
 }
 
-export const GET: APIRoute = async ({ props, url }) => {
+export const GET: APIRoute = async ({ props }) => {
   if (!config.features.dynamicOgImage) {
     return new Response(null, { status: 404, statusText: "Not found" });
   }
 
-  const fonts = fontData["--font-google-sans-code"];
-  const regularFontPath = getFontPathByWeight(fonts, 400);
-  const boldFontPath = getFontPathByWeight(fonts, 700);
-
-  if (regularFontPath === undefined || boldFontPath === undefined) {
-    throw new Error("Cannot find the font path.");
-  }
-
   const [regularData, boldData] = await Promise.all([
-    fetch(experimental_getFontFileURL(regularFontPath, url)).then(res =>
-      res.arrayBuffer()
-    ),
-    fetch(experimental_getFontFileURL(boldFontPath, url)).then(res =>
-      res.arrayBuffer()
-    ),
+    readFile(regularFontPath),
+    readFile(boldFontPath),
   ]);
 
   const svg = await satori(
@@ -54,6 +49,7 @@ export const GET: APIRoute = async ({ props, url }) => {
           width: "100%",
           height: "100%",
           display: "flex",
+          fontFamily: "Noto Sans JP",
           alignItems: "center",
           justifyContent: "center",
         },
@@ -174,13 +170,13 @@ export const GET: APIRoute = async ({ props, url }) => {
       embedFont: true,
       fonts: [
         {
-          name: "Google Sans Code",
+          name: "Noto Sans JP",
           data: regularData,
           weight: 400,
           style: "normal",
         },
         {
-          name: "Google Sans Code",
+          name: "Noto Sans JP",
           data: boldData,
           weight: 700,
           style: "normal",
