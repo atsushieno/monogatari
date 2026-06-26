@@ -2,6 +2,7 @@
 import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { getPostUrl } from "@/utils/getPostPaths";
+import { getDisplayPostTitle } from "@/utils/postTitle";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
@@ -31,7 +32,9 @@ const t = useTranslations(locale);
         <IconArrowLeft class="inline-block flex-none rtl:rotate-180" />
         <div>
           <span>{t.post.previousPost}</span>
-          <div class="text-accent/85 text-sm">{prevPost.title}</div>
+          <div class="text-accent/85 text-sm">
+            {getDisplayPostTitle(prevPost.title)}
+          </div>
         </div>
       </a>
     )
@@ -44,7 +47,9 @@ const t = useTranslations(locale);
       >
         <div>
           <span>{t.post.nextPost}</span>
-          <div class="text-accent/85 text-sm">{nextPost.title}</div>
+          <div class="text-accent/85 text-sm">
+            {getDisplayPostTitle(nextPost.title)}
+          </div>
         </div>
         <IconArrowRight class="inline-block flex-none rtl:rotate-180" />
       </a>

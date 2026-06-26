@@ -5,6 +5,7 @@ import satori from "satori";
 import sharp from "sharp";
 import { getFontPathByWeight } from "@/utils/getFontPathByWeight";
 import { getPostSlug } from "@/utils/getPostPaths";
+import { getDisplayPostTitle } from "@/utils/postTitle";
 import config from "@/config";
 
 export async function getStaticPaths() {
@@ -110,7 +111,7 @@ export const GET: APIRoute = async ({ props, url }) => {
                           maxHeight: "84%",
                           overflow: "hidden",
                         },
-                        children: props.data.title,
+                        children: getDisplayPostTitle(props.data.title),
                       },
                     },
                     {

@@ -277,16 +277,6 @@ def build_markdown(entry, source_name, base_url):
 
     description = make_description(body_md) or title
 
-    # Old Hatena diary allows untitled posts; derive a title from the body.
-    if not title:
-        snippet = description[:50].rstrip()
-        if snippet:
-            title = snippet + ("…" if len(description) > 50 else "")
-        elif dt:
-            title = dt.strftime("%Y-%m-%d")
-        else:
-            title = basename or "(untitled)"
-
     tags = [c for c in entry["categories"] if c]
 
     fm = ["---"]

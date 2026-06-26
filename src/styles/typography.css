@@ -131,6 +131,10 @@
       @apply mx-0 inline-block size-16 align-middle;
     }
 
+    img.hatena-table-image-repair {
+      @apply m-0 w-full max-w-none border-0;
+    }
+
     ul {
       @apply overflow-x-clip;
     }

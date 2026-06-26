@@ -6,6 +6,7 @@ import Footer from "@/components/Footer.astro";
 import Datetime from "@/components/Datetime.astro";
 import Tag from "@/components/Tag.astro";
 import { getPostSlug, getPostUrl } from "@/utils/getPostPaths";
+import { getDisplayPostTitle } from "@/utils/postTitle";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { slugifyStr } from "@/utils/slugify";
 import { toTransitionName } from "@/utils/toTransitionName";
@@ -70,6 +71,7 @@ const {
   tags,
   hideEditPost,
 } = post.data;
+const displayTitle = getDisplayPostTitle(title);
 
 const { Content } = await render(post);
 
@@ -92,10 +94,13 @@ if (!ogImageUrl && config.features.dynamicOgImage) {
 const ogImage = ogImageUrl
   ? new URL(ogImageUrl, Astro.url.origin).href
   : undefined;
+const hatenaBasename = post.id
+  .replace(/^hatenablog\//, "")
+  .replace(/\.mdx?$/, "");
 ---
 
 <PostLayout
-  title={`${title} | ${config.site.title}`}
+  title={`${displayTitle} | ${config.site.title}`}
   description={description}
   ogImage={ogImage}
   canonicalURL={canonicalURL}
@@ -112,10 +117,10 @@ const ogImage = ogImageUrl
     data-pagefind-body
   >
     <h1
-      style={{ viewTransitionName: toTransitionName(title) }}
+      style={{ viewTransitionName: toTransitionName(displayTitle) }}
       class="text-heading inline-block text-2xl font-bold sm:text-3xl"
     >
-      {title}
+      {displayTitle}
     </h1>
 
     <div class="my-2 flex items-center gap-2">
@@ -134,6 +139,7 @@ const ogImage = ogImageUrl
 
     <article
       id="article"
+      data-hatena-basename={hatenaBasename}
       class:list={[
         "mt-8 w-full",
         "app-prose max-w-app",
@@ -316,6 +322,45 @@ const ogImage = ogImageUrl
   }
   enhanceHatenaImages();
 
+  async function repairHatenaTableImages() {
+    const article = document.getElementById("article");
+    const basename = article?.dataset.hatenaBasename;
+    if (!article || !basename) return;
+
+    let manifest = {};
+    try {
+      const response = await fetch("/hatena-images/table-repairs.json");
+      if (!response.ok) return;
+      manifest = await response.json();
+    } catch {
+      return;
+    }
+
+    const repairs = manifest[basename];
+    if (!Array.isArray(repairs)) return;
+
+    const rows = Array.from(article.querySelectorAll("table tr"));
+    for (const repair of repairs) {
+      const row = rows[repair.row];
+      const cell = row?.children?.[repair.cell];
+      if (!cell || cell.querySelector("img")) continue;
+
+      const alt = typeof repair.alt === "string" ? repair.alt : "";
+      const localSrc =
+        typeof repair.localSrc === "string" ? repair.localSrc : "";
+      if (!localSrc || cell.textContent.trim() !== alt) continue;
+
+      const image = document.createElement("img");
+      image.src = localSrc;
+      image.alt = alt;
+      image.loading = "lazy";
+      image.className = "hatena-table-image-repair";
+
+      cell.replaceChildren(image);
+    }
+  }
+  repairHatenaTableImages();
+
   function enhanceHatenaMediaEmbeds() {
     const article = document.getElementById("article");
     if (!article) return;
@@ -387,6 +432,7 @@ const ogImage = ogImageUrl
 
     const paragraphs = Array.from(article.querySelectorAll("p"));
     for (const paragraph of paragraphs) {
+      if (paragraph.closest("section.footnotes, [data-footnotes]")) continue;
       if (!isOnlyLinksAndWhitespace(paragraph)) continue;
 
       const anchors = Array.from(paragraph.querySelectorAll("a"));
@@ -457,6 +503,7 @@ const ogImage = ogImageUrl
 
     const paragraphs = Array.from(article.querySelectorAll("p"));
     for (const paragraph of paragraphs) {
+      if (paragraph.closest("section.footnotes, [data-footnotes]")) continue;
       if (!isOnlyLinksAndWhitespace(paragraph)) continue;
 
       const anchors = Array.from(paragraph.querySelectorAll("a"));
@@ -594,6 +641,8 @@ const ogImage = ogImageUrl
     }
 
     function isStandaloneDomainLink(anchor) {
+      if (anchor.closest("section.footnotes, [data-footnotes]")) return false;
+
       const parent = anchor.parentElement;
       if (!parent || parent.tagName !== "P") return false;
       if (anchor.querySelector("img")) return false;
@@ -620,8 +669,8 @@ const ogImage = ogImageUrl
       document.querySelectorAll("a.hatena-embed, #article p > a")
     ).filter(embed => {
       return (
-        embed.classList.contains("hatena-embed") ||
-        isStandaloneDomainLink(embed)
+        !embed.closest("section.footnotes, [data-footnotes]") &&
+        (embed.classList.contains("hatena-embed") || isStandaloneDomainLink(embed))
       );
     });
 
