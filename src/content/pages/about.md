@@ -3,10 +3,9 @@ title: "このブログについて"
 description: "ものがたり — atsushieno の開発記録について。"
 ---
 
-「ものがたり」は atsushieno の開発記録です。MIDI 2.0、オーディオプラグイン、Android、.NET / mono などの話題を中心に書いています。
+このサイトは、atsushienoの[はてなダイアリー（2004〜2012）](https://atsushieno.hatenadiary.org/)と[はてなブログ（2012〜2026）](https://atsushieno.hatenablog.com/)の過去記事を[astro-paper](https://github.com/satnaing/astro-paper)ベースの静的サイトとして再構築したものです。
 
-このサイトは、はてなダイアリー（2004〜2012）とはてなブログ（2012〜）の過去記事を [Astro](https://astro.build/) ベースの静的サイトとして再構築したものです。古い記事には、移行時の変換で表示が崩れている箇所が残っていることがあります。
+古い記事には、移行時の変換で表示が崩れている箇所が残っていることがありますが、修正可能なものは発見次第修正していきます。
 
-- GitHub: [atsushieno](https://github.com/atsushieno)
 
 過去記事は[アーカイブ](/archives)から年・月ごとにたどれます。
