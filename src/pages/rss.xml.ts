@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { getPostUrl } from "@/utils/getPostPaths";
 import { getDisplayPostTitle } from "@/utils/postTitle";
+import { getPostDescription } from "@/utils/postDescription";
 import config from "@/config";
 
 export async function GET() {
@@ -16,7 +17,7 @@ export async function GET() {
     items: sortedPosts.map(({ data, id, filePath }) => ({
       link: getPostUrl(id, filePath, config.site.lang),
       title: getDisplayPostTitle(data.title),
-      description: data.description,
+      description: getPostDescription({ id, data }),
       pubDate: new Date(data.modDatetime ?? data.pubDatetime),
     })),
   });

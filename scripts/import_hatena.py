@@ -243,19 +243,6 @@ def html_to_markdown(raw_html):
     return text
 
 
-def make_description(markdown_text):
-    """First paragraph-ish chunk of plain text, trimmed to ~160 chars."""
-    # Drop raw HTML (e.g. link cards), footnote defs and markdown syntax noise.
-    text = re.sub(r"<[^>]+>", "", markdown_text)
-    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
-    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
-    text = re.sub(r"[#>*`_\-]", "", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    if len(text) > 160:
-        text = text[:157].rstrip() + "..."
-    return text
-
-
 def yaml_quote(s):
     s = s.replace("\\", "\\\\").replace('"', '\\"')
     return f'"{s}"'
@@ -297,8 +284,6 @@ def build_markdown(entry, source_name, base_url, include_comments=True):
 
     body_md = entry_body_markdown(entry)
 
-    description = make_description(body_md) or title
-
     tags = [c for c in entry["categories"] if c]
 
     fm = ["---"]
@@ -311,7 +296,6 @@ def build_markdown(entry, source_name, base_url, include_comments=True):
         fm.append("tags:")
         for t in tags:
             fm.append(f"  - {yaml_quote(t)}")
-    fm.append(f"description: {yaml_quote(description)}")
     if base_url and basename:
         fm.append(f"canonicalURL: {yaml_quote(base_url.rstrip('/') + '/' + basename)}")
     fm.append("---")
@@ -354,8 +338,6 @@ def build_hatenadiary_day_markdown(day, entries, base_url):
                 tags.append(tag)
 
     body_md = "\n\n".join(body_parts)
-    description = make_description(body_md) or day
-
     fm = ["---"]
     fm.append(f"title: {yaml_quote(first_dt.strftime('%Y-%m-%d'))}")
     fm.append(f"pubDatetime: {first_dt.isoformat()}")
@@ -365,7 +347,6 @@ def build_hatenadiary_day_markdown(day, entries, base_url):
         fm.append("tags:")
         for tag in tags:
             fm.append(f"  - {yaml_quote(tag)}")
-    fm.append(f"description: {yaml_quote(description)}")
     if base_url:
         fm.append(f"canonicalURL: {yaml_quote(base_url.rstrip('/') + '/' + day)}")
     fm.append("---")

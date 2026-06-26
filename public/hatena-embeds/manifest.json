@@ -2,54 +2,44 @@
   "http://atsushieno.hatenablog.com/entry/2014/10/20/141803": {
     "title": "Xamarin Sketchesの起源 - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/0f5ed99bfb676a27207fe829b4e58a4d6f60e301/backend=imagemagick;version=1;width=1300/http%3A%2F%2Fwww.mono-project.com%2Farchived%2Fimages%2F7%2F75%2FGSharpPlot.png",
-    "description": "Evolve 2014にスタッフとして行って帰って来たわけですが、今回はEvolve自体についての話は省略。今回はEvolveで発表されたSketchesについて、他所では語られなそうな話をちょっと書きます。 Evolve 2014で発表されたネタで一番面白かったのは、Sketchesだったと思います。Sketchesがやっていることはinteractive shell（いわゆるREPL）と、そのimmediate displayでしょうか*1。 MonoのC#コンパイラがREPLをサポートしていることは、ここでは2008年の始まりの頃からずっと書いてきましたが、このsketchesもやってい…",
     "siteName": "ものがたり",
     "finalUrl": "https://atsushieno.hatenablog.com/entry/2014/10/20/141803"
   },
   "http://atsushieno.hatenablog.com/entry/2016/05/03/183806": {
     "title": "Xamarin.AndroidのN previewとJava8サポートについて - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/6653812171394182518/1462268286",
-    "description": "Google I/Oが近づいていますが、それに先立ってAndroid N previewが公開されていますね。既にpreview 2で、今後も5週間ごとにプレビューが出続けるというので、最新版Androidへの対応もだいぶやりやすくなったなという感じです。 そんなわけで、Xamarin.AndroidのMono.Android.dllも、OSS版xamarin-androidとXamarin.Androidの最新preview版は、最新のN preview 2まで対応しています。 Android N APIの最大の特徴は、Java8に対応したことですが、Xamarinユーザーにとっての恩恵はほ…",
     "siteName": "ものがたり",
     "finalUrl": "https://atsushieno.hatenablog.com/entry/2016/05/03/183806"
   },
   "http://atsushieno.hatenablog.com/entry/2019/06/28/031615": {
     "title": "6月のmusic tools hacks, あるいはLV2 for Android - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/17680117127209875668/1561691401",
-    "description": "もっと早くに実現していたはずだったのですが、体調不良などに引きずられて今頃になって台湾に渡ってフラフラ過ごしています。人に会う用事が毎日のようにあって、日本の引きこもり生活とは雲泥の差が… 無駄話はさておき、5月にAndroid Native MIDI APIについて書いたときに、こんなことを書いていました。 今のうちに書いておくとよさそうなこと: そろそろAndroidにもAudio Unitみたいなのが出来ないかなー— Atsushi Eno (@atsushieno) 2019年5月5日 Google I/Oでこの方面でなんか発表してほしいなあというお気持ちの表明だったのですが、どうやら…",
     "siteName": "ものがたり",
     "finalUrl": "https://atsushieno.hatenablog.com/entry/2019/06/28/031615"
   },
   "http://atsushieno.hatenablog.com/entry/2019/07/26/210537": {
     "title": "CircleCI（など）でJUCEアプリケーションをビルドする - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/26006613378128293/1564142737",
-    "description": "JUCE GUIアプリケーションをCircleCIでビルドしてテスト実行するにはいろいろ面倒事を解決しないといけないのでまとめておく。CircleCIでやっているのはたまたまなので、他にも任意のDocker Imageを使用してビルドできるCI環境があれば応用がきくはず。実行環境は今回はUbuntuを想定している（パッケージ名等を調整すれば任意のLinuxイメージで動くはず）。 アプリケーションを起動してテストを実行しないとしても、Projucerによるビルドファイル生成が含まれている場合は、結局依存パッケージが必要になるので、およそ面倒事は避けられないのではないかと思う。リポジトリに生成済み…",
     "siteName": "ものがたり",
     "finalUrl": "https://atsushieno.hatenablog.com/entry/2019/07/26/210537"
   },
   "http://atsushieno.hatenablog.com/entry/2019/12/03/002804": {
     "title": "JUCEモジュールを作って外部ライブラリを参照する - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/c948eb0b5e39d2294323ff06d5d4fedfae6f86d6/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fpicasaweb.google.com%2F110788028571466287583%2F6756947724176112769%236756947722899604082",
-    "description": "これは音楽技術Advent Calendar 2019の3日目（まあ2本目ですが…）とJUCE Advent Calendar 20193日目のクロスポストエントリーです。 長い前書き JUCEのビルドシステムは、アプリケーションやオーディオプラグインのビルドに必要なコードを原則として全てソースコードからビルドするという仕組みです。JUCEはさまざまなモジュール群から成り立っていますが、その全てがソースからビルドされることになります。Linuxで言えばGentooです*1。これは複数のプラットフォームをターゲットとするビルドシステムを構築する場合には手っ取り早いハック（やっつけ仕事）であるとい…",
     "siteName": "ものがたり",
     "finalUrl": "https://atsushieno.hatenablog.com/entry/2019/12/03/002804"
   },
   "http://atsushieno.hatenablog.com/entry/2020/02/21/185623": {
     "title": "JUCEでカスタムAudioPluginFormatをホストする - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/26006613517219157/1591348570",
-    "description": "そろそろ忘れそうなので備忘録的に書いておく。 自分で独自のオーディオプラグインフレームワークを開発していて課題になるのは、自分でフレームワークからアプリケーションまで全てを開発するのは不可能だということだ。そういうわけで可能な限り既存のリソースを使い回すためにJUCEのバックエンドとしてサポートを追加しようと考えるのは割と自然なことだろう*1。 JUCEではオーディオプラグインをホストする機能はjuce_audio_processorsというモジュールでコア機能とVST, AU, LADSPAのホスティングをサポートしている。幸いJUCEに独自のオーディオプラグインを追加するのは難しくない。今…",
     "siteName": "ものがたり",
     "finalUrl": "https://atsushieno.hatenablog.com/entry/2020/02/21/185623"
   },
   "http://atsushieno.hatenablog.com/entry/2020/02/21/185808": {
     "title": "JUCEベースのオーディオプラグインを自分のフレームワークに輸入する - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/26006613517220029/1591348618",
-    "description": "こちらは二部構成の後編になる。前編はこちら。 atsushieno.hatenablog.com タイトルは対照的ではないけど、今度は「JUCEでカスタムAudioPluginFormatをホストする」の反対側、すなわちJUCEを使って自分のプラグインフレームワーク用のオーディオプラグインをビルドできるようにするために、JUCEモジュールを作成する。 JUCEの本質的な特徴のひとつは、1つのコードベースで複数フォーマットのオーディオプラグインを簡単にビルドできることだ。すなわちオーディオ処理の部分はコード共有できるので、自分が独自にオーディオプラグインフレームワークを開発しているときは、これを…",
     "siteName": "ものがたり",
     "finalUrl": "https://atsushieno.hatenablog.com/entry/2020/02/21/185808"
-  },
-  "http://blog.shibayan.jp/entry/20150311/1426055738": {
-    "error": "HTTP Error 404: Not Found"
   },
   "http://classeur.io/": {
     "title": "classeur.io"
@@ -57,174 +47,141 @@
   "http://connpass.com/event/29637/": {
     "title": "Japan ComCamp meets de:code (2016/05/23 19:00〜)",
     "image": "https://media.connpass.com/thumbs/3a/a7/3aa7ba2f5adb6c99da46bb25b73eaa7d.png",
-    "description": "【参加者の皆さまへのお願い】（Updated: 2016/05/20） 1\\. 当日の受付について スムーズにチェックインいただけますよう、イベントの受付票をお持ちください！ 本イベントにお申込みいただいた際に connpassのご登録メールアドレスに送られた受付票を印刷し、イベントの受付窓口にてご提出くださいますよう何卒ご対応のほど宜しくお願い申し上げます。 ※受付票サンプル：http://connpass.com/event/sample-ticket/ ※当日はde:code 2016一般受付の窓口もご用意しています。事前受付をされる方は、de:codeの受付票...",
     "siteName": "connpass",
     "finalUrl": "https://connpass.com/event/29637/"
   },
   "http://d.hatena.ne.jp/atsushieno/20110628/p1": {
     "title": "BridJ on Androidでネイティブコードを活用する - ものがたり(旧)",
     "image": "https://cdn.image.st-hatena.com/image/scale/78545448993d3210d2fc7ff647ddf4f8af32dedc/backend=imagemagick;version=1;width=1300/http%3A%2F%2Fdl.dropbox.com%2Fu%2F493047%2F2011%2FScreenshot-JNAeratorStudio.png",
-    "description": "これは最近いじっていたBridJというライブラリについてまとめたものです。本当はもうちょっと体裁を整えてどっかに記事として投げられないかなあと思っていたんですが、そこに時間を割くのももったいないかなと思ってやめました。なわけで文体が違和感ありありですがそこは気にしない^2 - AndroidとJNI Javaでは、ネイティブコードを呼び出す方法として、JNI (Java Native Interface)が提供されています。JNIは、JavaとC/C++で書かれたネイティブコードを繋ぐものです。具体的には、Javaでnativeキーワードを使用して定義したメソッドを入り口から、対応するCあるい…",
     "siteName": "ものがたり(旧)",
     "finalUrl": "https://atsushieno.hatenadiary.org/entry/20110628/p1"
   },
   "http://dotnetfringe-japan.connpass.com/event/35659/": {
     "title": ".NET Fringe Japan 2016 (2016/10/01 10:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": ".NET Fringe Japanは日本版の .NET Fringe です。 .NET Fringe Japanでは、 .NETに関する深く詳細な話題を主に取り上げます。 本イベントはニコニコ生放送による配信を行う予定です。 ニコニコ生放送配信場所 一部または全体を流せないセッションがあるかもしれないことをあらかじめご了承ください。 # 懇親会について 懇親会に参加したい場合は 別ページでの登録 が必要になります。 # タイムテーブル スピーカーおよびタイトルについては、予告なく変更されることがあります。 ご了承下さい。 時間 | スピーカー(敬称略) | タイトル ...",
     "siteName": "connpass",
     "finalUrl": "https://dotnetfringe-japan.connpass.com/event/35659/"
-  },
-  "http://electrocutica.com/cygnus-ss2016/": {
-    "error": "HTTP Error 404: Not Found"
-  },
-  "http://gensouongaku.info/fes/": {
-    "error": "HTTP Error 404: Not Found"
   },
   "http://gfx.hatenablog.com/entry/2016/03/11/001717": {
     "title": "「Android NでJava8がサポートされた」とはどういうことか - Islands in the byte stream",
     "image": "https://ogimage.blog.st-hatena.com/13208692334729887881/10328537792366568509/1460600115",
-    "description": "追記: StreamやOptionalはpreview-2で実装されたようです。 gfx.hatenablog.com Android N previewが公開されましたね！このバージョンではJava8のサポートがあると発表されています。また、標準クラスライブラリがOpenJDKベースの実装になったことで、Java8との互換性が高まるのではないかという前評判もありました。 First Preview of Android N: Developer APIs & Tools | Android Developers Blog 本エントリでは、この「Android NでJava8」について解説しま…",
     "siteName": "Islands in the byte stream",
     "finalUrl": "https://gfx.hatenablog.com/entry/2016/03/11/001717"
   },
   "http://gihyo.jp/book/2017/978-4-7741-8759-4": {
     "title": "Androidを支える技術〈Ⅰ〉 | 技術評論社",
     "image": "https://gihyo.jp/assets/images/ogp/2017/9784774187594.jpg",
-    "description": "Androidのインターナル解説書。 根底に流れるモバイルプラットフォームとしての哲学を丁寧に扱い、 最新版（7、N/Nougat）までカバー。 第1巻となる本書では、プラットフォーム戦略の基幹部分を担う「GUIシステム」を主眼に置き、モバイルで主流となったAndroidの中枢を徹底解説。 Androidという巨大ソフトウェアを題材にしつつ、アプリ開発者の方々に身近なテーマの問題設定で、ハードウェアからマルチタッチ/UIスレッド/Handler/Viewツリー/レイアウト/OpenGL ES/バイトコード実行環境まで、ツーランク上のクオリティの製品開発を可能にする技術知識を集約しました。 広くモバイル、Web、デスクトップ、組み込み... 分野ごとの要素技術の壁を越え、さらなるパワーアップをお考えのエンジニアの方々へ、今こそ知っておきたいトピックを凝縮してお届けします。",
     "siteName": "技術評論社",
     "finalUrl": "https://gihyo.jp/book/2017/978-4-7741-8759-4"
   },
   "http://gihyo.jp/book/2017/978-4-7741-8861-4": {
     "title": "Androidを支える技術〈Ⅱ〉 | 技術評論社",
     "image": "https://gihyo.jp/assets/images/ogp/2017/9784774188614.jpg",
-    "description": "Androidのインターナル解説書。 根底に流れるモバイルプラットフォームとしての哲学を丁寧に扱い、最新版（7、N/Nougat）までカバー。 第2巻となる本書では、Androidの核心「Activity」と「Activityのライフサイクル」に焦点を定め、システムの心臓部を徹底解説。 無数のアプリがインテントなどの仕組みを通じて協調できる環境をシステムが総力を挙げて支援する。 それは、モバイルOSのAndroidが選んだ道でした。 アプリのプロセスは、フォアグラウンドを退けば常にkillされ得る。 必要とされた時に半自動的に再生成される。 従来のアプリケーション開発とはまったく異なる画期的なメカニズムは、そのための切り札です。 また、小さな画面のモバイルにおける画面遷移のデザインの複雑さや重要性はPCやWebよりも遥かに高い。 この再生成と画面遷移という2つのモバイル特有の重要な問題を、統合してエレガントに解決しよう。 それが「Activity」です。 「Activityのライフサイクルを織り込んで、アプリの仕様、遷移のデザインを考えられるか」は、Android開発者としての最初の試金石です。 システムの設計思想を踏まえて、きびきびと動けるアプリをつくりたい。 そのような方々を強力にサポートする技術知識を集約してお届けします。",
     "siteName": "技術評論社",
     "finalUrl": "https://gihyo.jp/book/2017/978-4-7741-8861-4"
   },
   "http://github.com/atsushieno/ntracktive": {
     "title": "GitHub - atsushieno/ntracktive: Manipulate .tracktionedit files without loading the entire Tracktion workload",
     "image": "https://opengraph.githubassets.com/9e4229516daeb78a5445150f58dc30b3142e6d4a1a24927341b866ec1a8d3500/atsushieno/ntracktive",
-    "description": "Manipulate .tracktionedit files without loading the entire Tracktion workload - atsushieno/ntracktive",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/atsushieno/ntracktive"
   },
   "http://irui.diverse.jp/": {
     "title": "Irui - Feryquitous 3rd solo album | Diverse System",
     "image": "http://irui.diverse.jp/assets/images/card_01.jpg",
-    "description": "Irui | Comic Market 93 2017.12.29(Fri) 東A-84a \"Diverse System\"",
     "siteName": "Irui - Feryquitous 3rd solo album | Diverse System",
     "finalUrl": "https://irui.diverse.jp/"
   },
   "http://jxug.connpass.com/event/12544/": {
     "title": "第4回 JXUG Conference with dotNetConf 2015 Japan (2015/04/11 12:30〜)",
     "image": "https://media.connpass.com/thumbs/de/fe/defeb17b32cd38fffa21b2c103389057.png",
-    "description": "こんにちは。エクセルソフトの田淵です。 今回は 2トラックで勉強会・セミナートラックとハンズオントラックで開催します。 【重要】 また、同日にMS品川オフィスのセミナールーム C+D で開催となる dotNetConf 2015 Japan との共同開催イベントにもなります。 # ライブストリーミング録画 https://www.youtube.com/watch?v=_48JD8qTH8o でライブストリーミングの録画が公開されています。モバイル回線のため、途切れたりしている個所があります。ご了承ください。 # セミナートラック (定員 60名) ## セミナートラック登壇...",
     "siteName": "connpass",
     "finalUrl": "https://jxug.connpass.com/event/12544/"
   },
   "http://jxug.connpass.com/event/24442/": {
     "title": "JXUGC #10 Xamarin での NuGet と CI を極めよう (2016/02/05 19:00〜)",
     "image": "https://media.connpass.com/thumbs/60/2f/602fffc04b726806f321f211b05547b6.png",
-    "description": "こんにちは。エクセルソフトの田淵です。 前回お伝えした通り、 * Xamarin で NuGet を活用するには？ * Xamarin で CI（継続的インテグレーション）を活用するには？ として @atsushieno さんと @iseebi さんにお話をしていただきます！ 今回は初の試みとして、お二人にご協力いただき「事前に聞きたいことを質問として貰ってみよう」ということをしてみます！！！せっかく自分の興味あるジャンルの勉強会に参加するのに、聞きたいことが聞けないと勿体ない、期待外れ、って印象になってしまいますからね。 ということで、「この際だから聞きたいことを聞こ...",
     "siteName": "connpass",
     "finalUrl": "https://jxug.connpass.com/event/24442/"
   },
   "http://jxug.connpass.com/event/29734/": {
     "title": "JXUGC #13 東京 緊急開催 Xamarin のすべて！ (2016/05/07 13:00〜)",
     "image": "https://media.connpass.com/thumbs/f6/fc/f6fce5cced3dfe34c80d2d7366d159d2.png",
-    "description": "こんにちは。エクセルソフトの田淵です。 今、IT 開発者の間で最大の話題と言えば、そう、Bash on Windows ですね！っておい！Bash もそうなのですが、Xamarin じゃないですかー。 今回は無料化の話で Xamarin を初めて聞いた方や、無料になったのなら触ってみよう！と思ったくださった方などを対象に、Xamarin って何が出来るの？実際にどうやって開発していくの？ビジネスに活用するにはどうすればいいの？というような、気になるであろう点を纏めて聞ける勉強会を緊急開催することにいたしました^^ なお、日本マイクロソフト C#/Xamarin のエバンジェリストと...",
     "siteName": "connpass",
     "finalUrl": "https://jxug.connpass.com/event/29734/"
   },
   "http://mmitti.info/wp/articles/2019/04/usbmidi/": {
     "title": "[同人誌]自作USB オーディオインターフェース #1 サポートページ – mmitti-co"
   },
-  "http://plinth.org/techtalk/?p=580": {
-    "error": "HTTP Error 404: Not Found"
-  },
   "http://qiita.com/atsushieno/items/141f790a9bbaa93b62c1": {
     "title": "Android Studio 2.0のInstant Runの仕組みを解読する - Qiita",
     "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGMTg1OTMlMkZwcm9maWxlLWltYWdlcyUyRjE0NzM2ODI0Nzk_aXhsaWI9cmItNC4xLjEmYXI9MSUzQTEmZml0PWNyb3AmbWFzaz1lbGxpcHNlJmJnPUZGRkZGRiZmbT1wbmczMiZzPWJjNDI5YmQxMzljZGY1N2FkYmI3MDRkMWZmZTVkYTJj%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3De6e88f1ff1e824ad42e329749c2b712b?ixlib=rb-4.1.1&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9QW5kcm9pZCUyMFN0dWRpbyUyMDIuMCVFMyU4MSVBRUluc3RhbnQlMjBSdW4lRTMlODElQUUlRTQlQkIlOTUlRTclQjUlODQlRTMlODElQkYlRTMlODIlOTIlRTglQTclQTMlRTglQUElQUQlRTMlODElOTklRTMlODIlOEImdHh0LWFsaWduPWxlZnQlMkN0b3AmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtcGFkPTAmcz02ZWJiN2Y2ZjkwYzc0ZTNhNzFmODM1MGQyZjAxNDc0ZQ&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBhdHN1c2hpZW5vJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9NzJkYTkzOTllMzNhNjc5OTQ0ZWY2M2QyMGViYjg1NDk&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=fe53f1ba215a892f10f2e2461de5daa6",
-    "description": "これは、DroidKaigi 2016のセッション「Instant Runを実現する仕組み」と連動するエントリです。セッションは30分という短い時間で行われるので、細かい説明はこちらでまとめていきます。 Part I: Instant Runを理解するためのAndroi...",
     "siteName": "Qiita",
     "finalUrl": "https://qiita.com/atsushieno/items/141f790a9bbaa93b62c1"
   },
   "http://www.atmarkit.co.jp/ait/articles/1503/25/news104.html": {
     "title": "CoreCLR���r���h���Ă݂�",
     "image": "https://image.itmedia.co.jp/ait/articles/1503/25/top_news104.jpg",
-    "description": "���܂��犴���Y�����ACoreCLR��OS X��Ubuntu�Ńr���h���Ă݂��B�T�N�T�N�ƃr���h�ł��邩��F��������Ѓr���h���Ă݂悤�I",
     "siteName": "��IT",
     "finalUrl": "https://atmarkit.itmedia.co.jp/ait/articles/1503/25/news104.html"
   },
   "http://www.buildinsider.net/mobile/insidexamarin/13": {
     "title": "Xamarinと、ポータブル・クラス・ライブラリ（PCL）",
     "image": "https://www.buildinsider.net/re.buildinsider.net/mobile/insidexamarin/index/icon.fb.png",
-    "description": "インサイドXamarin（13）。複数プラットフォーム向けのライブラリを作れるPCLの概要と利点について解説。また、Xamarin.iOSやXamarin.Androidでの利用方法や、XamarinでPCLを実現する仕組み、PCLの課題を説明する。",
     "siteName": "Build Insider",
     "finalUrl": "https://www.buildinsider.net/mobile/insidexamarin/13"
   },
   "http://www.kvraudio.com/product/uapmd-by-the-aap-project-audio-plugins-for-android": {
     "title": "UAPMD by The AAP Project (Audio Plugins For Android) - MIDI 2.0 Plugin Host VST3 Audio Unit CLAP LV2",
     "image": "https://static.kvraudio.com/i/b/kvr-logo-grey-on-blue-300x300.png",
-    "description": "UAPMD is an audio plugin host that serves audio plugin instances as virtual MIDI 2.0 devices. With UAPMD, You do not have to wait for MIDI 2...",
     "siteName": "KVR Audio",
     "finalUrl": "https://www.kvraudio.com/product/uapmd-by-the-aap-project-audio-plugins-for-android"
   },
   "http://www.nicovideo.jp/watch/sm15875228": {
     "title": "【初音ミク】Absolunote【オリジナルPV付】",
     "image": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/15875228/15875228.original/r1280x720l?key=3e5ea2cd38452a9f727524df874581aaa8c306d797f1bb735609cff6050c3dd0",
-    "description": "【初音ミク】Absolunote【オリジナルPV付】 [音楽・サウンド] ■音・詞：Lemm■マスタリング：かごめP様（mylist/13631314）■絵：記号様（http://05go5.pupu.jp/）■...",
     "siteName": "ニコニコ動画",
     "finalUrl": "https://www.nicovideo.jp/watch/sm15875228"
   },
   "http://www.nicovideo.jp/watch/sm28806046": {
     "title": "【Number Bronze】 薄ら氷心中 【UTAUカバー】",
     "image": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/28806046/28806046.original/r1280x720l?key=aa3e6e407f68358d129ecf47e89000a3ed9e54931a69a715c7d19286cb9aaaf2",
-    "description": "【Number Bronze】 薄ら氷心中 【UTAUカバー】 [音楽・サウンド] ■今回はNumber Bronze（beach・whisper）にTVアニメ昭和元禄落語心中のOPテーマ「薄ら氷心中」を歌...",
     "siteName": "ニコニコ動画",
     "finalUrl": "https://www.nicovideo.jp/watch/sm28806046"
   },
   "http://www.nicovideo.jp/watch/sm32442257": {
     "title": "【C93/女性Vo】Sennzai 2nd Solo Album『L'éveil』XFD【冬コミ】",
     "image": "https://img.cdn.nimg.jp/s/nicovideo/thumbnails/32442257/32442257.original/r1280x720l?key=1c725cdbaab589390be3df84c342caf6c9f33b532092b141f71613f8a2d6a88c",
-    "description": "【C93/女性Vo】Sennzai 2nd Solo Album『L'éveil』XFD【冬コミ】 [音楽・サウンド] 「此れは、目醒めの彩――。」2017/12/29 コミックマーケット93(C93) ア-29bSennzai 2nd Solo Album『...",
     "siteName": "ニコニコ動画",
     "finalUrl": "https://www.nicovideo.jp/watch/sm32442257"
   },
   "http://yapcasia8oji-2016mid.hachiojipm.org/": {
     "title": "YAP(achimon)C::Asia Hachioji 2016 mid in Shinagawa. 2016/7/2(sat),3(sun)",
-    "image": "http://yapcasia8oji-2016mid.hachiojipm.org/images/ogp.png",
-    "description": "YAPC::Asia Hachioji 2016 mid in Shinagawa. 2016/7/2(sat),3(sun)"
+    "image": "http://yapcasia8oji-2016mid.hachiojipm.org/images/ogp.png"
   },
   "https://2323-code.hatenablog.com/entry/2025/02/02/222457": {
     "title": "PCから音が鳴るだけで楽しい！【DTMをやってみた】 - 歩くパワースポットでありたい。",
     "image": "https://ogimage.blog.st-hatena.com/6802418398297598614/6802418398325419765/1738502731",
-    "description": "結論 人生で初めてDTMに触れました 音が鳴るだけでもめっちゃ楽しい！ 参加したイベント 2025/02/02、【第73回 GTUGGirls 「DTMの世界に触れてみよう」】に参加しました！ gtuggirls.connpass.com GTUGGirlsとは 2ヶ月に1度初心者向けのハンズオンを行っているコミュニティさんです。 常に初心者向けのイベントをされているので、初参加でも大丈夫！（私も初参加でした✌️） 詳細はこちらをご覧ください！ ちなみに4月にRust初心者向けのハンズオンイベントやる予定です！お楽しみに！！ www.gtuggirls.jp gtuggirls.connpas…",
     "siteName": "歩くパワースポットでありたい。"
   },
   "https://adventar.org/calendars/3353": {
     "title": "音楽ツール・ライブラリ・技術",
     "image": "https://adventar.org/og_image.png",
-    "description": "音楽ソフトを作成するためのライブラリやツールを紹介するためのAdvent Calendarにしましょう。 誰も参加しなければatsushienoが1人でgithubなどで発見したリポジトリをつらつらと手短に紹介したものを書き続けるAdvent Calendarになります（飽きたら止めます）。 現時点で自分でも書けそうなのはlibsoundio、rtmidi、fluidsynth、tremolo、openSLES、oboe、music-synthesizer-for-androidなど。 書いてくれる人がいるとうれしいのはfaust、chuck、tidal、musescore、wasapi、NAudio/CSCore、CoreAudio/CoreMIDI、AudioKit、jack、vst3sdk、JUCE（単独でAdvent Calendarがありますが）、vlc、dssi/lv2、Carla、World、tss、テキスト音楽サクラ、magentaなど。（思いついたものを列挙しているだけなので、他にもいろいろあると思います。） ピンポイントで参加できそうなネタがあれば十分です。お気軽にご参加ください。 （atsushienoだけはメンテナンスのために特別にカレンダーの空いているところを適宜埋めたり空きスロットを調整するために移動したり空きスロットを作るために消えたりします。）",
     "siteName": "Adventar"
   },
   "https://android-developers.googleblog.com/2017/08/next-generation-dex-compiler-now-in.html": {
     "title": "Next-generation Dex Compiler Now in Preview",
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMzZYCkCmWzk_T9kkFz_Z44wfK1GDEvHwvCFYZnGpgprj9KYJjAuA2UV6CCdjXJ1vV21h4okkO7UlHycqNdeDcYh_CBCtJi9wlEYAhaRF3qMehxDQZAbSu_KYkK-yUNOdUEtt3m-dOH-WG/w1200-h630-p-k-no-nu/image1.png",
-    "description": "News and insights on the Android platform, developer tools, and events.",
     "siteName": "Android Developers Blog"
   },
   "https://android-developers.googleblog.com/2020/02/native-dependencies-in-android-studio-40.html": {
     "title": "Native Dependencies in Android Studio 4.0",
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDi39Mjn_zS4qA1BR469LRPbE1O_Sent92RfgiPV_AlXmgftDS3O6EwYBhUHUOdEBktZCT4hmEy1iO7jQo7ZxXCIgqf6kYerfV8Zvn81YY1ifnu-qnIZSeolQ7FOD5ZXL_eG1itqs1nV4/w1200-h630-p-k-no-nu/Introducing_LTS_Android_NDK_r21.png",
-    "description": "News and insights on the Android platform, developer tools, and events.",
     "siteName": "Android Developers Blog"
   },
   "https://android-developers.googleblog.com/2020/10/android-studio-41.html": {
     "title": "Android Studio 4.1",
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUJjorKSiDIjmWxpQ7obl_xk4qWX2H21I2j-PGcBcE13_vh294UbdMxDsyQV_7ztLhsCeIMZNeTXI6_qy2i3fe7nX4Nb1DaBKUhgh_IQw3AGuzkQNSukKtsDdIAimmKzgqx1EdgGltENk/w1200-h630-p-k-no-nu/AndroidStudio_logo.png",
-    "description": "News and insights on the Android platform, developer tools, and events.",
     "siteName": "Android Developers Blog"
   },
   "https://android.googlesource.com/platform/tools/ndkports/": {
@@ -241,8 +198,7 @@
     "siteName": "オーディオプラグイン研究所"
   },
   "https://atsushieno.github.io/2021/12/15/augene-ng-1.html": {
-    "title": "Modernizing MML for 2022 (1) Overture",
-    "description": "part 1 / part 2 / part 3 / part 4 / part 5"
+    "title": "Modernizing MML for 2022 (1) Overture"
   },
   "https://atsushieno.github.io/kmdsp": {
     "title": "kmdsp: an experimental MIDI 2.0 visual player",
@@ -251,103 +207,86 @@
   "https://atsushieno.hatenablog.com/entry/2019/07/26/210537": {
     "title": "CircleCI（など）でJUCEアプリケーションをビルドする - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/26006613378128293/1564142737",
-    "description": "JUCE GUIアプリケーションをCircleCIでビルドしてテスト実行するにはいろいろ面倒事を解決しないといけないのでまとめておく。CircleCIでやっているのはたまたまなので、他にも任意のDocker Imageを使用してビルドできるCI環境があれば応用がきくはず。実行環境は今回はUbuntuを想定している（パッケージ名等を調整すれば任意のLinuxイメージで動くはず）。 アプリケーションを起動してテストを実行しないとしても、Projucerによるビルドファイル生成が含まれている場合は、結局依存パッケージが必要になるので、およそ面倒事は避けられないのではないかと思う。リポジトリに生成済み…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2020/01/01/121050": {
     "title": "juce_emscripten: 最新のJUCE on WebAssembly - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/f058310cfedafff25106cbff9974bab6f5415fd0/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fa%2Fatsushieno%2F20200101%2F20200101003632.png",
-    "description": "English version 目次 juce_emscriptenを体験する JUCEのプラットフォームバックエンドの基本 自分のプロジェクトをjuce_emscriptenでビルドする際の注意点 missing modules missing Projucer builder type missing resources 足りない機能は自分で移植できる おまけ 2020年元旦からわれわれの界隈には刺激的なニュースが出てきました。 www.dtmstation.com この記事で触れられているDreamtonics社がgithubで公開しているというのは、このjuce_emscriptenと…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2020/06/01/154822": {
     "title": "aria2web: SFZ ARIA GUI extensions on Web UI (Part I) - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/4c2aaa1881b872348511cf30aaf8edfc803e2d04/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fa%2Fatsushieno%2F20200601%2F20200601154625.png",
-    "description": "目次 動機: なぜSFZを使うのか ARIA GUIとは何か webaudio-controlsを活用してHTML UI化する なぜWeb AudioでもないのにWeb UIなのか 後半へ続く 4月頃に、自作オーディオプラグインフレームワークのUI構想についていろいろ検討していて、SFZサウンドフォントのARIAまわりを取り込んでsfizzというSFZサンプラー（プラグイン）に統合したいという話を書きました。 これをaria2webというプロジェクトとして開発して公開しています。まだ実用品ではないのですが、いろいろ知見があったので今のうちに書き連ねておこうと思います。 github.com a…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2020/06/11/230621": {
     "title": "aria2web: SFZ ARIA GUI extensions on Web UI (Part II) - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/e1f373198588c74dc997921ee6e4217493299f05/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fraw.githubusercontent.com%2Fatsushieno%2Faria2web%2Fmaster%2Faria2web-ipc.drawio.svg%3Fsanitize%3Dtrue",
-    "description": "復習と後半の導入 オーディオプラグインフレームワークの選択 LV2 UIの独立ライブラリ設計 LV2プラグイン実装のトレンドに関するフォローアップ LV2 External UI LV2 UIのプロセス分離 オーディオ処理部分とのやり取りとウィンドウ管理 AtomとPatch ウィンドウとインスタンス管理 プラグイン側からのSFZファイルの変更通知とUIへの反映 未解決の課題と応用 前回の続きとなるエントリーです。今回はWeb UIをLV2 UIとしてどう統合するか、という話。 atsushieno.hatenablog.com だいたい作る予定だった部分はほぼ完成したので、とりあえずこの開発…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2020/12/18/002931": {
     "title": "prefab: Android Studioの最新ネイティブライブラリ依存解決機構 - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/26006613666632331/1608573115",
-    "description": "Android Advent Calendar 2020の20日目はAndroid NDK方面で今開発が進んでいるPrefabパッケージ機構についていろいろまとめます。タイトルに書いている「ネイティブ」とはC/C++等のコンパイラが生成するCPUネイティブなコードの意味です*1。 目次 Prefabとは? AARパッケージの仕組みと、それだけでは足りない部分 Prefabツールによる状況の改善 prefabメタデータとprefabツールの役割 Prefabアーカイブの汎用性 モジュール Android StudioでPrefabパッケージを使う・作る PrefabとAGPのPrefabサポート…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2021/01/16/020602": {
     "title": "JUCE+CMake+Android now works - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/98ae674c807d85782fbc1c5dab1db762c4cfc3f3/backend=imagemagick;version=1;width=1300/https%3A%2F%2Flh3.googleusercontent.com%2FQkInENIJwlAjb42LYl8T_7hXIzj7umJKxV1tuBy8NPRvD3XLq54vzhb9DJFVKuN3QB6eK0lbIKlahkhyn2vIAcrx-v7EdABi0ugbWdSkGjNqDIXGwNiFOjQ1t4oGgeufKpzkKigUfp53S64KipgIHe6aYhnxlkui4REDiVoWsyw-2cEiCsVzDkPcmdYR_i_2exyGuVGhsKtQjV1btrh9kf82a_LPaIib8uPLmcqU2mBYq8ViSoE5-opX6QzTLArJjbn84icbvTB81Hn22f22n8Ct9m4GW50jXuYyT97uhhngMcgen33ZsCmdMEtHeKREhKq8WMp7schww-ENrF5GAAuWNiKfXD2gdhvp65HYBiljFRkT82oQy-ooeYYbHm_cgWSW9KJe7RkkGY7j5TBgpgC3G23lWeM2vqn_fb6bzlVW3Ef_cueXtBG6Lz6Oy6TYK-eqlaJYRm-sF5jcfuB2oLsSNGGoomfQdbB6lzUYsKe6qbKpa6iK_mUm5V9RjU5IKo6DlzBsVoab43etbJ9kqTAnhWsbpTLAhw67TIQOZ4Ml6zMPc4S9mME2PSphKQWaNgd3Lac4v0I3Jgpv2HoJlyVvSyelEnaD-3VMHCjDk6vY-GcVbK-VGbNColExkrpuTcXIUbp9gf-1HiLnSkB5C3MGYWehYeMQnOL7_4960Ii8m-Hv6zG_FuJV7TqXCQ%3Dw478-h734-no%3Fauthuser%3D0",
-    "description": "JUCE6はCMakeに対応していますが、実はCMake対応の恩恵を受けられないプラットフォームが存在します。Androidです。 「は?」というのが多分一番正しいでしょう。何しろCMakeはだいぶ前からAndroid Studioでサポートされているわけで、むしろ一番恩恵を受けるべきプラットフォームです。Win/Mac/Linux/iOSのいずれもCMakeネイティブなビルド環境ではないのに、むしろCMakeがネイティブのビルド環境としてサポートされているAndroidがなぜかサポート外になっているのです。このままではいけない。 目次 Missions 分析編 一般的なAndroid C++…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2021/12/16/052248": {
     "title": "JUCE6.1以降でも使えるダイアログ - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/13574176438043158519/1639628393",
-    "description": "JUCE Advent Calendar 2021 16日目のエントリーです。3回目なので(!)軽めにいきます。 今年リリースされたJUCE 6.1には、いくつかの破壊的変更が加えられています。JUCEでは公式に破壊的変更とみなしているものを全てトップレベルのBREAKING_CHANGES.txtに記録してあって、どんな破壊的変更が加えられたのかを手作業の更新として確認できますが、今回はその中からモーダルダイアログの扱いについてちょっと書きます。 The default value of JUCE_MODAL_LOOPS_PERMITTED has been changed from 1 t…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2021/12/24/205351": {
     "title": "VitalをAndroidで動かす - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/cc9ca3dad02d211ac6bdfe17a19c4a24433f1c5f/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fuser-images.githubusercontent.com%2F53929%2F146684386-9233832a-54d5-466d-9d92-9f2d3878dbf3.png",
-    "description": "JUCE Advent Calendar 2021、24日目も空いていたので滑り込ませてみました。今年4本目じゃん。 最近Vitaloidという名前でVitalをAndroidに移植して動かしてみたプロジェクトを作って遊んでいるので、どうすればそんなことができたのか、今何が出来るのか、何が出来ないのかについてまとめます。一応GitHub Actionsのbuild artifactにapkも含まれているので、興味がある人はいじってみてください（no supportです）。 github.com Vitalについて Vitalは2020年末にGPLv3でリリースされたウェーブテーブルシンセサイザ…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2022/03/13/173518": {
     "title": "JUCE on Android : fixing ClassNotFoundException on non-main thread - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/a1e08b3f01e68740f02cf41fbc1363b38176ee48/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fi.imgur.com%2FYZRFNcQ.png",
-    "description": "調査の端緒 JUCE on Androidには、メインスレッド以外ではJNI経由でAndroid frameworkとJUCEのクラス以外でまともにJNI呼び出しが行えないという問題が存在する。自分が初めての発見者というわけではないようで、JUCE forumに同様の報告がある。 forum.juce.com これは（詳しい分析はここではすっ飛ばして）juce::ThreadがAndroid NDKのドキュメントに沿ってjava.lang.Threadを適切に生成せずに処理を開始してしまうことに起因する。 https://developer.android.com/training/artic…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2022/06/10/135531": {
     "title": "モバイル・エコシステムに関する競争評価（中間報告）に対するパブリックコメント 最終版 - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/13574176438100749815/1654838776",
-    "description": "話題の*1「モバイル・エコシステムに関する競争評価（中間報告）に対するパブリックコメント」を自分でも書いたので公開しておきます。 public-comment.e-gov.go.jp 以下本文: この報告書の位置づけに対する理解 （この項目は、提出用フォーマットの「2.記載された内容の他に、考慮すべき視点とそれに対する意見」として記載します。） パブリックコメントは公開されて読まれる前提である、という考えに基づいて、このコメントは担当者の方以外にも読まれる体裁でまとめられている。 本コメントはmarkdown形式で書かれたものをメールで送信しているので、デジタルデータがあれば読みやすく復元でき…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2022/08/16/194517": {
     "title": "Android 13のMIDI 2.0サポートについて - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/4207112889909268201/1660646927",
-    "description": "Android 13正式版がリリースされてAOSPにcode dropされたようです。 Android 13には興味深い新機能がいくつかあって、個人的にはLE Audioサポートの追加で音楽ソフトの体験が変わりそうなのとAndroid 12Lで追加された（主に）タブレット向けの複数Activity並列動作のサポートが気になるところですが、それらと並んでMIDI 2.0サポートが追加されたことがAndroid Developers Blogに書かれているので、これを少し解説します。 MIDI 2.0 - Android 13 adds support for the new MIDI 2.0 s…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2023/06/17/164755": {
     "title": "MIDI 2.0 UMP June 2023 updatesについて - ものがたり",
     "image": "https://cdn.image.st-hatena.com/image/scale/2612b8ee0b375602901833d105fd6300515a6c75/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fi.imgur.com%2Fn7vWR0V.png",
-    "description": "半年前から「アップデートがある」と言われていたMIDI 2.0ですが、6/12にようやく最終版が確定して公開されました。MIDI 2.0という名称は変わりませんが、UMP（MIDIメッセージのフォーマット）の仕様への大掛かりな機能追加に加え、SMF2と呼ばれるMIDI Clip Fileフォーマット仕様の追加、MIDIデバイスの初期化まわりのプロトコルに対する非互換変更も加えられています。 概要はmidi.orgの記事に書かれているので、そちらを参考にすると良いでしょう。ひとつ注意点として、このページはブログ記事っぽい作りですが、実際には仕様のアップデートがあるたびに更新されているので、古い内…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2023/07/11/195301": {
     "title": "MIDI Clip File specificationについて - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/820878482949018254/1689072823",
-    "description": "先月MIDI 2.0 June 2023 UpdatesがリリースされてすぐUMP仕様についてのアップデートをまとめましたが、今回は仕様に新しく追加されたSMF2とも呼ばれているMIDI Clip File specificationについて説明します。 想定していた通り、今回の内容は前回と比べたら短いものですし、内容もそもそも先月仕様書が出た直後にgistでまとめてMastodonで公開した内容のとおりなので、まあ見逃していた人向けという感じです。 SMF2 = MIDI Clip File (finalized) + MIDI Container File (unpublished, dr…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2023/07/27/182539": {
     "title": "ResidentMIDIKeyboard: Android用の常駐型MIDIキーボード - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/820878482953210422/1690470592",
-    "description": "ずっとAndroid用のコードを書いているくせにAndroidアプリをリリースすることが全く無かったのですが、ちょっとオーディオプラグインプロジェクトの負担を減らすために(!?)、compose-audio-controlsの応用で常駐型MIDIキーボードアプリを作ったので、ひさしぶりにGoogle Play Storeアップロード体験してみるかと思ってリリースしてみました。といってもまだOpen Testingです。一応数日様子を見て、変更なく落ち着いたら正式リリースするつもりです（そうしない理由は特に無い）。 play.google.com ソースも公開しています。 github.com …",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2023/09/22/045131": {
     "title": "分離プロセスのオーディオプラグインにおけるStateとPresetsに関する覚書 - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/820878482969554241/1696070205",
-    "description": "parameters, states, presets オーディオプラグインの挙動は、主にパラメーターとそれ以外の状態 (state) に基づいている。GUI上で調整しているとこれらの違いをあまり意識しないが、パラメーターは主に32bit float、使い方によっては64bit floatひとつで設定するもので、それ以外の状態のデータ型や形式はプラグイン次第だ。これは一般的なオーディオプラグインフォーマットに共通する挙動といってよい。大抵は拡張機能の方式で規定されている。 32bit float（あるいは64bit float、面倒なので以降は言及しない）と決まっているパラメーターは、DAWに…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2024/02/23/181532": {
     "title": "Android 15のMIDI 2.0サポートについて - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/6801883189085539893/1708779957",
-    "description": "2/16（PST）にAndroid 15 DP1が公開され、\"Virtual MIDI 2.0 Devices\" のサポートが追加されました。これについてMIDI 2.0の最新の状況（自分が知りうる公知のもの）を踏まえて解説します。この機能を要望したのは自分なので*1、たぶん自分が説明するのが一番正しいはず… 承前: Android 13のMIDI 2.0サポートからどうなった? AndroidでMIDI 2.0の機能が初めて追加されたのは2年前のAndroid 13です。正式版がリリースされたとき、このブログでその詳細を解説しました。 atsushieno.hatenablog.com 内容…",
     "siteName": "ものがたり"
   },
   "https://atsushieno.hatenablog.com/entry/2026/04/29/154624": {
     "title": "Music Tech Meetup 2026.04 Postmortem - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/17179246901382013681/1777452575",
-    "description": "しばらく前の話ですが、4/15にMusic Tech Meetup・音楽技術勉強会を開催しました。 music-tech.connpass.com オフライン勉強会を開催するのも6年ぶりで、開催するほうの状況もいろいろ変わり、基本的に自分だけで企画して回すという不安要素だらけのスタートでしたが、いざやってみたら大成功でした。メインセッションも4本のLTも最先端を突っ走る刺激的な内容ばかりで、参加者の皆さんからも、ホストしてくださったCRIミドルウェア社の皆さんからも好評で、また開催してほしいという声を多数いただいたので、次も何とか企画して回せればと思っています。ヘルプしてくださった皆さんも含め…",
     "siteName": "ものがたり"
   },
   "https://audio.dev/": {
@@ -356,815 +295,654 @@
   "https://audio.dev/adc-japan-26/": {
     "title": "ADC Japan 26 - The Audio Developer Conferencedot-circle-o"
   },
-  "https://b35.jp/skyjournal/user.php?id=atsushieno&ds=20241116&de=20241117&ps=1000&os=0": {
-    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'b35.jp'. (_ssl.c:1081)>"
-  },
-  "https://blog.xamarin.com/inspect-visualize-and-debug-your-app-live/": {
-    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'blog.xamarin.com'. (_ssl.c:1081)>"
-  },
-  "https://blog.xamarin.com/xamarin-android-7-0-now-with-more-nougat/": {
-    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'blog.xamarin.com'. (_ssl.c:1081)>"
-  },
-  "https://blog.xamarin.com/xamarin-for-all/": {
-    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'blog.xamarin.com'. (_ssl.c:1081)>"
-  },
-  "https://blogs.msdn.microsoft.com/chomado/xamarin/joined-dotnetconf-japan-2016/": {
-    "error": "HTTP Error 404: Not Found"
-  },
   "https://booth.pm/ja/items/5010062": {
     "title": "INSIDE [技術のヒミツ] 【C102新刊】 - TechBooster - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/5010062/42554ce0-6320-4d58-bb71-1493ba4a8890_base_resized.jpg",
-    "description": "【新刊】 INSIDE [技術のヒミツ]（A5相当で60p）はTechBoosterの新刊です。 【電子書籍】 電子書籍は紙面とは組版が異なり、スマホ・タブレットに最適化したカラー版です。アップデートなどは電子版で対応します。 【配送情報】 ・紙媒体は8月20日(日曜日)の配送です。 ・紙＋電子および電子書籍のPDFは購入後、すぐにダウンロードできます。"
+    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/5010062/42554ce0-6320-4d58-bb71-1493ba4a8890_base_resized.jpg"
   },
   "https://bsky.app/profile/atsushieno.bsky.social/post/3l62n72j7zf2b": {
     "title": "Atsushi Eno (@atsushieno.bsky.social)",
     "image": "https://cdn.bsky.app/img/avatar_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreidf6vutxmvxhzhwwfyjdymz3nhotfcmknoujvo7qglp3wkj43d3vu",
-    "description": "昔「刑法と民法の対話」っていう書籍（というかもともとは法学教室の連載）があって、各論の諸問題をつまみ食いで検討するやつだったんだけど、技術書典17の新刊はそのオーディオプラグインフォーマット版みたいなやつにしようかと思っている（伝わらなそう）。 まだ目次案が出来たくらいで実現性は未定",
     "siteName": "Bluesky Social"
   },
   "https://bsky.app/profile/atsushieno.bsky.social/post/3lux2p67wjk24": {
     "title": "Atsushi Eno (@atsushieno.bsky.social)",
     "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreibhitsrpdr356jf3ocdvsdiyvshdn45dqhn5me4yjrauqbyiujsai",
-    "description": "仮想MIDI 2.0で演奏できるOPNplugのプラグインパラメーターをAssignable Controllerに割り当てて、その情報をMIDI-CIクライアントで取れるところまできた（内容はまだまだいろいろおかしいけど） ProgramListをpresetsに割り当てて、StateListをStateバイナリに割り当てたら、とりあえず当面の目的は達成だ",
     "siteName": "Bluesky Social"
   },
   "https://bsky.app/profile/atsushieno.bsky.social/post/3luxf2x5iyk26": {
     "title": "Atsushi Eno (@atsushieno.bsky.social)",
     "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreiapsagj7a4tzksjwhfptsj3663xs622vclfg7oj4kzidu4zxd6rs4",
-    "description": "VST3のOPNplugだとパラメーターが2100件くらいあって、それをAssignable Controllerで制御可能にすると、AllCtrlListの内容がそれだけのパラメーターが全部で500KB近いJSONメタデータになる。 https://gist.github.com/atsushieno/2f83a8e8511818dac379d96012840477 JUCEのCapabilityInquiryDemo取得させたら何分もかかってこれはちょっと使い物にならない。デモアプリにすぎないから真面目に最適化されていないっていう話はあるけど、現状これ以上に作り込まれたツールはあとは自作のktmidi-ci-toolくらいしかなさそう（これはちゃんと読める）。",
     "siteName": "Bluesky Social"
   },
   "https://bsky.app/profile/atsushieno.bsky.social/post/3lw7e4k4hjk2c": {
     "title": "Atsushi Eno (@atsushieno.bsky.social)",
     "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreigjq724epropcr4u4m7mlltjwnrvmrr6gu43p5npigwsi54dsuwze",
-    "description": "ようやくAllCtrlListのプロパティをMIDI 2.0デバイス化したVitalから取得できるようになった…これじゃ使い勝手が悪いからツマミのリストくらいにしないとな。 ちなみに列挙値も取れるからJUCEのproperty grid的なものも作れなくもない。オーディオプラグイン並のことができるようにしたいところだな。",
     "siteName": "Bluesky Social"
   },
   "https://bsky.app/profile/muo.jp/post/3meseushryk2y": {
     "title": "muo (@muo.jp)",
     "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5evvmyjp4eq4645jpfg6u2b7/bafkreidmkgrireua6umgyiya62aj32t6m7ke2ebrbdneh7kdsfvnekqkba",
-    "description": "最近ClaudeでAndroid用のXMLアイコン描かせてるんですが、妙に味があって気に入ってしまい困る事案にw",
     "siteName": "Bluesky Social"
   },
   "https://channel9.msdn.com/Events/Community-Open-Camp/Community-Open-Camp-2016/ComOpenCamp013": {
     "title": "ショー - イベントとビデオ コンテンツ",
     "image": "https://learn.microsoft.com/en-us/media/open-graph-image.png",
-    "description": "Microsoftから何千時間ものビデオ コンテンツを閲覧できます。 オンデマンド ビデオ、認定準備、過去のMicrosoft イベント、定期的なシリーズ。",
     "finalUrl": "https://learn.microsoft.com/ja-jp/shows/"
   },
   "https://commonsware.com/blog/2020/03/27/peek-surfacecontrolviewhost-android-r.html": {
     "title": "A Peek at SurfaceControlViewHost in Android R",
-    "description": "Android app development books",
     "siteName": "CommonsWare: Android App Development Books"
   },
   "https://community-open-camp.azurewebsites.net/": {
     "title": "Community Open Camp",
-    "image": "http://community-open-camp.azurewebsites.net/FBshare_v2.png",
-    "description": "Community Open Camp 由微軟MVP以及Docker 、Laravel 台灣、R 、Python等社群高手，即將於2016年8月27日星期六於中研究舉辦，帶給您一整天的實戰經驗分享 - 立即報名。"
+    "image": "http://community-open-camp.azurewebsites.net/FBshare_v2.png"
   },
   "https://connpass.com/event/162161/": {
     "title": "Music Tech Meetup #1 (Night) (2020/02/06 19:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": "## このコミュニティについて 音楽・オーディオ・作編曲のためのハードウェア・ソフトウェアに興味がある人が集まって勉強会などの集まりを催すコミュニティです。日本には多数の技術コミュニティがありますが、音楽に関する技術を軸としたコミュニティ勉強会はまだほとんどありません。 日々音楽に関するおもしろい技術に触れている楽器・エフェクター製作者やソフトウェアエンジニア、ゲームデベロッパー、またユーザーとしてDAWをはじめとするさまざまな音楽系ツールに熟練している作曲者・編曲者はそこそこいて、うっすらと興味がある人はもっとたくさんいるはずです。その知見を共有し合う場所があると、きっと面白いこと...",
     "siteName": "connpass",
     "finalUrl": "https://music-tech.connpass.com/event/162161/"
   },
   "https://connpass.com/event/203067/": {
     "title": "音声信号処理勉強会 (2021/02/05 19:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": "## 概要 音声処理・信号処理について{主催}が勉強したいけど1人で勉強するより同じ関心がある人と集まってわいわい勉強したほうが進みそうなので、同士を募集します。 今回は「プログラム101付き 音声信号処理」の読書会です。 https://shop.cqpub.co.jp/hanbai/books/31/31471.html 音にディレイエコーやリバーブ、リングモジュレーター、ボイスチェンジャー、ボーカルキャンセラーといった加工処理をどうやって行っているのか興味がある人が読む書籍です。ただし割と数学的な話も出てきたりするので、簡単には読み進められません。でもそこで止まってしまったら...",
     "siteName": "connpass"
   },
   "https://connpass.com/event/56773/": {
     "title": "ジェネリクス勉強会 (2017/06/24 13:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": "ジェネリクス、ジェネリック、多相、テンプレート、総称型、アドホック多相などに関する勉強会です。 これらに関することであれば基本、応用、実装、必要論、不要論を問いません。 ニコニコ生放送はこちら ## 注意 * 運営側で難易度調整することはないので、発表内容が理解できない（かもしれない）ことを覚悟しておきましょう * 私たちは技術者です。技術のことを語りましょう。 ## 発表者募集 * 発表者を先着で募集中です。 * 発表枠に登録した方を順次管理者に登録するので、発表タイトル編集は各自で行ってください。発表者になってタイトルも決まったのに、しばらく経っても管理者...",
     "siteName": "connpass"
   },
   "https://coscup.org/2022/zh-TW/session/HUJMQT": {
     "title": "What for, Where and How to Adopt MIDI 2.0 - COSCUP 2022 | Conference for Open Source Coders, Users, and Promoters",
     "image": "https://pretalx.com/media/avatars/1c55cf46019f01113eaf24b2c1df38a1_PCiQXwe.jpg",
-    "description": "Discuss what MIDI 2.0 achieves, what was already achieved before MIDI 2.0, an...",
     "siteName": "COSCUP 2022"
   },
   "https://dev.to/kotlin/how-to-build-and-publish-a-kotlin-multiplatform-library-going-public-4a8k": {
     "title": "Publishing your Kotlin Multiplatform library to Maven Central",
     "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3otvb2z646ytpt1hl2rv.jpg",
-    "description": "Now when we've built our first Kotlin Multiplatform library and learned about multiplatform library p...",
     "siteName": "DEV Community"
   },
   "https://devblogs.microsoft.com/xamarin/androidx-for-xamarin/": {
     "title": "Introducing AndroidX for Xamarin - Xamarin Blog",
     "image": "https://devblogs.microsoft.com/xamarin/wp-content/uploads/sites/44/2019/07/Xamarin.AndroidX_1024x1024.png",
-    "description": "The Android team has announced a new set of extension libraries known as AndroidX that includes simplified package names.",
     "siteName": "Xamarin Blog"
   },
   "https://developer.android.com/ndk/guides/cpp-support": {
     "title": "C++ ライブラリ サポート | Android NDK | Android Developers",
     "image": "https://developer.android.com/static/images/social/android-developers.png?hl=ja",
-    "description": "このドキュメントでは、Android NDK でサポートされている C++ ランタイム ライブラリ、その機能、トレードオフ、プロジェクトでの構成方法について説明します。",
     "siteName": "Android Developers",
     "finalUrl": "https://developer.android.com/ndk/guides/cpp-support?hl=ja"
   },
   "https://discourse.ardour.org/t/midi-polyphonic-expression-mpe-support/102019": {
     "title": "MIDI Polyphonic Expression (MPE) support?",
     "image": "https://discourse.ardour.org/uploads/default/original/1X/04cf878362daa89d075cafc45057853f731ff755.png",
-    "description": "If I understand correctly, the MPE (MIDI Polyphonic Expression) adds per-note pitchbends (and I guess other things too). Previously such stuff was impossible with standard MIDI, so in DAWs like FL Studio or LMMS only the internal plug-ins could use such features, using DAW-specific internal APIs. But with MPE there’s a standard way of doing it, so all plug-ins can do this and work between different DAWs! I know that Vital supports MPE, and I’ve seen some people testing the per-note pitchbends ...",
     "siteName": "Ardour"
   },
   "https://docs.com/iwanaga-nobuyuk/2848/net-platform-standard": {
     "title": "Microsoft Learn: 必要な答えがすぐ得られる環境で開発する",
     "image": "https://learn.microsoft.com/en-us/media/open-graph-image.png",
-    "description": "Microsoft 製品で作業およびトラブルシューティングを行うビルダー向けの公式ドキュメント、実用的なノウハウ、および専門家のガイダンスを確認します。",
     "finalUrl": "https://learn.microsoft.com/ja-jp/"
-  },
-  "https://docs.juce.com/master/namespaceuniversal__midi__packets.html": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://dotnetfringe-japan.connpass.com/event/74536/": {
     "title": ".NET Fringe Japan 2018 New Year Party (2018/01/27 13:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": ".NET Fringe Japanは日本版の .NET Fringe です。 .NET Fringe Japanでは、 .NETに関する深く詳細な話題を主に取り上げます。 今回は新年会です。 それぞれ発表が終わった後、そのまま同じ会場で懇親会を行います。 # タイムテーブル スピーカーおよびタイトルについては、予告なく変更されることがあります。 ご了承下さい。 時間 | スピーカー(敬称略) | タイトル ---|---|--- 13:00 - 13:05 | 鈴木幸敏 @yukitos | 挨拶 13:15 - 13:45 | Takashi Matsuoka ...",
     "siteName": "connpass"
   },
   "https://droidkaigi.github.io/2016/timetable.html": {
     "title": "DroidKaigi 2016",
     "image": "https://2016.droidkaigi.jp/images/ogimage.png",
-    "description": "Timetable",
     "siteName": "DroidKaigi 2016",
     "finalUrl": "https://2016.droidkaigi.jp/timetable.html"
   },
   "https://dtmer.info/vital/": {
     "title": "無料シンセサイザーVitalの使い方やプリセットまとめ！有料版レビューや違いも解説",
     "image": "https://i0.wp.com/dtmer.info/wp-content/uploads/2021/03/vital-audio-vital-thnumbnails-2.jpg?fit=1200%2C675&ssl=1",
-    "description": "無料で利用できるウェーブテーブルシンセ「Vital」。 無料にもかかわらず評価の高い人気ソフトシンセです。 そ…",
     "siteName": "DTMer.info"
   },
   "https://fedibird.com/@atsushieno/111373015072065047": {
     "title": "Atsushi Eno (@atsushieno@fedibird.com)",
     "image": "https://s3.fedibird.com/accounts/avatars/111/267/757/096/626/917/original/878180bf1963f735.jpg",
-    "description": "MIDI 2.0 UMPガイドブック 第2版（承認された） https://techbookfest.org/product/4827750072320000?productVariantID=5176379809202176 新刊だけど既刊のアップデートとしてあるので、既刊を購入してあれば無料で更新版をダウンロードできます（のはず）",
     "siteName": "Fedibird"
   },
   "https://foojay.io/today/foojay-podcast-54/": {
     "title": "Foojay Podcast #54: Music and MIDI with Java and Kotlin",
     "image": "https://foojay.io/wp-content/uploads/2024/06/podcast-guests-java-midi.png",
-    "description": "Within OpenJDK, there is a whole Java package dedicated to MIDI communication and data handling. Is it up to date? Are there better approaches now? And what can we do with music, Java, and Kotlin?",
     "siteName": "foojay"
   },
   "https://forum.juce.com/t/announcing-juce-6/38698": {
     "title": "Announcing JUCE 6",
     "image": "https://us1.discourse-cdn.com/flex026/uploads/juce/optimized/2X/1/1f3d90880a0951d5d37d326fa511ed04815118fa_2_1024x426.jpeg",
-    "description": "The JUCE team is excited to reveal the first details of the upcoming JUCE 6 release. This release is the culmination of many months of work and strengthens JUCE’s position as the leading framework for creating multi-platform audio software. JUCE 6 provides numerous updates that collectively allow developers to create new applications and plug-ins more efficiently, and includes powerful new workflows for combining existing software components. New Features in JUCE 6 CMake Support JUCE 6 improve...",
     "siteName": "JUCE"
   },
   "https://forum.juce.com/t/env-findclass-does-not-work-inside-juce-app-very-strange/46886": {
     "title": "env->FindClass does not work inside Juce app, very strange",
     "image": "https://us1.discourse-cdn.com/flex026/uploads/juce/original/3X/5/d/5ddd38e8d75b8fa577ecac71163dbf26267d83c1.png",
-    "description": "If I alter Juce’s JNI_Onload to this: extern \"C\" jint JNIEXPORT JNI_OnLoad (JavaVM* vm, void*) { // Huh? JNI_OnLoad was called two times! jassert (androidJNIJavaVM == nullptr); androidJNIJavaVM = vm; auto* env = getEnv(); // register the initialisation function auto juceJavaClass = env->FindClass(\"com/rmsl/juce/Java\"); __android_log_write(ANDROID_LOG_DEBUG, \"Tag\", \"finding MainActivity\"); auto S = env->FindClass(\"com/my_app/flutter_app/MainActivity\"); __an...",
     "siteName": "JUCE"
   },
   "https://forum.juce.com/t/midi-to-midi-using-vst3-inconsistent-on-various-daws/37927": {
     "title": "MIDI-to-MIDI using VST3: Inconsistent on various DAWs?",
     "image": "https://us1.discourse-cdn.com/flex026/uploads/juce/original/3X/5/d/5ddd38e8d75b8fa577ecac71163dbf26267d83c1.png",
-    "description": "Hi all, Hoping to get a general discussion going about this. I’m somewhat new to this and don’t have a lot of “insider” knowledge. I’m interested in developing VST3 plug-ins with MIDI input and MIDI output. I’ve been successful so far creating VST3 plug-ins that work in Ableton Live 10. In order to get things running in Ableton, I specifically had to check the “MIDI Input” and “MIDI Output” boxes under “Plugin Characteristics” in Projucer. Checking “MIDI Effect Plugin” causes the program to n...",
     "siteName": "JUCE"
   },
   "https://forum.juce.com/t/z-order-in-juce-is-weird/32056": {
     "title": "Z-order in JUCE is weird",
     "image": "https://us1.discourse-cdn.com/flex026/uploads/juce/original/3X/5/d/5ddd38e8d75b8fa577ecac71163dbf26267d83c1.png",
-    "description": "JUCE lets you define the z-order of child components as an optional second argument to addAndMakeVisible, which is nice. However, I find the way it works quite odd and not how I think z-order should work (please correct me if I’m wrong). In particular, if a component has N children, then all z-indices >= N will be considered equivalent, because of this code in Component::addChildComponent: if (zOrder < 0 || zOrder > childComponentList.size()) zOrder = childComponentList.size(); The surpri...",
     "siteName": "JUCE"
   },
   "https://g0v.social/@atsushieno/115020714252584895": {
     "title": "Atsushi Eno (@atsushieno@g0v.social)",
     "image": "https://objects.g0v.social/media_attachments/files/115/020/713/885/416/198/original/d28b6f3a99ffe828.png",
-    "description": "添付: 1枚の画像 making some progress on my top app",
     "siteName": "g0v.social"
   },
   "https://github.com/Birch-san/juicysfplugin": {
     "title": "GitHub - Birch-san/juicysfplugin: Audio plugin (e.g. VST, AU) to play soundfonts on macOS, Windows, Linux",
     "image": "https://opengraph.githubassets.com/7b4725772d8d562d749ce875a67d6209b7299de6c0a88d145884e1add459b067/Birch-san/juicysfplugin",
-    "description": "Audio plugin (e.g. VST, AU) to play soundfonts on macOS, Windows, Linux - Birch-san/juicysfplugin",
     "siteName": "GitHub"
   },
   "https://github.com/Birch-san/juicysfplugin/": {
     "title": "GitHub - Birch-san/juicysfplugin: Audio plugin (e.g. VST, AU) to play soundfonts on macOS, Windows, Linux",
     "image": "https://opengraph.githubassets.com/7b4725772d8d562d749ce875a67d6209b7299de6c0a88d145884e1add459b067/Birch-san/juicysfplugin",
-    "description": "Audio plugin (e.g. VST, AU) to play soundfonts on macOS, Windows, Linux - Birch-san/juicysfplugin",
     "siteName": "GitHub"
   },
   "https://github.com/Dreamtonics/juce_emscripten/": {
     "title": "GitHub - Dreamtonics/juce_emscripten: Port of JUCE to the browser via emscripten",
     "image": "https://opengraph.githubassets.com/28e2ffadc1b686670cb7291ebe0279693e279b713c6f44e0e4388475427bfc45/Dreamtonics/juce_emscripten",
-    "description": "Port of JUCE to the browser via emscripten. Contribute to Dreamtonics/juce_emscripten development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/FluidSynth/fluidsynth/commit/daa037b": {
     "title": "Add Android audio drivers based on OpenSLES and Oboe (#464) · FluidSynth/fluidsynth@daa037b",
     "image": "https://opengraph.githubassets.com/e3a0a9e716005fae33f40a811c817e23d70de436f42b3fcc92f928812c4b33b1/FluidSynth/fluidsynth/commit/daa037b0d3854077cf51e20da10541d931a5f607",
-    "description": "This set of changes implements audio drivers for Android, OpenSLES and Oboe. The changes in the original sources are kept minimal so that it should be easily maintained.",
     "siteName": "GitHub"
   },
   "https://github.com/Fluidsynth/fluidsynth/": {
     "title": "GitHub - FluidSynth/fluidsynth: Software synthesizer based on the SoundFont 2 specifications",
     "image": "https://opengraph.githubassets.com/ec679fca138f7d23c55c16a2f2affefea35be9cc031d67c076676f81cfb0ae5a/FluidSynth/fluidsynth",
-    "description": "Software synthesizer based on the SoundFont 2 specifications - FluidSynth/fluidsynth",
     "siteName": "GitHub"
   },
   "https://github.com/GuitarML/SmartGuitarAmp": {
     "title": "GitHub - GuitarML/SmartGuitarAmp: Guitar plugin made with JUCE that uses neural networks to emulate a tube amplifier.",
     "image": "https://repository-images.githubusercontent.com/293843943/61c99280-f1bb-11ea-822a-9d5bc04810a8",
-    "description": "Guitar plugin made with JUCE that uses neural networks to emulate a tube amplifier. - GuitarML/SmartGuitarAmp",
     "siteName": "GitHub"
   },
   "https://github.com/Microsoft/msbuild": {
     "title": "GitHub - dotnet/msbuild: The Microsoft Build Engine (MSBuild) is the build platform for .NET and Visual Studio.",
     "image": "https://repository-images.githubusercontent.com/32051890/f3614080-1f6f-11eb-965b-5d41819a287b",
-    "description": "The Microsoft Build Engine (MSBuild) is the build platform for .NET and Visual Studio. - dotnet/msbuild",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/dotnet/msbuild"
   },
   "https://github.com/TheWaveWarden/odin2": {
     "title": "GitHub - TheWaveWarden/odin2: Odin 2 Synthesizer Plugin",
     "image": "https://repository-images.githubusercontent.com/305401703/c4538b00-125d-11eb-9f68-8d6d7dfc1957",
-    "description": "Odin 2 Synthesizer Plugin. Contribute to TheWaveWarden/odin2 development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/Tracktion/tracktion_engine/": {
     "title": "GitHub - Tracktion/tracktion_engine: Tracktion Engine module",
     "image": "https://opengraph.githubassets.com/574a7390d63976eb6100e19e23a2ace754794304baa95eb4298d404352efb47e/Tracktion/tracktion_engine",
-    "description": "Tracktion Engine module. Contribute to Tracktion/tracktion_engine development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/Wohlstand/OPN2BankEditor": {
     "title": "GitHub - Wohlstand/OPN2BankEditor: A small cross-platform editor of the OPN2 FM banks of different formats (Downloads in README below)",
     "image": "https://opengraph.githubassets.com/570fe30e1cbc42f740f6fbce3a71cb5ea7c083340218dda24a71472c81dc321a/Wohlstand/OPN2BankEditor",
-    "description": "A small cross-platform editor of the OPN2 FM banks of different formats (Downloads in README below) - Wohlstand/OPN2BankEditor",
     "siteName": "GitHub"
   },
   "https://github.com/angushewlett/plugnpain": {
     "title": "GitHub - angushewlett/plugnpain: Questions you should ask of any proposed audio plug-in API",
     "image": "https://opengraph.githubassets.com/975bd7ebe6ad3c2645bc1c2ea05732b9964a496e1a9df8d8c579c5941fe8b41e/angushewlett/plugnpain",
-    "description": "Questions you should ask of any proposed audio plug-in API - angushewlett/plugnpain",
     "siteName": "GitHub"
   },
   "https://github.com/artfwo/andes": {
     "title": "GitHub - artfwo/andes: Experimental sound synthesiser based on Perlin noise",
     "image": "https://opengraph.githubassets.com/d3db0962623d21487c767961ba4840bc4951e3668fdae85c99fc99d2319e2a52/artfwo/andes",
-    "description": "Experimental sound synthesiser based on Perlin noise - artfwo/andes",
     "siteName": "GitHub"
   },
   "https://github.com/asb2m10/dexed": {
     "title": "GitHub - asb2m10/dexed: DX7 FM multi plaform/multi format plugin",
     "image": "https://opengraph.githubassets.com/dae718f5b0a0d4bfc389bf8afaf9caeb9e12809da65cf9c782c6b73b5362cabd/asb2m10/dexed",
-    "description": "DX7 FM multi plaform/multi format plugin. Contribute to asb2m10/dexed development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/ADLplug-AE/": {
     "title": "GitHub - atsushieno/ADLplug-AE: modernized ADLplug build with JUCE7 and CMake setup in JUCE6 manner",
     "image": "https://opengraph.githubassets.com/b2f8fb12db92f5af9a5e0bc3d86b715ca3d1a39d2ff3551343ea6ce156e30708/atsushieno/ADLplug-AE",
-    "description": "modernized ADLplug build with JUCE7 and CMake setup in JUCE6 manner - atsushieno/ADLplug-AE",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/ADLplug/tree/juce6-lv2": {
     "title": "GitHub - atsushieno/ADLplug at juce6-lv2",
     "image": "https://opengraph.githubassets.com/f3f9eb8b0124ea2622462538bb086216bee0e5586fd1b7e874dcf7a691da687d/atsushieno/ADLplug",
-    "description": "FM Chip Synthesizer — OPL & OPN — VST/LV2/Standalone , branch for android and juce_emscripten, also android-juce6 for aap - atsushieno/ADLplug",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/JUCE/tree/juce6%2Blv2": {
     "title": "GitHub - atsushieno/JUCE at juce6+lv2",
     "image": "https://opengraph.githubassets.com/964e73c319ca3d8014c55300f56f49d04f6b9549963e83d081c5bee56cdc4eac/atsushieno/JUCE",
-    "description": "The JUCE cross-platform C++ framework. juce_emscripten_607 branch derived from Dreamtonics/juce_emscripten / also ADLplug develop+lv2 fork - atsushieno/JUCE",
     "siteName": "GitHub"
-  },
-  "https://github.com/atsushieno/TechBookFest3Xamarin/issues/1": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://github.com/atsushieno/aap-core/blob/3f624bb816436217ca8bf9c8afabe5be522aa741/include/aap/ext/midi.h#L25": {
     "title": "aap-core/include/aap/ext/midi.h at 3f624bb816436217ca8bf9c8afabe5be522aa741 · atsushieno/aap-core",
     "image": "https://opengraph.githubassets.com/6e44370ef646f40c06843d9f3b35f883388f81be395115577c9083aeff8a1055/atsushieno/aap-core",
-    "description": "an Audio Plugin Format/Framework for Android. Contribute to atsushieno/aap-core development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-core/blob/96f80bb/docs/DEVELOPERS.md#profiling-audio-processing": {
     "title": "aap-core/docs/DEVELOPERS.md at 96f80bb87210c656209bb71c95283afbb2850a4c · atsushieno/aap-core",
     "image": "https://opengraph.githubassets.com/6e44370ef646f40c06843d9f3b35f883388f81be395115577c9083aeff8a1055/atsushieno/aap-core",
-    "description": "an Audio Plugin Format/Framework for Android. Contribute to atsushieno/aap-core development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-core/discussions/115#discussioncomment-5663438": {
     "title": "AAP 0.7.x releases · atsushieno/aap-core · Discussion #115",
     "image": "https://opengraph.githubassets.com/60c817de6a619401b21df4c15286cc76016214c8569804be72d311b51cf6baa7/atsushieno/aap-core/discussions/115",
-    "description": "I'll be recording release notes here, kind of. Today I tagged 0.7.3 release. The 0.7.2 release had a lot of fundamental changes regarding extensions (\"AAPXS\", as documented in EXTENSIONS.md). The f...",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-core/discussions/115#discussioncomment-6389753": {
     "title": "AAP 0.7.x releases · atsushieno/aap-core · Discussion #115",
     "image": "https://opengraph.githubassets.com/60c817de6a619401b21df4c15286cc76016214c8569804be72d311b51cf6baa7/atsushieno/aap-core/discussions/115",
-    "description": "I'll be recording release notes here, kind of. Today I tagged 0.7.3 release. The 0.7.2 release had a lot of fundamental changes regarding extensions (\"AAPXS\", as documented in EXTENSIONS.md). The f...",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-core/discussions/115#discussioncomment-7096981": {
     "title": "AAP 0.7.x releases · atsushieno/aap-core · Discussion #115",
     "image": "https://opengraph.githubassets.com/60c817de6a619401b21df4c15286cc76016214c8569804be72d311b51cf6baa7/atsushieno/aap-core/discussions/115",
-    "description": "I'll be recording release notes here, kind of. Today I tagged 0.7.3 release. The 0.7.2 release had a lot of fundamental changes regarding extensions (\"AAPXS\", as documented in EXTENSIONS.md). The f...",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-core/discussions/207": {
     "title": "AAP v0.9.1 release (along with aap-lv2 v0.4.1 and aap-juce v0.6.1) · atsushieno/aap-core · Discussion #207",
     "image": "https://opengraph.githubassets.com/e9faae6a4c220daa875f7cd31f7aa9fc8e4f43cb2fa22f75d68a52b64a67ff95/atsushieno/aap-core/discussions/207",
-    "description": "Today I tagged and released aap-core v0.9.1, aap-lv2 v0.4.1 and aap-juce v0.6.1. There has not been many development activities in AAP land since last release (v0.9.0) and there is almost no new fe...",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce": {
     "title": "GitHub - atsushieno/aap-juce: AAP (Audio Plugins For Android) JUCE integration.",
     "image": "https://opengraph.githubassets.com/a51b1b6408d4dae932e52db794f5c01af103bffc3465a8771f9c13fdedf13769/atsushieno/aap-juce",
-    "description": "AAP (Audio Plugins For Android) JUCE integration. Contribute to atsushieno/aap-juce development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-audible-planets/": {
     "title": "GitHub - atsushieno/aap-juce-audible-planets: Audible Planets port to AAP (Audio Plugins For Android)",
     "image": "https://opengraph.githubassets.com/094ce6858ca46b65b7de228d9f70c11bab57479218805054d5a5f3e7f40bca60/atsushieno/aap-juce-audible-planets",
-    "description": "Audible Planets port to AAP (Audio Plugins For Android) - atsushieno/aap-juce-audible-planets",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-ddsp": {
     "title": "GitHub - atsushieno/aap-juce-ddsp: ddsp-vst ported to AAP (Audio Plugins For Android) using aap-juce",
     "image": "https://opengraph.githubassets.com/1d73bab7cd2b0ebcfe8401be0b03d1368303553f1b75f656f11a8bbd1dd27242/atsushieno/aap-juce-ddsp",
-    "description": "ddsp-vst ported to AAP (Audio Plugins For Android) using aap-juce - atsushieno/aap-juce-ddsp",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-helio": {
     "title": "GitHub - atsushieno/aap-juce-helio: experimental aap-juce port of helio-workstation",
     "image": "https://opengraph.githubassets.com/d3428a3f7d6df510e326db92b01a1d6d070485f8ffb766c059d616a6e168c696/atsushieno/aap-juce-helio",
-    "description": "experimental aap-juce port of helio-workstation. Contribute to atsushieno/aap-juce-helio development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-hera": {
     "title": "GitHub - atsushieno/aap-juce-hera: experimental Hera port to AAP (Android Audio Plugin)",
     "image": "https://opengraph.githubassets.com/a13fca29a9ee84366bf45b70aa1ddc0e4cfc1e80338db99bb131d6061205b052/atsushieno/aap-juce-hera",
-    "description": "experimental Hera port to AAP (Android Audio Plugin) - atsushieno/aap-juce-hera",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-simple-host": {
     "title": "GitHub - atsushieno/aap-juce-simple-host: Audio Plugins For Android (AAP) example simple host for dogfooding aap-juce hosting API",
     "image": "https://opengraph.githubassets.com/e63c2ccb63061cf6e2cc8d7bfd49ce40ac5fc41659ae5829733d6657a3610ecb/atsushieno/aap-juce-simple-host",
-    "description": "Audio Plugins For Android (AAP) example simple host for dogfooding aap-juce hosting API - atsushieno/aap-juce-simple-host",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-surge": {
     "title": "GitHub - atsushieno/aap-juce-surge",
     "image": "https://opengraph.githubassets.com/44ef0a6c615eceea8431bbead5146a8ce24e17c501271e63a66133a47337c082/atsushieno/aap-juce-surge",
-    "description": "Contribute to atsushieno/aap-juce-surge development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-vital": {
     "title": "GitHub - atsushieno/aap-juce-vital: port of Vi(t)al to Audio Plugins For Android (AAP)",
     "image": "https://opengraph.githubassets.com/7704e4f007cbbf6a5515b33a6b33832faadfaad4b07655f614b31f654ced8a9f/atsushieno/aap-juce-vital",
-    "description": "port of Vi(t)al to Audio Plugins For Android (AAP) - atsushieno/aap-juce-vital",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce/": {
     "title": "GitHub - atsushieno/aap-juce: AAP (Audio Plugins For Android) JUCE integration.",
     "image": "https://opengraph.githubassets.com/a51b1b6408d4dae932e52db794f5c01af103bffc3465a8771f9c13fdedf13769/atsushieno/aap-juce",
-    "description": "AAP (Audio Plugins For Android) JUCE integration. Contribute to atsushieno/aap-juce development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-lv2-aida-x": {
     "title": "GitHub - atsushieno/aap-lv2-aida-x: AIDA-X port to AAP (Audio Plugins For Android) using aap-lv2",
     "image": "https://opengraph.githubassets.com/58ee067a78180f74e9022c9302e9217359c4306ea214b4fea97d16a9767486fa/atsushieno/aap-lv2-aida-x",
-    "description": "AIDA-X port to AAP (Audio Plugins For Android) using aap-lv2 - atsushieno/aap-lv2-aida-x",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-lv2-string-machine": {
     "title": "GitHub - atsushieno/aap-lv2-string-machine: AAP port of String-Machine",
     "image": "https://opengraph.githubassets.com/dee37634e8e2df07053bd28b902710bdc581eeaecad4cee89a9794031e1ece15/atsushieno/aap-lv2-string-machine",
-    "description": "AAP port of String-Machine. Contribute to atsushieno/aap-lv2-string-machine development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-lv2/releases/tag/v0.1.3": {
     "title": "Release r0.1.3 · atsushieno/aap-lv2",
     "image": "https://opengraph.githubassets.com/c08d4b6b1c0334e90e70014931f8b78daf60b5c7c37f56ed43a7232370f67535/atsushieno/aap-lv2/releases/tag/v0.1.3",
-    "description": "This is the first unified successful builds across aap-lv2, aap-lv2-sfizz, aap-lv2-guitarix, and aap-lv2-fluidsynth. Everything loads on aaphostsample.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/android-audio-plugin-framework/blob/main/docs/design/NEW_PORTS.md": {
     "title": "aap-core/docs/design/NEW_PORTS.md at main · atsushieno/aap-core",
     "image": "https://opengraph.githubassets.com/6e44370ef646f40c06843d9f3b35f883388f81be395115577c9083aeff8a1055/atsushieno/aap-core",
-    "description": "an Audio Plugin Format/Framework for Android. Contribute to atsushieno/aap-core development by creating an account on GitHub.",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/atsushieno/aap-core/blob/main/docs/design/NEW_PORTS.md"
   },
   "https://github.com/atsushieno/android-audio-plugin-framework/issues/101": {
     "title": "Reorganize native hosting and service API · Issue #101 · atsushieno/aap-core",
     "image": "https://opengraph.githubassets.com/30cbd2b8121bce8f2b89788c20ef1d49d0d5d3339996337b99a1464501a01ed4/atsushieno/aap-core/issues/101",
-    "description": "It is 50% design document, but tentative, also will be updated as it goes. Not a comprehensive list (at least yet). Background AAP had started with similar concept to desktop plugin APIs like LV2, ...",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/atsushieno/aap-core/issues/101"
   },
   "https://github.com/atsushieno/android-audio-plugin-framework/issues/71": {
     "title": "meta: AAP roadmap 2021 edition · Issue #71 · atsushieno/aap-core",
     "image": "https://opengraph.githubassets.com/990148b35abd79633d315450bf000b9baa2b2c49a689d0db03133c5a2c879ed2/atsushieno/aap-core/issues/71",
-    "description": "This is a roadmap for Android Audio Plugin Framework in 2021. I don't put any concrete milestones for each task, but many of them are connected. (a) redesign ports (a1) port properties : required f...",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/atsushieno/aap-core/issues/71"
   },
   "https://github.com/atsushieno/android-audio-plugin-framework/issues/96": {
     "title": "meta: AAP roadmap 2022 edition · Issue #96 · atsushieno/aap-core",
     "image": "https://opengraph.githubassets.com/3ccdc9a0ef963e5a52a6f5dce81878d6c14a1a7ac6a9737ed13084d04a17c6dd/atsushieno/aap-core/issues/96",
-    "description": "This is a roadmap for the entire Android Audio Plugin Framework in 2022. It in general takes over Roadmap 2021: #71 . It will be occasionally updated as new tasks show up. Refactoring various piece...",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/atsushieno/aap-core/issues/96"
   },
   "https://github.com/atsushieno/android-experiment": {
     "title": "GitHub - atsushieno/android-experiment: atsushieno's playground for Android stuff.",
     "image": "https://opengraph.githubassets.com/0d7eba97628b12f5babd656767115bae6a0fba4a3ed91cf3e04d2870bf2d678e/atsushieno/android-experiment",
-    "description": "atsushieno's playground for Android stuff. Contribute to atsushieno/android-experiment development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/android-native-audio-builders/": {
     "title": "GitHub - atsushieno/android-native-audio-builders: Android native library builder script",
     "image": "https://opengraph.githubassets.com/b4cff405a3dfdc48fb219f29404c746ec0292d513d97ee83a57389e4c84f0187/atsushieno/android-native-audio-builders",
-    "description": "Android native library builder script. Contribute to atsushieno/android-native-audio-builders development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aria2web": {
     "title": "GitHub - atsushieno/aqua: experimental sfz ARIA extensions converter to HTML and LV2 UI implementation",
     "image": "https://opengraph.githubassets.com/88a1d7a2a57a892e5b08384589e7703766bc785d41d780f012850938a0422189/atsushieno/aqua",
-    "description": "experimental sfz ARIA extensions converter to HTML and LV2 UI implementation - atsushieno/aqua",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/atsushieno/aqua"
   },
   "https://github.com/atsushieno/atsushieno-fmbank": {
     "title": "GitHub - atsushieno/atsushieno-fmbank: My FM tone definitions for OPN (YM-2203) chip, in OPM format.",
     "image": "https://opengraph.githubassets.com/a0817441e74d3a1c1c383bc699b0332491c8d33fe469bb760e71c4282caabca6/atsushieno/atsushieno-fmbank",
-    "description": "My FM tone definitions for OPN (YM-2203) chip, in OPM format. - atsushieno/atsushieno-fmbank",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/augene-ng": {
     "title": "GitHub - atsushieno/augene-ng: MML + MIDI + Tracktion Engine XML manipulation tool for real production",
     "image": "https://opengraph.githubassets.com/812a4f916b23b7bb0ed75785b63f9a8421c998a354b212bf8f0071659d862626/atsushieno/augene-ng",
-    "description": "MML + MIDI + Tracktion Engine XML manipulation tool for real production - atsushieno/augene-ng",
     "siteName": "GitHub"
-  },
-  "https://github.com/atsushieno/augene-ng-production/actions/runs/1549073098": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://github.com/atsushieno/ayumi-juce": {
     "title": "GitHub - atsushieno/ayumi-juce: ayumi YM2149 emulator on VST3",
     "image": "https://opengraph.githubassets.com/33ab7715c19ca4a2e5cffb65d2013ea5d2b992d2bdc66440655155e1c36545a4/atsushieno/ayumi-juce",
-    "description": "ayumi YM2149 emulator on VST3. Contribute to atsushieno/ayumi-juce development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/cmidi2": {
     "title": "GitHub - atsushieno/cmidi2: header-only MIDI 2.0 UMP and MIDI-CI binary processor library",
     "image": "https://opengraph.githubassets.com/e036150dd2698f5acfa6c7c1410ff37c8c17778a0c62f3febc681d87aa0078ab/atsushieno/cmidi2",
-    "description": "header-only MIDI 2.0 UMP and MIDI-CI binary processor library - atsushieno/cmidi2",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/compose-audio-controls": {
     "title": "GitHub - atsushieno/compose-audio-controls: audio controls for Jetpack Compose and Compose for Multiplatform",
     "image": "https://opengraph.githubassets.com/34e53773051104b650edbfe9014b6d579d1ea5759febad4f72e843dcd2aa7678/atsushieno/compose-audio-controls",
-    "description": "audio controls for Jetpack Compose and Compose for Multiplatform - atsushieno/compose-audio-controls",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/compose-mpp/": {
     "title": "GitHub - atsushieno/compose-mpp: Fill the missing gap between MPP and Jetpack Compose + Compose for Desktop / archived as there are AlertDialog and ExposedDropDownMenu in multiplatform",
     "image": "https://opengraph.githubassets.com/46e368d207860cdbe9927d7d0748a6199cb4eb3da666e95a5beb9ba675348e3f/atsushieno/compose-mpp",
-    "description": "Fill the missing gap between MPP and Jetpack Compose + Compose for Desktop / archived as there are AlertDialog and ExposedDropDownMenu in multiplatform - atsushieno/compose-mpp",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/fluidsynth-midi-service-j": {
     "title": "GitHub - atsushieno/fluidsynth-midi-service-j: JNA-based fluidsynth MIDI device service effort",
     "image": "https://opengraph.githubassets.com/680af18d2e1ddd43250b28baf0330da5e88bcafcaf700d39c9a5853b7342ca63/atsushieno/fluidsynth-midi-service-j",
-    "description": "JNA-based fluidsynth MIDI device service effort. Contribute to atsushieno/fluidsynth-midi-service-j development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/jeq8": {
     "title": "GitHub - atsushieno/jeq8: https://imgur.com/a/wGTqIro",
     "image": "https://opengraph.githubassets.com/487936ea23eee41445ede48b69f33979e493d4109cac7b6117f2016f27e20741/atsushieno/jeq8",
-    "description": "https://imgur.com/a/wGTqIro. Contribute to atsushieno/jeq8 development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/kmdsp": {
     "title": "GitHub - atsushieno/kmdsp: MIDI 1.0/2.0 visual music player for desktop (JVM), Android, iOS and Web (wasmJs) using Kotlin Multiplatform",
     "image": "https://opengraph.githubassets.com/6f5efae854ca71ff92b29ab9c5186a1c72036ad8b4f97650233d84c634da6c20/atsushieno/kmdsp",
-    "description": "MIDI 1.0/2.0 visual music player for desktop (JVM), Android, iOS and Web (wasmJs) using Kotlin Multiplatform - atsushieno/kmdsp",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/libcxx-provider/": {
     "title": "GitHub - atsushieno/libcxx-provider: A utility Android package that just provides libc++_shared.so for apps with complex STL dependencies",
     "image": "https://opengraph.githubassets.com/eb23bf1e0034df93f468bc6ec0978d521af7972f268c0ef79e81612c916344f7/atsushieno/libcxx-provider",
-    "description": "A utility Android package that just provides libc++_shared.so for apps with complex STL dependencies - atsushieno/libcxx-provider",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/libremidi-javacpp": {
     "title": "GitHub - atsushieno/libremidi-javacpp: DEPRECATED JavaCPP binding for libremidi => use my libremidi-panama instead",
     "image": "https://opengraph.githubassets.com/168ab29a849c0a1ec9ad221db36a983c78e22632f9c893e2f28d1e87cd5d9903/atsushieno/libremidi-javacpp",
-    "description": "DEPRECATED JavaCPP binding for libremidi => use my libremidi-panama instead - atsushieno/libremidi-javacpp",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/libremidi-panama": {
     "title": "GitHub - atsushieno/libremidi-panama: A modern Panama-based libremidi Java binding.",
     "image": "https://opengraph.githubassets.com/69603c2005abdd0b6027e398acee3f2dc7a38a9869437eff7000ec5fe766a27a/atsushieno/libremidi-panama",
-    "description": "A modern Panama-based libremidi Java binding. Contribute to atsushieno/libremidi-panama development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/libsoundio-sharp": {
     "title": "GitHub - atsushieno/libsoundio-sharp: cross platform audio I/O library wrapped in C# API",
     "image": "https://opengraph.githubassets.com/014a97b415837fdd9eac543130b2d042dd5ca43b071fff85c67fae6ee4443543/atsushieno/libsoundio-sharp",
-    "description": "cross platform audio I/O library wrapped in C# API - atsushieno/libsoundio-sharp",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/lilv-sharp": {
     "title": "GitHub - atsushieno/lilv-sharp: lilv C# binding (very immature) you cannot really generate the sources without fixed lilv.",
     "image": "https://opengraph.githubassets.com/566fe6037d5e6b53730f8e16c849a43fc0ce46414f0c4ec4557f3d34ac4c053e/atsushieno/lilv-sharp",
-    "description": "lilv C# binding (very immature) you cannot really generate the sources without fixed lilv. - atsushieno/lilv-sharp",
     "siteName": "GitHub"
-  },
-  "https://github.com/atsushieno/lv2-developers-guide/": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://github.com/atsushieno/lv2-midi2": {
     "title": "GitHub - atsushieno/lv2-midi2: (ongoing/experimental) LV2 extension feature to support MIDI 2.0 UMP through cmidi2 library.",
     "image": "https://opengraph.githubassets.com/9a019f0783a8431c54c34f33fbb544e4b84cd7099300c83ea0a73bc700b3e3c4/atsushieno/lv2-midi2",
-    "description": "(ongoing/experimental) LV2 extension feature to support MIDI 2.0 UMP through cmidi2 library. - atsushieno/lv2-midi2",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/midicci": {
     "title": "GitHub - atsushieno/midicci: MIDI-CI tools and libraries in C++, and a fully featured software MIDI 2.0 keyboard",
     "image": "https://opengraph.githubassets.com/5bda61f208f3b7d5f3516856c68fa3848705fd899cfface3793da173a82687fa/atsushieno/midicci",
-    "description": "MIDI-CI tools and libraries in C++, and a fully featured software MIDI 2.0 keyboard - atsushieno/midicci",
     "siteName": "GitHub"
-  },
-  "https://github.com/atsushieno/midicci/tree/main/tools/ump-keyboard": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://github.com/atsushieno/missing-dot/": {
     "title": "GitHub - atsushieno/missing-dot: a migration helper library from .NET to Kotlin Multiplatform",
     "image": "https://opengraph.githubassets.com/3401dafe81898a7a5a8f89cd857be26686c293d053ad18974773cebcd5304a73/atsushieno/missing-dot",
-    "description": "a migration helper library from .NET to Kotlin Multiplatform - atsushieno/missing-dot",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/mugene-guide-book": {
     "title": "GitHub - atsushieno/mugene-guide-book: sources for book \"MMLコンパイラmugeneによる音楽制作ガイド\"",
     "image": "https://opengraph.githubassets.com/4e71e1aa094db3550bf285d7e642a5a2c685925227cf056765e73c2d659f833e/atsushieno/mugene-guide-book",
-    "description": "sources for book \"MMLコンパイラmugeneによる音楽制作ガイド\". Contribute to atsushieno/mugene-guide-book development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/ntracktive/tree/master/samples/Augene": {
     "title": "ntracktive/samples/Augene at main · atsushieno/ntracktive",
     "image": "https://opengraph.githubassets.com/9e4229516daeb78a5445150f58dc30b3142e6d4a1a24927341b866ec1a8d3500/atsushieno/ntracktive",
-    "description": "Manipulate .tracktionedit files without loading the entire Tracktion workload - atsushieno/ntracktive",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/atsushieno/ntracktive/tree/main/samples/Augene"
   },
   "https://github.com/atsushieno/ob-x-ae": {
     "title": "GitHub - atsushieno/OB-X-AE: modernized fork of (fork of) OSS version of OB-Xd with CMake for LV2, CLAP, and AAP (Android)",
     "image": "https://opengraph.githubassets.com/c5e829fe58ba2792d6867a3f3ec8decf1c70d3fd93635db1fd9b2e7abc769ee4/atsushieno/OB-X-AE",
-    "description": "modernized fork of (fork of) OSS version of OB-Xd with CMake for LV2, CLAP, and AAP (Android) - atsushieno/OB-X-AE",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/open-vital-resources": {
     "title": "GitHub - atsushieno/open-vital-resources: Open-source compatible Vital resources that were converted from open resources.",
     "image": "https://opengraph.githubassets.com/e50a90910ce0da5109fc0305db1171c9ce755f3fccbddceae83c6b4e295cd14f/atsushieno/open-vital-resources",
-    "description": "Open-source compatible Vital resources that were converted from open resources. - atsushieno/open-vital-resources",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/resident-midi-keyboard": {
     "title": "GitHub - atsushieno/resident-midi-keyboard: Resident MIDI Keyboard for Android",
     "image": "https://opengraph.githubassets.com/bdc750b3a3b5f4cc60fcb0e4aa4f4fae6a7acd4006b1e56f47c71a733a42f21d/atsushieno/resident-midi-keyboard",
-    "description": "Resident MIDI Keyboard for Android. Contribute to atsushieno/resident-midi-keyboard development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/rtmidi-javacpp": {
     "title": "GitHub - atsushieno/rtmidi-javacpp",
     "image": "https://opengraph.githubassets.com/77103d2beda4312ef03b0774c7cee1faa02ed54d4c82ff649c8e7362a84b490d/atsushieno/rtmidi-javacpp",
-    "description": "Contribute to atsushieno/rtmidi-javacpp development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/soundfont-player-cs": {
     "title": "GitHub - atsushieno/soundfont-player-cs: SoundFont player to easily find sound, particularly drum instruments",
     "image": "https://opengraph.githubassets.com/00dd494d594a9bbb27a05d54edfc77243fdc138a8a186868caf4f2a4033de425/atsushieno/soundfont-player-cs",
-    "description": "SoundFont player to easily find sound, particularly drum instruments - atsushieno/soundfont-player-cs",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/uapmd": {
     "title": "GitHub - atsushieno/uapmd: A liberal plugin hosting library (VST3/AU/LV2/CLAP/AAP/WebCLAP) with fully-featured MIDI 2.0 (UMP + MIDI-CI) frontend where applicable. Create virtual MIDI 2.0 devices using your favorite plugins.",
     "image": "https://opengraph.githubassets.com/02df56261cdf0a25bea0e7bb02abb892e357e4382be60ba2ae27ca3d0f661187/atsushieno/uapmd",
-    "description": "A liberal plugin hosting library (VST3/AU/LV2/CLAP/AAP/WebCLAP) with fully-featured MIDI 2.0 (UMP + MIDI-CI) frontend where applicable. Create virtual MIDI 2.0 devices using your favorite plugins. ...",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/uapmd-android": {
     "title": "GitHub - atsushieno/uapmd-android: <del>experimental Android port of uapmd (which means, bunch of dependency hell resolved)</del> It is now part of uapmd",
     "image": "https://opengraph.githubassets.com/7e6350d2e6ac60d94f2e55bbd8b3c32f1ea71c8ca717ec4e13f5ece0d24086c9/atsushieno/uapmd-android",
-    "description": "<del>experimental Android port of uapmd (which means, bunch of dependency hell resolved)</del> It is now part of uapmd - atsushieno/uapmd-android",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/uapmd-kmp": {
     "title": "GitHub - atsushieno/uapmd-kmp: Kotlin bindings and CMP porting experiment for uapmd - not working due to plugin UI hosting",
     "image": "https://opengraph.githubassets.com/e14d6f4b90df8311a3ed6859bf23ee6cfe22f48ad7adc0b2e34dc27b4926b211/atsushieno/uapmd-kmp",
-    "description": "Kotlin bindings and CMP porting experiment for uapmd - not working due to plugin UI hosting - atsushieno/uapmd-kmp",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/vital/tree/batch-import-wavetables": {
     "title": "GitHub - atsushieno/vital at batch-import-wavetables",
     "image": "https://opengraph.githubassets.com/0ff32cb347622a43176263ef4310295b631990546f0dfd4c613182cfa362f763/atsushieno/vital",
-    "description": "Spectral warping wavetable synth / batch-import-wavetables branch by atsushieno - atsushieno/vital",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/xamarin-android-d8-build": {
     "title": "GitHub - atsushieno/xamarin-android-d8-build: d8 compiler support for Xamarin.Android (d15-5 or later)",
     "image": "https://opengraph.githubassets.com/4c1ff7281b23ecc81256ceee67a8387537c02de19d506c29ddf8641040e141e4/atsushieno/xamarin-android-d8-build",
-    "description": "d8 compiler support for Xamarin.Android (d15-5 or later) - atsushieno/xamarin-android-d8-build",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/xmmk": {
     "title": "GitHub - atsushieno/xmmk: cross-platform virtual MIDI keyboard / development has switched to Kotlin, atsushieno/kmmk",
     "image": "https://opengraph.githubassets.com/db69796d2dee88392d00d70f9a2f1e195c3d2f3971e95f3969a9221dbe044561/atsushieno/xmmk",
-    "description": "cross-platform virtual MIDI keyboard / development has switched to Kotlin, atsushieno/kmmk - atsushieno/xmmk",
     "siteName": "GitHub"
   },
   "https://github.com/bytedeco/javacpp": {
     "title": "GitHub - bytedeco/javacpp: The missing bridge between Java and native C++",
     "image": "https://opengraph.githubassets.com/74d4a45c69577b33fe0875ba77a8fc725087ed48cd83ff86260cecd460c89cd0/bytedeco/javacpp",
-    "description": "The missing bridge between Java and native C++. Contribute to bytedeco/javacpp development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/dotnet/llilc": {
     "title": "GitHub - dotnet/llilc: This repo contains LLILC, an LLVM based compiler for .NET Core. It includes a set of cross-platform .NET code generation tools that enables compilation of MSIL byte code to LLVM supported platforms.",
     "image": "https://opengraph.githubassets.com/41d64666027a08ad6a10ad83ac25d14672a357e30e3f582ec0cc08329a135b62/dotnet/llilc",
-    "description": "This repo contains LLILC, an LLVM based compiler for .NET Core. It includes a set of cross-platform .NET code generation tools that enables compilation of MSIL byte code to LLVM supported platforms...",
     "siteName": "GitHub"
   },
   "https://github.com/dotnetreadingjp/coreclr-botr-jp": {
     "title": "GitHub - dotnetreadingjp/coreclr-botr-jp: Japanese Translations of coreclr Book of the Runtime (BotR)",
     "image": "https://opengraph.githubassets.com/33f53939dbb0551554a93a1998907892a7fe47ec0579712a567bef23828269bf/dotnetreadingjp/coreclr-botr-jp",
-    "description": "Japanese Translations of coreclr Book of the Runtime (BotR) - dotnetreadingjp/coreclr-botr-jp",
     "siteName": "GitHub"
   },
   "https://github.com/ebassi/emeus": {
     "title": "GitHub - ebassi/emeus: Constraint-based layout manager for GTK+",
     "image": "https://opengraph.githubassets.com/adbbb5ec0236ceb8862ffe1f80bcb0835c3bd4127ad94a74c3f6a46ee18c68ac/ebassi/emeus",
-    "description": "Constraint-based layout manager for GTK+. Contribute to ebassi/emeus development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/ffAudio/Frequalizer": {
     "title": "GitHub - ffAudio/Frequalizer: Equalizer using JUCE new dsp module",
     "image": "https://opengraph.githubassets.com/89b8d310d965bcc06c859a6eaa0c52deba81ee0b7067a33a2f1e487ff09c7080/ffAudio/Frequalizer",
-    "description": "Equalizer using JUCE new dsp module. Contribute to ffAudio/Frequalizer development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/g200kg/webaudio-controls/": {
     "title": "GitHub - g200kg/webaudio-controls: GUI parts library for Web application using WebComponents",
     "image": "https://opengraph.githubassets.com/eaaf4f4f0d62b81c33ed1f62b06d959aa4da504c9159e29b1c29875850b82a8d/g200kg/webaudio-controls",
-    "description": "GUI parts library for Web application using WebComponents - g200kg/webaudio-controls",
     "siteName": "GitHub"
   },
   "https://github.com/google/oboe/discussions/1418#discussioncomment-1510284": {
     "title": "Using Oboe with Kotlin · google/oboe · Discussion #1418",
     "image": "https://opengraph.githubassets.com/ab541cf244c5a5002192c326f202bebdce9eda2d5f30afe514b44a396353314c/google/oboe/discussions/1418",
-    "description": "How do I get the Oboe library to be loaded by Kotlin in Android Studio? I’ve implemented the recommendations in https://www.youtube.com/watch?v=csfHAbr5ilI but when I do an assignment to an object ...",
     "siteName": "GitHub"
   },
   "https://github.com/helio-fm/helio-workstation": {
     "title": "GitHub - helio-fm/helio-sequencer: Libre music sequencer for desktop and mobile platforms",
     "image": "https://repository-images.githubusercontent.com/88845336/ceaf439d-e2b1-4cfe-b227-b99a41b8c05a",
-    "description": "Libre music sequencer for desktop and mobile platforms - helio-fm/helio-sequencer",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/helio-fm/helio-sequencer"
   },
   "https://github.com/jpcima/ADLplug": {
     "title": "GitHub - jpcima/ADLplug: FM Chip Synthesizer — OPL & OPN — VST/LV2/Standalone",
     "image": "https://opengraph.githubassets.com/a8fb48436cd713c8bc56e1bbd4f543423af453ba176b8cc3238479b744230632/jpcima/ADLplug",
-    "description": "FM Chip Synthesizer — OPL & OPN — VST/LV2/Standalone - jpcima/ADLplug",
     "siteName": "GitHub"
   },
   "https://github.com/jpcima/Hera": {
     "title": "GitHub - jpcima/Hera: Juno 60 emulation synthesizer",
     "image": "https://opengraph.githubassets.com/0f8e65ab7918996a0f113630bbe95e58db777f59dc6ab43f6348cd648d588370/jpcima/Hera",
-    "description": "Juno 60 emulation synthesizer. Contribute to jpcima/Hera development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/juce-framework/JUCE/commit/a9b5fe3a395355af6502fed7d2716825cff5881d": {
     "title": "Tweaks for emscripten support · juce-framework/JUCE@a9b5fe3",
     "image": "https://opengraph.githubassets.com/36b5858cc97f7b7dcecab31ac8376c5d7f85d0ca59503dc16577ae29a3710c84/juce-framework/JUCE/commit/a9b5fe3a395355af6502fed7d2716825cff5881d",
-    "description": "JUCE is an open-source cross-platform C++ application framework for desktop and mobile applications, including VST, VST3, AU, AUv3, LV2 and AAX audio plug-ins. - Tweaks for emscripten support · juce-framework/JUCE@a9b5fe3",
     "siteName": "GitHub"
   },
   "https://github.com/michaelwillis/virtual-playing-orchestra-ardour-template": {
     "title": "GitHub - michaelwillis/virtual-playing-orchestra-ardour-template: An Ardour project template for composing orchestral music on Linux",
     "image": "https://opengraph.githubassets.com/2aaed813471df1b78fc152f30e8fcbd03722e9378a5b9bc80a3edfd9c25adb98/michaelwillis/virtual-playing-orchestra-ardour-template",
-    "description": "An Ardour project template for composing orchestral music on Linux - michaelwillis/virtual-playing-orchestra-ardour-template",
     "siteName": "GitHub"
-  },
-  "https://github.com/osxmidi/SFZero-X": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://github.com/sfztools/sfizz/issues/92": {
     "title": "Support for Polyphonic Aftertouch · Issue #92 · sfztools/sfizz",
     "image": "https://opengraph.githubassets.com/213803edb6c9136861c313631777f8fc2fbb736467bdfb5c83777c2e5897092f/sfztools/sfizz/issues/92",
-    "description": "I would be interested in seeing Polyphonic Aftertouch as well. Devices such as the Roli Seaboard support it, as do any devices that support MPE. (The list is growing every day). I understand that t...",
     "siteName": "GitHub"
   },
   "https://github.com/surge-synthesizer/surge-fx": {
     "title": "GitHub - surge-synthesizer/surge-fx: Surge FX as a separate plugin, built with JUCE.",
     "image": "https://opengraph.githubassets.com/014db6e7a9ba95cde9124b45ddbb30a57d39ec0627bc969c4d8163740eaa72fe/surge-synthesizer/surge-fx",
-    "description": "Surge FX as a separate plugin, built with JUCE. . Contribute to surge-synthesizer/surge-fx development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/swami/libinstpatch": {
     "title": "GitHub - swami/libinstpatch: Instrument file software library.",
     "image": "https://opengraph.githubassets.com/717c3487ecc1a58df4968f8b1d1cd8659b8655ff1252d402091eb5bbb318fc09/swami/libinstpatch",
-    "description": "Instrument file software library. Contribute to swami/libinstpatch development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/xamarin/XamarinAndroidXMigration": {
     "title": "GitHub - xamarin/XamarinAndroidXMigration: Build tasks and tools to support Xamarin.Android AndroidX migration",
     "image": "https://opengraph.githubassets.com/2c5b7a8ba401d91f690612abc95170e67d36e23d332b427673e1230a97cad793/xamarin/XamarinAndroidXMigration",
-    "description": "Build tasks and tools to support Xamarin.Android AndroidX migration - xamarin/XamarinAndroidXMigration",
     "siteName": "GitHub"
   },
   "https://github.com/xamarin/binding-tools-for-swift": {
     "title": "GitHub - xamarin/binding-tools-for-swift",
     "image": "https://opengraph.githubassets.com/e4b95effc50a26b501aafdda25e542e788350ab6a4cecfcc6613057f34b2777b/xamarin/binding-tools-for-swift",
-    "description": "Contribute to xamarin/binding-tools-for-swift development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://github.com/xamarin/xamarin-android/commit/2cace0b": {
     "title": "[Mono.Android] Add Android API-Q preview binding (#2829) · dotnet/android@2cace0b",
     "image": "https://opengraph.githubassets.com/f81bd39ff00a1d08cba4dc6ab17e7cff73d5885f28556c2acc7575ed0e63ce44/dotnet/android/commit/2cace0b369812e6dd7feadc7477c407aa07fbd64",
-    "description": "Context: https://developer.android.com/preview/overview [^1] Android Q Beta 1 has been released. The API-Q Program Overview [Timeline and updates][0] section suggests the following: * Bet...",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/dotnet/android/commit/2cace0b"
   },
   "https://github.com/xamarin/xamarin-android/pull/209": {
     "title": "switch to facebook proguard by atsushieno · Pull Request #209 · dotnet/android",
     "image": "https://opengraph.githubassets.com/7e0d832d290863944f35a8111c1ff4f1bcf86477f9516ef34dfee243d72e6e1a/dotnet/android/pull/209",
-    "description": "it is based on proguard 5.2.1 which should be able to process Java8 bytecode. facebook proguard is reportedly 20%~ faster. Note that this will result in distributing proguard.jar within our produ...",
     "siteName": "GitHub",
     "finalUrl": "https://github.com/dotnet/android/pull/209"
   },
   "https://github.com/yokemura/Magical8bitPlug2": {
     "title": "GitHub - yokemura/Magical8bitPlug2",
     "image": "https://opengraph.githubassets.com/024a49d18d52ba9d215e1a3316835561acd0b707830e960a1ca5a8fc9fc4fdd0/yokemura/Magical8bitPlug2",
-    "description": "Contribute to yokemura/Magical8bitPlug2 development by creating an account on GitHub.",
     "siteName": "GitHub"
   },
   "https://gitlab.com/lv2/suil": {
     "title": "LV2 / suil · GitLab",
     "image": "https://gitlab.com/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg",
-    "description": "Library for loading and wrapping LV2 plugin UIs",
     "siteName": "GitLab"
   },
   "https://google.github.io/prefab/": {
     "title": "Prefab",
-    "description": "Prefab is a tool for generating build system integrations for prebuilt C/C++ libraries.",
     "siteName": "prefab"
   },
   "https://home.gamer.com.tw/creationDetail.php?sn=2247594": {
     "title": "Deemo 的故事 - catkit的創作 - 巴哈姆特",
     "image": "https://p2.bahamut.com.tw/HOME/creationCover/94/0002247594.PNG",
-    "description": "ＰＳ：如在街上看本文請不要按開啟圖片，因為本文超多圖片，回家再看吧～ ＰＳ２：如",
     "siteName": "巴哈姆特電玩資訊站",
     "finalUrl": "https://home.gamer.com.tw/artwork.php?sn=2247594"
   },
   "https://imgur.com/a/IvAM8Uq": {
     "title": "imgur.com",
     "image": "https://i.imgur.com/MgVBmGz.jpg?fbplay",
-    "description": "Discover the magic of the internet at Imgur, a community powered entertainment destination. Lift your spirits with funny jokes, trending memes, entertaining gifs, inspiring stories, viral videos, and so much more from users.",
     "siteName": "Imgur"
   },
   "https://imgur.com/a/ZCJBDIB": {
     "title": "imgur.com",
     "image": "https://i.imgur.com/VHCHmlB.jpg?fbplay",
-    "description": "Discover the magic of the internet at Imgur, a community powered entertainment destination. Lift your spirits with funny jokes, trending memes, entertaining gifs, inspiring stories, viral videos, and so much more from users.",
     "siteName": "Imgur"
   },
   "https://imgur.com/a/wGTqIro": {
     "title": "imgur.com",
     "image": "https://i.imgur.com/X8YpwCV.jpg?fbplay",
-    "description": "Discover the magic of the internet at Imgur, a community powered entertainment destination. Lift your spirits with funny jokes, trending memes, entertaining gifs, inspiring stories, viral videos, and so much more from users.",
     "siteName": "Imgur"
   },
   "https://insthackersnewbies.connpass.com/event/47749/": {
     "title": "楽器を作ろうハッカソン #1 (2017/01/04 13:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": "Raspberry Piなどを使って楽器を作ってみたい人たちが集まってハッカソンのようなことをやる予定です。 （経緯: https://twitter.com/atsushieno/status/812564698096766980 ） 株式会社ISAOさんに会場をご提供いただいて開催します（ありがとうございます!） ハッカソンと書いていますが、イベントの趣旨に合ったゆるいプログラミングや工作をやっていただければと思います。",
     "siteName": "connpass"
   },
   "https://iosdc.jp/2017/": {
     "title": "Top | iOSDC Japan 2017",
     "image": "https://iosdc.jp/2017/themes/custom/iosdc_japan_2017/images/sns.png",
-    "description": "iOSDC Japan 2017 は2017年9月15日(金)〜17日（日）に開催される、エンジニアが主役の、iOSと周辺技術を題材としたカンファレンスです。",
     "siteName": "iOSDC Japan 2017"
   },
   "https://iotlt.connpass.com/event/224144/": {
     "title": "Music LT Vol. 1 (2021/12/14 19:30〜)",
     "image": "https://media.connpass.com/thumbs/0f/a8/0fa8d557592822230efd0ad660bb3c36.png",
-    "description": "## このイベントについて 国内最大のIoTコミュニティ \"IoTLT\" の派生イベント！ 音楽（Music） x テクノロジーでライトニングトーク大会を初開催します。 音楽とテクノロジーに興味のある方ならどなたでも参加できます。 ## このイベントが目指すもの * テクノロジーで音楽表現をUPDATEするアイデアを共有できる * 音楽制作や音楽学習に役立つ最新のデバイス/ソフトウェアを知ることができる * 最新の音楽表現の動向を学べる * 音楽を通して最新のテクノロジーを楽しく理解できる * LTをきっかけに、ユニークなアイデアを持ったいろんな人達と交流...",
     "siteName": "connpass"
   },
   "https://jimlac25.inria.fr/": {
@@ -1179,13 +957,11 @@
   "https://kai-you.net/article/5182": {
     "title": "重厚な世界観に吸い込まれそう──西島尊大×深水チエ『OPHANIL』",
     "image": "https://img.kai-you.net/storage/2023/10/08ffa647-a1f6-4ddc-9f7a-7400dc4c56e6/jpg/origin.jpg",
-    "description": "自主音楽制作レーベルの「KOSZONTO（ケセンテ）」から、作曲家・西島尊大さんとインディーズポップシンガー・深水チエさんによるコラボCD『OPHANIL』がリリースされた。本作は4月27日に、同人音楽即売会「M3」と「THE VOC@LOiD 超 M@STER28」にて先行販売されていたが...",
     "siteName": "KAI-YOU | POP is Here ."
   },
   "https://kotlinconf.com/": {
     "title": "KotlinConf 2026, May 20–22, Munich",
     "image": "https://kotlinconf.com/meta-kotlinconf-img.png",
-    "description": "KotlinConf is the official Kotlin conference by JetBrains. It is a place for the community to gather and discuss all things Kotlin.",
     "siteName": "KotlinConf"
   },
   "https://lac26.mucs.club/": {
@@ -1194,39 +970,33 @@
   "https://mastodon.cloud/@atsushieno/110710909785816407": {
     "title": "Atsushi Eno (@atsushieno@mastodon.cloud)",
     "image": "https://media.mastodon.cloud/media_attachments/files/110/710/901/557/465/876/original/5e4a01a6cd0fa784.png",
-    "description": "添付: 1枚の画像 AAPプラグインのデフォルトUIにMidiDeviceServiceプレビューの機能があるんだけど、本来のプラグインのテストにもMIDIキーボードが必要で、2つあるとこんな感じでｲﾐﾌになるから、MidiDeviceServiceとしてのテストにはこのアプリ使えっていってアウトソースしたい",
     "siteName": "mastodon.cloud"
   },
   "https://mastodon.cloud/@atsushieno/110769335214039607": {
     "title": "Atsushi Eno (@atsushieno@mastodon.cloud)",
     "image": "https://media.mastodon.cloud/media_attachments/files/110/769/335/125/449/395/original/9e901ace7deb8d34.jpeg",
-    "description": "添付: 1枚の画像 できた。けどこれから移動だ。",
     "siteName": "mastodon.cloud"
   },
   "https://mastodon.cloud/@atsushieno/111138653595623798": {
     "title": "Atsushi Eno (@atsushieno@mastodon.cloud)",
     "image": "https://media.mastodon.cloud/media_attachments/files/111/138/653/480/060/361/original/cff9616136a068c9.jpg",
-    "description": "添付: 1枚の画像",
     "siteName": "mastodon.cloud"
   },
   "https://mastodon.cloud/web/statuses/109634775315715917": {
     "title": "mastodon.cloud",
     "image": "https://media.mastodon.cloud/site_uploads/files/000/000/001/@1x/ZkJtnD8w.png",
-    "description": "Everyone is welcome as long as you follow our code of conduct! Thank you. Mastodon.cloud is maintained by Sujitech, LLC.",
     "siteName": "Mastodon hosted on mastodon.cloud",
     "finalUrl": "https://mastodon.cloud/statuses/109634775315715917"
   },
   "https://mastodon.cloud/web/statuses/109917901354622454": {
     "title": "mastodon.cloud",
     "image": "https://media.mastodon.cloud/site_uploads/files/000/000/001/@1x/ZkJtnD8w.png",
-    "description": "Everyone is welcome as long as you follow our code of conduct! Thank you. Mastodon.cloud is maintained by Sujitech, LLC.",
     "siteName": "Mastodon hosted on mastodon.cloud",
     "finalUrl": "https://mastodon.cloud/statuses/109917901354622454"
   },
   "https://medium.com/kodein-koders/building-kotlin-multiplatform-with-github-actions-2478801d6d46": {
     "title": "Building Kotlin/Multiplatform with Github Actions",
     "image": "https://miro.medium.com/v2/resize:fit:889/1*SNLS-t1m0SwLciGCDoqBcA.png",
-    "description": "In a previous tutorial, I showed you how to configure your Kotlin/Multiplatform libraries to be published on Maven Central. To go beyond a…",
     "siteName": "Medium"
   },
   "https://mimium.org/": {
@@ -1235,115 +1005,83 @@
   "https://musescore.org/ja/%E3%83%8F%E3%83%B3%E3%83%89%E3%83%96%E3%83%83%E3%82%AF/geci#melisma": {
     "title": "歌詞",
     "image": "https://musescore.org/sites/musescore.org/files/adeste_0.png",
-    "description": "歌詞の行を入力 最初の行 メロディラインの音符を入力 歌詞の入力を始めたい場所の音符を 選択 歌詞モード に入るため、Ctrl+L (Mac: ⌘+L) を押すか、メニューから 追加→テキスト→歌詞 を選択 音節をタイプ 歌詞入力を続けるには次の方法を使います。 次の音節へ移動: 音節の最後で Space …",
     "siteName": "MuseScore.org"
   },
   "https://music-tech.connpass.com/event/243744/": {
     "title": "ADC21セッション動画鑑賞会 #1 （オンライン） (2022/04/06 20:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": "昨年11月に行われたAudio Developer Conference 2021のセッション動画が少しずつYouTubeに上がってきていて、誰でも見られる状態になっていますが、英語のセッション動画で前提知識もそれなりに求められるものが少なくないので、みんなで日本語で参考情報を出したりわからないことを相談しながら見られる鑑賞会（勉強会）をオンラインでやろうと思います。 誰でも気軽に再生を止めて質問やコメントができる流れを想定しています。セッション動画は50分程度のものが多いので、最後まで見るには少なくとも1.5時間、だいたい2時間はかかると想定していますが、当日の流れと参加人数次第では...",
     "siteName": "connpass"
   },
   "https://music-tech.connpass.com/event/252007/": {
     "title": "オーディオプラグイン規格勉強会 (2022.7) (2022/07/06 20:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
-    "description": "### この勉強会は何? DAWを使った楽曲制作に欠かせない「オーディオプラグインフォーマット（規格）」についての理解を深めるための勉強会です。VST、AU、LV2などのオーディオプラグインやDAWの開発に関心のある開発者はもちろん、コードを書かなくても技術面に関心のある音楽制作者・DAWユーザーが参加しても得られるものがあることを目指します（プログラミングの高度な話題になったり、基礎的な話題が説明なく続く場面も多くなると思いますが、そこはご了承ください）。 ### 内容 2022年6月に、u-heとBitwigからCLAPオーディオプラグインv1.0のサポートがアナウンスされまし...",
     "siteName": "connpass"
   },
   "https://music-tech.connpass.com/event/267483/": {
     "title": "[音楽技術勉強会] Zrythm DAWから読み解くDAWの作り方 (2022/12/11 13:00〜)",
     "image": "https://media.connpass.com/thumbs/bf/b0/bfb01957a56da3f8b7906685c2c72d8f.png",
-    "description": "### この勉強会は何? 12月のオンライン勉強会では、クロスプラットフォームのフリーソフトウェアであるZrythm DAWのメイン開発者であるAlexandros Theodotou(alextee)氏をコメンテーターとしてお招きして、Zrythmの使い方・機能を紹介しつつ、DAWがどのように作られているのか、DAWの機能はどのように実現しているのか、といった話を、参加者のみなさんで議論したいと思います。日本語でやり取りできるDAWの開発者から直接話を聞けるのは珍しい機会だと思います。 ※勉強会は日本語です（場合によっては英語が混ざるかもしれませんが、日本語に訳します） 勉強会は...",
     "siteName": "connpass"
   },
   "https://music-tech.connpass.com/event/388526/": {
     "title": "Music Tech Meetup / 音楽技術勉強会 2026.04 (2026/04/15 19:00〜)",
     "image": "https://media.connpass.com/thumbs/b0/c4/b0c4c7f9ef74ff0a4349145ab8c3fb77.png",
-    "description": "## 音楽技術勉強会について 音楽技術勉強会は主にオーディオ開発、DTM、音声処理などにまつわるさまざまな技術に興味のある人のためのコミュニティ勉強会です。オーディオプログラミング、DSP、音声合成、DAWやシンセの開発や利用方法の追求、DTM関連技術、音楽理論、楽器開発、ライブコーディング、ゲームオーディオ、Web Audio、AI・アルゴリズム作曲など（これらに限らず）、音楽・音声に関わるトピックを幅広く扱います。 この分野に関心のある方であれば誰でも参加できます。開発者や作編曲者だけでなく、音楽製品のユーザーにとっても、開発者の話を聞いてフィードバックを送る機会として活用できる...",
     "siteName": "connpass"
-  },
-  "https://musichackspace.org/product-category/wemove/": {
-    "error": "HTTP Error 404: Not Found"
-  },
-  "https://mvnrepository.com/artifact/dev.atsushieno": {
-    "error": "HTTP Error 403: Forbidden"
-  },
-  "https://mvnrepository.com/artifact/org.androidaudioplugin": {
-    "error": "HTTP Error 403: Forbidden"
   },
   "https://nextpublishing.jp/book/10411.html": {
     "title": "ボカロビギナーズ！ボカロでDTM入門 第二版 | インプレス NextPublishing",
     "image": "https://nextpublishing.jp/wp-content/uploads/2019/01/N00764.jpg",
-    "description": "本書は2015年インプレスR&Dより刊行した『ボカロビギナーズ！ボカロでDTM入門 』の改訂版です。 本書の目指すところは、「音楽制作、DT...",
     "siteName": "NextPublishing デジタルファースト宣言！"
-  },
-  "https://notestock.osa-p.net/@atsushieno@twitter.com/view": {
-    "error": "HTTP Error 403: Forbidden"
   },
   "https://play.google.com/store/apps/details?id=com.rayark.pluto": {
     "title": "Deemo - Google Play のアプリ",
-    "image": "https://play-lh.googleusercontent.com/f4DVpyoiLT32kTz8sZSwcsYcOSDy7mrqHlSLX_7wjJ0hDai2emiZnFcKn6EjBQ3ExPL7R5zAOeHnVWLJsnMaPA",
-    "description": "童話の絵本風ピアノ音楽ゲーム。音色と共にピュアな感動を。"
+    "image": "https://play-lh.googleusercontent.com/f4DVpyoiLT32kTz8sZSwcsYcOSDy7mrqHlSLX_7wjJ0hDai2emiZnFcKn6EjBQ3ExPL7R5zAOeHnVWLJsnMaPA"
   },
   "https://play.google.com/store/apps/details?id=org.androidaudioplugin.resident_midi_keyboard": {
     "title": "Resident MIDI Keyboard - Google Play のアプリ",
-    "image": "https://play-lh.googleusercontent.com/-m2xmQnNS4njkSrNYeZUfRsX4GSoMMaVXzMicY4LLmoVkENyCht9BgPhkDwxX4uLImK5a8809PZZeLY2FW-cAP8",
-    "description": "MIDI 1.0および2.0用の仮想MIDIキーボード"
+    "image": "https://play-lh.googleusercontent.com/-m2xmQnNS4njkSrNYeZUfRsX4GSoMMaVXzMicY4LLmoVkENyCht9BgPhkDwxX4uLImK5a8809PZZeLY2FW-cAP8"
   },
   "https://prtimes.jp/main/html/rd/p/000001783.000005875.html": {
     "title": "「技術書典シリーズ」第二弾！ 『Essential Xamarin ネイティブからクロスプラットフォームまで モバイル.NETの世界』発行最先端技術者による全方位の解説書！",
     "image": "https://prtimes.jp/i/5875/1783/resize/d5875-1783-474502-1.jpg",
-    "description": "株式会社インプレスホールディングスのプレスリリース（2017年8月25日 10時00分）「技術書典シリーズ」第二弾！ 『Essential Xamarin ネイティブからクロスプラットフォームまで モバイル.NETの世界』発行最先端技術者による全方位の解説書！",
     "siteName": "プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES"
   },
   "https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&id=060220427&Mode=0": {
-    "title": "「モバイル・エコシステムに関する競争評価 中間報告」及び「新たな顧客接点（ボイスアシスタント及びウェアラブル）に関する競争評価 中間報告」に対する意見募集について｜e-Govパブリック・コメント",
-    "description": "パブリックコメントの「「モバイル・エコシステムに関する競争評価 中間報告」及び「新たな顧客接点（ボイスアシスタント及びウェアラブル）に関する競争評価 中間報告」に対する意見募集について」に関する意見募集の実施についての詳細です。"
+    "title": "「モバイル・エコシステムに関する競争評価 中間報告」及び「新たな顧客接点（ボイスアシスタント及びウェアラブル）に関する競争評価 中間報告」に対する意見募集について｜e-Govパブリック・コメント"
   },
   "https://qiita.com/advent-calendar/2020/audiolang": {
     "title": "オーディオプログラミング言語 - Qiita Advent Calendar 2020 - Qiita",
     "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Fadvent_calendar%2Fogp%2Fcalendar-ogp-background-c24e7570f8dc39b6f4e1323cbd83d11f.jpg?ixlib=rb-4.1.1&w=1200&mark-x=142&mark-y=128&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzRkZGRkZGJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dD0lRTMlODIlQUElRTMlODMlQkMlRTMlODMlODclRTMlODIlQTMlRTMlODIlQUElRTMlODMlOTclRTMlODMlQUQlRTMlODIlQjAlRTMlODMlQTklRTMlODMlOUYlRTMlODMlQjMlRTMlODIlQjAlRTglQTglODAlRTglQUElOUUlMjBBZHZlbnQlMjBDYWxlbmRhciUyMDIwMjAmdz05MTYmaD0zNTYmcz0zNTQ4MjUyNmVjNmVkOTlmM2U5NGM4MzBhMGEwZGQ2Nw&blend-mode=normal&blend-x=142&blend-y=491&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzRkZGRkZGJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dD0lNDBhaWtlJTQwZ2l0aHViJnc9OTE2JnM9MjExODAzYWM4MDQ0ZDNmN2YwMWE5OTkzMGFjNjIyZWM&s=ccce75b3bbc3ac172746f5330b3f12c2",
-    "description": "オーディオプログラミング言語に関するQiita Advent Calendar 2020のカレンダーページです。",
     "siteName": "Qiita"
   },
   "https://qiita.com/atsushieno/items/331b76b08b7f9b4aca0f": {
     "title": "cerberoを使ってlibfluidsynthをAndroid用にビルドする - Qiita",
     "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGMTg1OTMlMkZwcm9maWxlLWltYWdlcyUyRjE0NzM2ODI0Nzk_aXhsaWI9cmItNC4xLjEmYXI9MSUzQTEmZml0PWNyb3AmbWFzaz1lbGxpcHNlJmJnPUZGRkZGRiZmbT1wbmczMiZzPWJjNDI5YmQxMzljZGY1N2FkYmI3MDRkMWZmZTVkYTJj%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3De6e88f1ff1e824ad42e329749c2b712b?ixlib=rb-4.1.1&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9Y2VyYmVybyVFMyU4MiU5MiVFNCVCRCVCRiVFMyU4MSVBMyVFMyU4MSVBNmxpYmZsdWlkc3ludGglRTMlODIlOTJBbmRyb2lkJUU3JTk0JUE4JUUzJTgxJUFCJUUzJTgzJTkzJUUzJTgzJUFCJUUzJTgzJTg5JUUzJTgxJTk5JUUzJTgyJThCJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9ZjEwYjdiZDY4ZWY0NjY1OGU3Njg5N2UxMTg0YmJjNTc&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBhdHN1c2hpZW5vJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9NzJkYTkzOTllMzNhNjc5OTQ0ZWY2M2QyMGViYjg1NDk&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=6972d543dcfe19787e082f5780b3c862",
-    "description": "TL;DR 試行錯誤の末、fluidsynthをビルドするために、cerberoのソースに追加できるrecipeを作成した。 https://gist.github.com/atsushieno/a1c7af0537f1ce353e4e やや冗長な導入 fluidsyn...",
     "siteName": "Qiita"
   },
   "https://qiita.com/hotwatermorning/items/efe9be3934c6863b2a3b": {
     "title": "VST3ホストを作ろう（９） 〜VST-MA の概要〜 - Qiita",
     "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGOTQ0JTJGcHJvZmlsZS1pbWFnZXMlMkYxNDczNjgyMzA3P2l4bGliPXJiLTQuMS4xJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz00MDE0MjUxYmRjZjE3Zjg3YjY1OTJlOTI2NGExY2Q4YQ%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3Dca06a7081413f7a9944065cd4b87a26c?ixlib=rb-4.1.1&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9VlNUMyVFMyU4MyU5QiVFMyU4MiVCOSVFMyU4MyU4OCVFMyU4MiU5MiVFNCVCRCU5QyVFMyU4MiU4RCVFMyU4MSU4NiVFRiVCQyU4OCVFRiVCQyU5OSVFRiVCQyU4OSUyMCVFMyU4MCU5Q1ZTVC1NQSUyMCVFMyU4MSVBRSVFNiVBNiU4MiVFOCVBNiU4MSVFMyU4MCU5QyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPWNlODNjMjgzMTI2MmViZGQ3NDQ2MDg2OGU5ZGY4N2Vm&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBob3R3YXRlcm1vcm5pbmcmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1mYjFlMTU0NGFkMTYyZDg5NzM1MTgwMzgwMGNiN2I2Yw&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=78ab74cb76b25f74a1707f2f28e51805",
-    "description": "目次 はじめに VST3 規格はその設計のベース部分に、VST Module Architecture (VST-MA) という技術を採用しています。 今回から三回にわたって、VST-MA について解説していきます。 VST-MA とは VST-MA は Stei...",
     "siteName": "Qiita"
   },
   "https://sdk.steinberg.net/viewtopic.php?t=282": {
     "title": "VST 3 SDK License",
     "image": "https://europe1.discourse-cdn.com/steinberg/original/3X/b/e/becc0b2f3a148c189008691bb9be347bc647ba07.svg",
-    "description": "Here you can find the new License for the VST 3 SDK, it is now MIT license. For more explanation please check here and the online documentation! MIT License Copyright (c) 2025, Steinberg Media Technologies GmbH Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,...",
     "siteName": "Steinberg Forums",
     "finalUrl": "https://forums.steinberg.net/t/vst-3-sdk-license/201637"
   },
   "https://soundcloud.com/atsushieno/mugene-fantasy-suite-demo": {
     "title": "Mugene - Fantasy - Suite - Demo",
     "image": "https://i1.sndcdn.com/artworks-000493007295-dws8b7-t500x500.jpg",
-    "description": "2019.3.2. 幻想音楽祭 A-4 [ginga] details: http://atsushieno.hatenablog.com/entry/2019/02/22/181235 (Japanese)",
     "siteName": "SoundCloud"
   },
   "https://soundcloud.com/atsushieno/mugene-mml-sfizz-gustav-holst-the-planets-i-mars-the-bringer-of-war": {
     "title": "[mugene MML + sfizz] Gustav Holst - The Planets: I. Mars, the Bringer of War.",
     "image": "https://i1.sndcdn.com/avatars-000549852054-0bntt7-t500x500.jpg",
-    "description": "This is an outcome from atsushieno's augene project github.com/atsushieno/augene-ng that can compile MML (music macro language) into Tracktion Engine (OSS) / Waveform (commercial DAW) without any edit",
     "siteName": "SoundCloud"
-  },
-  "https://sourceforge.net/projects/diacanvas/files/GtkCassowary%20%28depricated%29/0.1.0/": {
-    "error": "HTTP Error 403: Forbidden"
   },
   "https://speakerdeck.com/atsushieno/can-we-build-a-daw-with-compose-multiplatform": {
     "title": "Can we build a DAW with Compose Multiplatform? Maybe!",
     "image": "https://files.speakerdeck.com/presentations/b2cb3372a80a487f810bbd2a22053165/slide_0.jpg?39467516",
-    "description": "at KotlinConf 2026",
     "siteName": "Speaker Deck",
     "finalUrl": "https://speakerdeck.com/atsushieno/can-we-build-a-daw-with-compose-multiplatform-maybe"
   },
@@ -1355,19 +1093,16 @@
   "https://speakerdeck.com/atsushieno/coscup2018-language-server-protocol-explained": {
     "title": "[COSCUP2018] Language Server Protocol explained",
     "image": "https://files.speakerdeck.com/presentations/79f26343f7cb49fe8747028fcae5b1cc/slide_0.jpg?10554566",
-    "description": "- at COSCUP 2018 (future presentation, subect to change)",
     "siteName": "Speaker Deck"
   },
   "https://speakerdeck.com/atsushieno/embeddinator-4000-using-net-libraries-in-android-studio": {
     "title": "Embeddinator-4000: using .NET libraries in Android Studio",
     "image": "https://files.speakerdeck.com/presentations/be51a35a77f24bbfb3f1760a5dd87049/slide_0.jpg?9378342",
-    "description": "DroidKaigi 2018",
     "siteName": "Speaker Deck"
   },
   "https://speakerdeck.com/atsushieno/generics-on-xamarin-products": {
     "title": "Generics on Xamarin products",
     "image": "https://files.speakerdeck.com/presentations/11d05e3d89ef4529b4bc2ccdd2983902/slide_0.jpg?8195239",
-    "description": "2017/6/24 ジェネリクス勉強会",
     "siteName": "Speaker Deck"
   },
   "https://speakerdeck.com/atsushieno/how-instant-run-works-at-droidkaigi2016": {
@@ -1378,13 +1113,11 @@
   "https://speakerdeck.com/atsushieno/jxug-number-4-2015-04-11-binding-java-library": {
     "title": "[JXUG#4] 2015-04-11 Binding Java Library",
     "image": "https://files.speakerdeck.com/presentations/6d474a99014143c1b54e8586d2bf606f/slide_0.jpg?4636869",
-    "description": "Session slides for Japan Xamarin User Group meetup #4",
     "siteName": "Speaker Deck"
   },
   "https://speakerdeck.com/atsushieno/whats-up-in-xamarin-2018-jp": {
     "title": "Xamarin最新情報2018 / what's up in Xamarin 2018 (JP)",
     "image": "https://files.speakerdeck.com/presentations/345bf38c3508473ca20e5fb25401ea3f/slide_0.jpg?10067710",
-    "description": "de:code 2018 補足: http://atsushieno.hatenablog.com/entry/2018/05/24/135204",
     "siteName": "Speaker Deck"
   },
   "https://speakerdeck.com/atsushieno/xamarin-dot-android-sdk-at-community-open-camp-20160827-at-zhong-yan-yuan": {
@@ -1400,326 +1133,251 @@
   "https://speakerdeck.com/inamiy/autolayout-algorithm": {
     "title": "AutoLayout Algorithm",
     "image": "https://files.speakerdeck.com/presentations/060bd86232984265afad66aba0908a87/slide_0.jpg?8569424",
-    "description": "iOSDC 2017 (Sep 16, 2017) https://iosdc.jp/2017/node/1317 Library: https://github.com/inamiy/Cassowary",
     "siteName": "Speaker Deck"
   },
   "https://stackoverflow.com/questions/27058064/why-do-i-need-to-define-a-precision-value-in-webgl-shaders": {
     "title": "Why do I need to define a precision value in webgl shaders?",
     "image": "https://stackoverflow.com/Content/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=0f0cab681579",
-    "description": "I'm trying to get this tutorial to work but I ran into two issues, one of which is the following. When I run the code as is I get an error in the fragment shader saying: THREE.WebGLShader: gl.",
     "siteName": "Stack Overflow"
   },
   "https://synthesizerv.com/web/": {
     "title": "Web Synthesizer V | Synthesizer V - Official Website",
     "image": "http://synthesizerv.com/ogp-image.png",
-    "description": "Announcing Web Synthesizer V",
     "siteName": "Synthesizer V - Official Website"
   },
   "https://techbookfest.org/": {
     "title": "技術書典：技術書オンリーイベント",
     "image": "https://techbookfest.org/assets/tbf20/images/ogp.png",
-    "description": "新しい技術に出会えるお祭りです",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/event/tbf03": {
     "title": "技術書典3",
     "image": "https://techbookfest.org/assets/tbf03/images/ogp.png",
-    "description": "技術書典3",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/event/tbf03/circle/5742115992633344": {
     "title": "技術書典3: Xamaritans 詳細",
     "image": "https://techbookfest.org/api/image/4839130391379968.png",
-    "description": "Xamarin、C#、.NETなどの技術情報をまとめた本を配布します",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/event/tbf04/circle/15430001": {
     "title": "技術書典4: Xamaritans 詳細",
     "image": "https://techbookfest.org/api/image/22520006.png",
-    "description": "Xamarin、.NET技術、その他",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/event/tbf05/circle/29260001": {
     "title": "技術書典5: TechBooster 詳細",
     "image": "https://techbookfest.org/api/image/57710015.png",
-    "description": "技術サークルTechBooster（ techbooster.org ）です",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/market": {
     "title": "技術書典 ：技術書のオンラインマーケット開催中",
     "image": "https://techbookfest.org/assets/tbf20/images/market/gs20_no8_sp.png",
-    "description": "技術書典のオンラインマーケットです！推しの技術書を買って応援しよう！",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/organization/5695872079757312": {
     "title": "オーディオプラグイン研究所 | 技術書典",
     "image": "https://techbookfest.org/api/image/5756954563575808.png",
-    "description": "音楽技術に関する同人誌を公開する@atsushienoのサークルです 「MIDI 2.0 アーキテクチャ ガイドブック」「CLAPオーディオプラグイン開発者ガイド [第2版]」「MIDI 2.0 UMPガイドブック 第2版」「理想のオーディオプラグインフォーマットを求めて」",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/4717055745982464": {
     "title": "LV2オーディオプラグイン開発者ガイド：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/4717055745982464",
-    "description": "LV2はLinuxを中心に使われている、しかしクロスプラットフォームで利用可能な、オーディオプラグインの仕様です。 LV2はオーディオプラグインとしてはかなり多岐にわたる機能を実現しており、加えてコア部分だけでもなかなか難解な仕様であり、LV2にかかる開発はオーディオ専門職であってもなかなか手を出せない領域です。LV2についてはユーザーガイドと言えるものもなかなか無く、特に日本語情報は非常に少ないので、LV2全般について幅広くまとめたものが必要であろう、と筆者は考えました。 本書ではLV2オーディオプラグインの「使い方」と「作り方」の両方を解説します。通常、ソフトウェア開発のための書籍では「使い方」について説明する必要はないのですが、LV2オーディオプラグインの場合は、まずそもそも使いこなせるようになるところまでの情報が十分ではありません。いくつかの章をまずユーザー用ガイドとして用意し、ある程度理解が整ったところで実際の開発ガイドに進みます。 目次: ``` はじめに 本書の内容とそうでないもの 本書の構成 関連書籍など 第1章 オーディオプラグイン仕様とは 第2章 LV2プラグインを探す・使う 2.1 lv2lsとlv2info: 利用可能なLV2プラグインを確認する 2.2 ポピュラーなLV2プラグイン 2.3 ソースからビルドする 2.4 lv2vst - LV2をVSTとして使う 2.5 Carla 第3章 LV2ホスト（DAW）を使う 3.1 Ardour 3.2 QTractor 3.3 Audacity 3.4 zrythm 3.5 jalv 第4章 LV2オーディオプラグインの開発 導入 第5章 LV2メタデータとRDF Turtle Syntax 第6章 LV2の拡張機能 6.1 オーディオプラグインと拡張性 (以降6.16まで。長いのでここには全部書けません) 第7章 LV2ホストを作る ``` 本書のサポートはdiscordで行われています: https://discord.gg/2aegwT",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/4827750072320000": {
     "title": "MIDI 2.0 UMPガイドブック 第2版：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/4827750072320000",
-    "description": "「MIDI 2.0 UMPガイドブック 第2版」は、2023年6月に正式に公開されたMIDI 2.0仕様の更新版に合わせて、第1版の内容に加筆・修正を加えたものです。付録としてMIDI CLIP FILEフォーマット仕様についても解説しています。 ---- 「MIDI 2.0 UMPガイドブック」は、2020年2月に正式に公開されたMIDI 2.0仕様のうち、もっとも目を引く内容であるMIDI 2.0 UMP（ユニバーサルMIDIパケット）仕様を中心に、MIDI 2.0をサポートするデバイスやソフトウェアが提供する、あるいは実装する必要がある機能について解説する書籍です。UMPは、一連のMIDI 2.0関連仕様の中で、MIDI 1.0のときに80hはノートオフ、90hはノートオン、B0はCC、F0〜F7はシステムエクスクルーシブ…といったメッセージを規定していた部分に相当する部分です。筆者の知る限りでは、仕様書を除いて世界初のMIDI 2.0に関する書籍です。 ---- 目次: ``` はじめに 本書の内容とそうでないもの 本書の構成 関連書籍 第1章 MIDI 2.0ことはじめ 1.1 MIDI 1.0の復習 1.2 MIDI 1.0からMIDI 2.0へ 1.3 MIDI 2.0関連仕様の構成 1.4 MIDI 2.0対応ソフトウェアの現状 1.5 2023年10月（本書第2版）までの状況 第2章 UMPの基本構造 2.1 メッセージ種別 2.2 グループとファンクションブロック 2.3 可変長データから32ビット単位の整数へ 2.4 UMPとタイムスタンプ 2.5 チャンネルボイスメッセージのステータスコード 2.6 UMPとプロトコル 第3章 MIDI 1.0プロトコルで利用可能なメッセージ 3.1 MIDI 1.0チャンネルメッセージ 3.2 Sysex7 3.3 Sysex8 3.4 混合データセット 3.5 システムメッセージ 3.6 NO-OP、タイムスタンプ、クロック同期、デルタタイム 3.7 フレックスデータ 3.8 UMPストリームメッセージ 第4章 MIDI 2.0チャンネルメッセージ 4.1 ノートオン・ノートオフ 4.2 プログラムチェンジ 4.3 コントロールチェンジとノート別コントローラー 4.4 ノート別管理メッセージ 4.5 RPN/NRPNのサポート 4.6 ピッチベンドとノート別ピッチベンド 4.7 チャンネルプレッシャーとポリフォニックキープレッシャー 付録A MIDI Clip Fileフォーマットについて 付録B cmidi2ライブラリ ``` 本書の意義はここで解説しています: https://atsushieno.hatenablog.com/entry/2020/09/16/041720",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/4914302924357632": {
     "title": "このAI技術がすごい！：ビーチーム",
     "image": "https://techbookfest.org/api/product/ogp/image/4914302924357632",
-    "description": "本書では各執筆者が気になるAI技術をピックアップして、サービス・技術の紹介をしています！ AI技術入門者が一から調べてまとめた技術同人誌になっています。 ## 内容 * SalesforceのAI「Einstein」について * ゲームAI 開発ではじめるKaggle入門 * AWS DeepComposer で機械学習に入門する * 多目的遺伝的アルゴリズム概論",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5155728868245504": {
     "title": "MacではじめるSTM32第二版：コテツ商会",
     "image": "https://techbookfest.org/api/product/ogp/image/5155728868245504",
-    "description": "この本はMacでSTM32マイコンの環境設定を行う本です。Catalina対応版です。「WindowsではじめるSTM32第二版」の移植版です。Mac用に変更したのと、内容を大幅追加および修正しています。 ターゲット読者は「MacでSTM32 をはじめてみたい」という初心者から、「ペリフェラルの使い方を知りたい」「RTOS も使ってみたい」という中級者、「実務でSTM32を使用している」というプロユースの方まで幅広く対応しています。 この本を読むとこれができるようになります MacでSTM32の環境設定ができます HALの勉強方法がわかります STM32の各ペリフェラルのHALを実践的に試せます STM32のハードウェア設計のきっかけがわかります その他、STM32のさまざまなノウハウがわかります 最終的には、熟練した STM32 プログラマー相当になれます。(たぶん) 総ページ数どーんと265ページです。 すべてのサンプルソースコードはGitHubで公開しています。",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5167483596046336": {
     "title": "Delightful Way to Start IT Engineer Life（English）：ゆらゆら魔法少女",
     "image": "https://techbookfest.org/api/product/ogp/image/5167483596046336",
-    "description": "Delightful Way to Start IT Engineer Life「The Manga Guide to Programming Problems」(English Edition) Solve problems without any code. (5 problems) To explain problems in an easy-to-understand way, we will show the steps for solving problems without any code. You can read it even if you don’t know how to program.",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5200781800112128": {
     "title": "ペーパークラフトを作ろう！！モデリングからカッティングマシンまでのテクニック：玉玉屋",
     "image": "https://techbookfest.org/api/product/ogp/image/5200781800112128",
-    "description": "趣味でペーパークラフトを作っています ノウハウがたまってきたので、本にまとめてみました 細かいモデリングの手法や展開方法とかはネットに沢山ありますので この本では、あまりネットでも情報が少ない 実際に組み立てやすいペーパークラフトのノウハウ Metasequoia 4、ペパクラデザイナー、Silhouette Studioの 連携 カッテイングマシンsilhouette portrait2の活用 を重視して作りました ペーパークラフトライフが少しでも楽しくなっていただければ幸いです 【目次】 開発環境 モデリング[Metasequoia 4] 作れるペーパークラフトの基本構造 山折り至上主義 見栄えの良いペーパークラフトの基本構造 積層する 展開図[ペパクラデザイナー] 基本は山折り、谷折りは最低限 同じ形のパーツは並べてカットしやすく ノリシロの位置を意識する ノリシロ合体 紙と印刷 組み立て カッターとハサミ 接着剤 折れ線の加工方法 仮組み silhouette portrait2 導入 マテリアルの設定 カット条件の設定 silhouette portrait2とペパクラデザイナーの連携 ペパクラデザイナー ペパクラビューワー４ Silhouette CAMEO対応 Silhouette Studio 紙のセッティング 小ネタ フロー",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5650141820223488": {
     "title": "C++ 集成体 第3版：Cryptomycocolacales",
     "image": "https://techbookfest.org/api/product/ogp/image/5650141820223488",
-    "description": "C++の集成体型について熱く語りつくす本です。",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5680641993605120": {
     "title": "改訂版 実践で学ぶ！Electron+Vue.jsでデスクトップアプリ開発：N4+",
     "image": "https://techbookfest.org/api/product/ogp/image/5680641993605120",
-    "description": "❓どんな本？ Web技術でデスクトップアプリが開発できるフレームワークElectronと、 WebページでUIを構築するためのフレームワークVue.jsを使って、 WindowsやmacOSに対応したデスクトップアプリを開発する手法を解説しています。 難易度的にはVue.jsの基本を身に着けている方を想定して、 単画面の実用アプリ（雷距離計算機）や画面遷移を伴うクソゲー（ぴえんゲーム）などの開発過程を見ながら、 「こんなときにはどうするの？」を実践的に学べる内容です。 📚特徴は？ ＊実践だけど、開発のためのプロジェクトセットアップから解説！ はじめ方がわかるので、自分でも開発が始めやすいです ＊全アプリサンプルコード付き！ サンプルコードを入手すれば実際に動かしてパク……参考にできます ＊Vue.jsバージョン3で導入されるComposition API+TypeScriptでの開発レポートも掲載！ あなたのために人柱になっておきました 👍おすすめな人は？ ＊Electron 製デスクトップアプリ開発について興味がある⼈ ＊Vue.js の⼀⾵変わった使い⽅を知ってみたい⼈ ＊⼊⾨より実際の実装⼿法を⾒てみたい⼈ を想定読者として執筆しています。 そのほか ＊デスクトップアプリ開発にチャレンジしたが、挫折した人 ＊Electronでデスクトップアプリを開発しているが、他の人の開発手法が見てみたい人 にもおすすめです。",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5713005169868800": {
     "title": "入門 プルトニウム燃料：ちりめん王国",
     "image": "https://techbookfest.org/api/product/ogp/image/5713005169868800",
-    "description": "最近、よく聞く、プルトニウムを混合した核燃料について、 どういうふうにできているのか どういうふうに作られているのか どのような原理をもとにつくられているのか ウランを使った燃料との差について 内部取り込みをしたときの対応法 を解説しています。 ※2020/9/19 いろいろ変えました",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5715379890421760": {
     "title": "クラウド破産を回避するInfrastructure as Code実践ガイド：KOS-MOS",
     "image": "https://techbookfest.org/api/product/ogp/image/5715379890421760",
-    "description": "Terraform・Serverless Framework・GoでAWSアカウントセキュリティを実装します。 詳細はブログからどうぞ！ https://nekopunch.hatenablog.com/entry/2020/09/11/084342 【目次】 1章 AWSセキュリティ戦略 2章 AWS CLI入門 3章 Terraform入門 4章 git-secretsの導入 5章 AWSアカウント保護 6章 IAMグループによる権限管理 7章 パスワードポリシーの厳格化 8章 AWS Budgetsによる請求アラート 9章 ガードレールの構築 10章 S3による安全なログ管理 11章 IAMロールによる権限付与 12章 CloudTrailによる証跡管理 13章 AWS Configによる構成管理 14章 SNSによるメール通知 15章 GuardDutyによる脅威検知 16章 IAM Access Analyzerによる公開リソースの検出 17章 Security Hubによる集約 18章 ChatbotによるSlack通知 19章 インシデントレスポンスの自動化 20章 direnvによる環境変数の管理 21章 Serverless Framework入門 22章 AWS利用料金のSlack通知 23章 セキュリティイベントのSlack通知 24章 Security Hubの自動復旧 25章 アクセスキーの強制無効化 26章 セキュリティグループの自動無効化 27章 アクセスキーのセキュアな運用 28章 AssumeRoleによる一時的な権限取得 29章 IAMグループの権限最小化 30章 参照用IAMロールと管理用IAMロール 31章 AssumeRoleのMFA強制 32章 AWS Vaultによるアクセスキーの暗号化 33章 パスワードレスサインイン環境の構築 34章 セキュリティの高度化 35章 ルートユーザー使用のアラート通知 36章 CloudWatch Alarmsによるアラート通知 37章 マルチリージョン対応 38章 IAMポリシーによるリージョン制限 39章 Athenaによる証跡ログの検索 40章 Systems Managerパラメータストアによる設定管理 41章 AWS Well-Architectedフレームワークに学ぶ",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5727504515989504": {
     "title": "超ビジュアル訳 ニーチェの詩：p5.jsでうたう「深夜の鐘の歌」：すぎもと組",
     "image": "https://techbookfest.org/api/product/ogp/image/5727504515989504",
-    "description": "【第１回技術書典 「刺され！技術書アワード」エポックメイキング部門賞最終候補作品に選ばれました】 【紙の本は技術書典16開催後に増刷しました。在庫わずかです。】 本書は、ある一篇の詩の内容を一行ずつ解釈し、視覚的に文字を配置構成したビジュアルの作品集です。 各作品は、それぞれアルゴリズムにそって生成されています。 詩集であり、タイポグラフィの作品集であり、思想書であり、そして技術書でもあります。 こちらもご覧ください。 『超ビジュアル訳 ニーチェの詩』をつくりました｜すぎもとたつお｜note https://note.com/sugi2000/n/n71a4f2640667 超ビジュアル訳 ニーチェの詩 - すぎもと組 https://visualized-nietzsche.tumblr.com/ 目次 まえがき 第一部 作品篇 深夜の鐘の歌 ひとつ！ ふたつ！ みっつ！ よっつ！ いつつ！ むっつ！ ななつ！ やっつ！ ここのつ！ とお！ じゅういち！ じゅうに！ 第二部 解説篇 深夜の鐘の歌 「深夜の鐘の歌」解説 第三部 技法篇 p5.jsとは 作品概要とコード解説 あとがき Zarathustra's Rundgesang ニーチェ略歴 ブックガイド 編著者かく語りき #ニーチェ #ツァラトゥストラ #クリエイティブコーディング #Processing #タイポグラフィ",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5880913365827584": {
     "title": "Cell Ag ~ 培養肉自作マニュアル+全方位評論本：Shojinmeat Project",
     "image": "https://techbookfest.org/api/product/ogp/image/5880913365827584",
-    "description": "Shojinmeat Projcetから純肉本2020夏が出版！！ 全59ページにわたり、自宅での細胞培養から、細胞農業の背景やCOVID-19が培養肉に与える影響まで幅広いトピックを記載。 また近未来SF小説「フォルカスの倫理的な死」の漫画化に先立ち、ネームを一部先行公開！",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/5918640878649344?productVariantID=4638774606692352": {
     "title": "MIDI 2.0エコシステム構築術：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/5918640878649344",
-    "description": "**2026年2月追記**: DL通知がノイズでしかなく、しかもここでは通知を切れないので、有料に戻しました。原稿はGitHubで公開しているので、万が一興味があるならそちらを見てください: https://github.com/atsushieno/midi-2.0-ecosystem-book **2025年11月追記**: あまりにも「無料だからダウンロードする」という人間が多いので明記しておきますが、これが公開を公開しているのは史料として出しているからに過ぎません。これだけを読むくらいなら何も読まないほうがマシなので、ダウンロードしないほうがいいです。 **2025年5月更新**: 本書はMIDI 2.0仕様が根本的に変更された2023年アップデートに追従していない古いものです。仕様が古い時代に書かれたものなので、これを読んでも現在のMIDI 2.0技術の知見は得られません。2025年時点で本書の発展型として書かれたものとして、「MIDI 2.0アーキテクチャ ガイドブック」 を発行してあります: https://techbookfest.org/product/q0aTZk8eNmmWxEVpB8ZZg4 同書公開に伴い、本書は無償公開に切り替えてあります。 ---- MIDI 2.0アプリケーションを開発するにはどんなことをしたらいいのか? MIDI 2.0をMIDI 1.0を置き換えて採用するには何を作っていけばいいのか? MIDI 2.0アプリケーション開発用ライブラリとその応用でエコシステムを開発する実証実験に基づいて書かれている最先端のMIDI 2.0技術書です。30ページの比較的軽い小冊子です。 以下まえがきより: ---- MIDI 2.0の最終的な仕様が確定してから約1年が経過しました@<fn>{first-draft-at}。1年も経てばさまざまなソフトウェアがMIDI 2.0に対応していることだろうと思っていましたが、実際に1年を振り返ってみると、ほとんど進展が無かった1年だったように思います。 2020年が大変な1年だったということももちろんあるでしょうが、現実的にはどのソフトウェア・ハードウェア開発者も鶏と卵の関係のように「MIDI 2.0対応機器・ソフトが登場するのを待っている」状態ではないかと思います。この1年の間、MIDI 2.0が策定された後も、MPE (MIDI Polyphonic Expression)@<fn>{mpe}対応のソフトウェアはいくつか登場しており、シンプルにMIDI 2.0対応は先送りされているのが現状です。 このような状況を踏まえて、筆者はまず独立したソフトウェア開発者としてMIDI 2.0対応のためにできることがあるのではないかと考えて、いくつかソフトウェアを開発してきました。本書ではその開発戦略と開発の方向性、現状出来ているもの・出来つつあるものを紹介して、自分たちがプラットフォームなどの開発者でなくても他の開発者がMIDI 2.0に対応できる可能性を広げていけることを示す目的で書かれています。",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/6313696567492608?productVariantID=5429897390456832": {
     "title": "Up to Eleven：TechBooster",
     "image": "https://techbookfest.org/api/product/ogp/image/6313696567492608",
-    "description": "【概要紹介】 本書ではAndroid 開発に関わる著者が興味を持った技術要素を取り扱っています。Android 11をはじめとしてアプリ開発の知識は常にアップデートを求められています。我々と一緒に技術的な特徴を面白がったり、知識を増やしたりしてください。最新技術の使い方はもちろん、考え方やプログラミングを楽しんでもらえると幸いです。 【目次紹介】 詳細な目次、本文はサンプルでご確認ください。全6章+1で110pです。紙の書籍は完成版104pです。 第1章 会話とBubbles @napplecomputer 第2章 ConstraintLayout 徹底解説～Flow、Layer、ConstraintProperties 編～ @yanzm 第3章 Jetpack Compose for Desktop を読み解く @atsushieno 第4章 今日から使えるMatrix @_igreenwood 第5章 ControlsProviderService を追加して外部デバイスを操作する（1月1日追加済） @mhidaka 第6章 アプリの終了理由を取得する（1月6日追加済） @mhidaka 付録 targetSdkVersion 30 への移行チェックリスト @mhidaka 【発行に寄せて】 本書のタイトル「Up to Eleven」は「最大音量まで」という意味です。Android 11のリリース時にも引用されて話題になりました。リアルタイム更新というロックな取り組みにもピッタリなタイトルだと感じています。 （電子＋紙セットを購入した場合、完成版が届きます） ※アップデートは次の３本を実施済みです。Version 1.2.0未満をお持ちの場合、再ダウンロードをお願いします ・1月1日 第5章 Android 11新機能解説 「外部デバイスを操作する」20p ・1月6日 第6章 Android 11新機能解説「アプリの終了理由を取得する」 4p ・1月6日 付録 Android 11マイグレーションチェックリスト 3p",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/6487498335191040?productVariantID=5754805670641664": {
     "title": "DAW・シーケンサーエンジンを支える技術 [第2版]：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/6487498335191040",
-    "description": "●「DAWを作るために必要な技術」を幅広く解説 本書は、既存のDAW（Digital Audio Workstation）などの音楽シーケンサーをプラグインで拡張したり、新しく自分で音楽シーケンサーを開発したり、といった、単に利用するのを超えるレベルで音楽ソフトを活用したい人にとって、参考となるような情報をまとめたいという思いのもとに生まれました。 音楽ソフトに関連する技術の話は多岐にわたりますが、DAWのようなソフトウェアの開発を主眼に置いた本はあまり見たことがありません。DAWは大規模なソフトウェアであり、個人や小規模なソフトウェア開発チームで取り組むのは困難であるかもしれませんが、開発のために必要な参考資料が包括的にまとまっていないということもあるでしょう。 一般的な書店のコンピューター関連書籍のコーナーで見つけることの出来る音楽関係の技術書には、（筆者の観点ですが）概ね3パターンあります。 - Cubase, ProTools, Studio Oneなど既存のDAWやオーサリングツールの使い方を解説する書籍 - DAWなどを利用した音楽の作成テクニックを解説する書籍（Vocaloidの使いこなし方なども含む） - 音声処理・信号処理など工学に類する書籍 本書はこれらのどれにも属さないものになると筆者は考えています。 筆者がかつて見てきたソフトウェア開発の分野では、IDE（統合開発環境）に関する情報も同様の問題をかかえていたと思っています。IDEはエディタ、コンパイラ等のツールチェイン、プロジェクトモデル、デバッガー、UIデザイナーなど、数多くの部品から成り立っています。それぞれを構成要素に分解していけば、個別には個人開発者でも十分に立ち向かえる課題になりますし、資料になる書籍のある分野もあります。一方で、それらを総体的な視点でまとめようとするものはほとんどありません。 DAWに関しても、同じような視点で分析し、課題を因数分解して、個別の課題は既存の書籍などを参照しつつ、それらがどのように繋ぎ合わせられるのかを解説することで、自分が普段使っているDAWについて、理解を一段深められる本があるべきだ、と筆者は考えます。本書は、その結実としての1冊です。 2020/12/22: 第2版 (第1版初出: M3 2019秋(2019-10-27)",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/6568566084075520": {
     "title": "3DモデルフォーマットglTFに詳しくなる本：FADIS PRESS",
     "image": "https://techbookfest.org/api/product/ogp/image/6568566084075520",
-    "description": "3Dモデルを保存するためのファイル形式としてKhronosグループが標準化しているglTFがどのような構造で3Dモデルを記録しているかを解説し, glTFを読んでレンダリングするアプリケーションを書く方法を紹介します.",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/ajiqFUUVasKYh2Z01LGGVz": {
     "title": "理想のオーディオプラグインフォーマットを求めて：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/ajiqFUUVasKYh2Z01LGGVz",
-    "description": "## 第2版まえがき 初版を発行してから本版の発行までわずか1年しか経っていませんが、この間にVST3がMITライセンスで公開されることになりました。オーディオプラグインフォーマットにおけるMIDI 2.0の取り込みも拡大しており、MIDI 2.0のMIDIマッピングやMIDI Learnの機能まで仕様策定の射程に入ってくるようになりました。LinuxではWaylandへの移行が本格化する中、X11でGUIを統一せざるを得なかった各プラグインフォーマットでもWayland対応が求められてきています。 本版では（差分は小さいながらも）新たにGUIの章を追加し、各プラグインフォーマットが、アプリケーション開発者に可能な限り自由なGUIフレームワークの選択を確保しつつ、プラットフォーム固有のAPIをもとにホストとプラグインのやり取りをどのように実現するのか、そこにどのようなフォーマット間の違いがあるのかを解説していきます。 ## 初版まえがき ### オーディオプラグインフォーマットの戦国時代 本書「理想のオーディオプラグインフォーマットを求めて」(the Ideal Audio Plugin Format) は、筆者が既存のオーディオプラグインフォーマットの仕様を学ぶうちに考えるようになった、理想のオーディオプラグインフォーマットのあるべき姿について、本書執筆時点でポピュラーなプラグインフォーマットの仕様・設計をもとに考えをまとめたものです。 **オーディオプラグインフォーマットは競争の時代に入りつつあります**。WindowsのVST2とMacOSのAudioUnit v2だけが支配的な存在だったおよそ20年近い不動の時代から、iOSもカバーするAudioUnit v3の導入と段階的な普及、VST2ライセンス供給停止による強制的ともいえるVST3への移行、そしてCLAPの台頭といった流動的な時代に変わりつつあります。 プラグインフォーマットの話題は、それ自身のみのものではありません。どのプラグインフォーマットのバイナリやパッケージもビルドできるプラグイン開発フレームワークJUCEが大きな市場をもち、DAWに対しては要求されるフォーマットのオーディオプラグインとして動作しつつ自身はプラグインホストとして他の任意のプラグイン（時には他のプラットフォームのものまで）をロードしてそのデータを管理するプラグインラッパーが注目されています。あるプラグインフォーマットをサポートするプラグインラッパーがあれば、各DAWがサポートしていなくても、そのプラグインフォーマットでのみプラグインをリリースしても「全てのDAWユーザー」に使ってもらえるので、新しいプラグインフォーマットをサポートする「リスク」は格段に下がります。 MIDI協会 (MMA, MIDI Manufacturers Association) にも「MIDI 1.0ではできず、オーディオプラグインが実現してきた技術」をMIDI 2.0の拡張機能（MIDI-CIのプロファイルやプロパティ）として規定しており、所定のオーディオプラグイン技術を使わなければ表現できなかったことを、MIDI 2.0をサポートする任意の技術で表現できるようにしており、まだ2024年以内に予定されているWindowsのMIDI 2.0サポート待ちで未来形とはいえ、オーディオプラグインフォーマットやDAWからの「自由化」が展望できます。JUCEチームはJUCE 8.0がリリースされた直後に、いつもならやっていないJUCE 9の「開発予定」を公開しており、オーディオプラグインAPI（`AudioProcessor`）におけるMIDI 2.0サポートとCLAPサポートを挙げています。これらが実現していないJUCEは確実に「時代遅れ」になってしまうからです。 このような背景があることを考えると、「理想のオーディオプラグインフォーマット」のあるべき姿について、われわれの誰もが検討できる時代が到来しているといえるでしょう。いうなれば**オーディオプラグインフォーマットの戦国時代**です。各プラグインフォーマットには背景としてある種の技術的思想があり、それぞれの提唱する方式は少なからず相反するものです。これはある意味では学術的論争があるような状態であり、さまざまな論点を整理してそれぞれの技術的主張の妥当性を評価していくことが意義深いといえます。本書はこのような目的意識に基づいて、筆者なりの視点でそれぞれのプラグインフォーマットの技術的選択（あるいは非選択）の良し悪しを評価します。 ### 本書の内容と想定読者 本書では、主にVST3、AudioUnit (v2/v3)、LV2、CLAPの4種類のポピュラーなプラグインフォーマットの仕様について、さまざまなプラグインフォーマットの機能的側面から長所と短所を、中立的な視点で描き出していきます。これらのプラグインフォーマットに関心があるプラグイン開発者やホスト開発者が、興味本位で手にとって読むような内容を集めているため、本書の想定読者層も必然的にこの方面に関心のあるソフトウェア設計者／開発者となるでしょう。 コード例はほとんど登場しませんが、各フォーマットのAPIのさまざまな要素について言及するので、プログラマー向けの書籍であるというべきでしょう。本書の執筆にあたって、筆者はプラグインホスティングライブラリを試験的に開発していましたが、まだ汎用的に使える状態ではなく、本書に合わせて公開するには至っていません。 本書は包括的なプラグインフォーマット関連技術の解説書ではありません。それぞれの章は、章題に関連する話題を各論的に掘り下げます。第1章はプラグインを利用する前にインストールされているプラグインをスキャンする仕組みにかかる各フォーマットの良し悪しを語ります（この時点で良し悪しがあります）。第2章はプラグインのインスタンス生成からオーディオ処理開始までのライフサイクルに関する各フォーマットの違いに焦点を当てます。第3章はプラグインが提供するパラメーターの機能に関する設計と挙動の違いを議論します。第4章はステート操作に関連する各フォーマットの根本的な設計思想の違いに注目し、その良し悪しを語ります。第5章はプラグインフォーマットの機能を拡張する方式のあるべき姿を検討します。 第2版で加筆された第6章ではGUIを扱います。",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/ajiqFUUVasKYh2Z01LGGVz?productVariantID=uyuZhuqcLE0Lc0kfgwiSMH": {
     "title": "理想のオーディオプラグインフォーマットを求めて：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/ajiqFUUVasKYh2Z01LGGVz",
-    "description": "## 第2版まえがき 初版を発行してから本版の発行までわずか1年しか経っていませんが、この間にVST3がMITライセンスで公開されることになりました。オーディオプラグインフォーマットにおけるMIDI 2.0の取り込みも拡大しており、MIDI 2.0のMIDIマッピングやMIDI Learnの機能まで仕様策定の射程に入ってくるようになりました。LinuxではWaylandへの移行が本格化する中、X11でGUIを統一せざるを得なかった各プラグインフォーマットでもWayland対応が求められてきています。 本版では（差分は小さいながらも）新たにGUIの章を追加し、各プラグインフォーマットが、アプリケーション開発者に可能な限り自由なGUIフレームワークの選択を確保しつつ、プラットフォーム固有のAPIをもとにホストとプラグインのやり取りをどのように実現するのか、そこにどのようなフォーマット間の違いがあるのかを解説していきます。 ## 初版まえがき ### オーディオプラグインフォーマットの戦国時代 本書「理想のオーディオプラグインフォーマットを求めて」(the Ideal Audio Plugin Format) は、筆者が既存のオーディオプラグインフォーマットの仕様を学ぶうちに考えるようになった、理想のオーディオプラグインフォーマットのあるべき姿について、本書執筆時点でポピュラーなプラグインフォーマットの仕様・設計をもとに考えをまとめたものです。 **オーディオプラグインフォーマットは競争の時代に入りつつあります**。WindowsのVST2とMacOSのAudioUnit v2だけが支配的な存在だったおよそ20年近い不動の時代から、iOSもカバーするAudioUnit v3の導入と段階的な普及、VST2ライセンス供給停止による強制的ともいえるVST3への移行、そしてCLAPの台頭といった流動的な時代に変わりつつあります。 プラグインフォーマットの話題は、それ自身のみのものではありません。どのプラグインフォーマットのバイナリやパッケージもビルドできるプラグイン開発フレームワークJUCEが大きな市場をもち、DAWに対しては要求されるフォーマットのオーディオプラグインとして動作しつつ自身はプラグインホストとして他の任意のプラグイン（時には他のプラットフォームのものまで）をロードしてそのデータを管理するプラグインラッパーが注目されています。あるプラグインフォーマットをサポートするプラグインラッパーがあれば、各DAWがサポートしていなくても、そのプラグインフォーマットでのみプラグインをリリースしても「全てのDAWユーザー」に使ってもらえるので、新しいプラグインフォーマットをサポートする「リスク」は格段に下がります。 MIDI協会 (MMA, MIDI Manufacturers Association) にも「MIDI 1.0ではできず、オーディオプラグインが実現してきた技術」をMIDI 2.0の拡張機能（MIDI-CIのプロファイルやプロパティ）として規定しており、所定のオーディオプラグイン技術を使わなければ表現できなかったことを、MIDI 2.0をサポートする任意の技術で表現できるようにしており、まだ2024年以内に予定されているWindowsのMIDI 2.0サポート待ちで未来形とはいえ、オーディオプラグインフォーマットやDAWからの「自由化」が展望できます。JUCEチームはJUCE 8.0がリリースされた直後に、いつもならやっていないJUCE 9の「開発予定」を公開しており、オーディオプラグインAPI（`AudioProcessor`）におけるMIDI 2.0サポートとCLAPサポートを挙げています。これらが実現していないJUCEは確実に「時代遅れ」になってしまうからです。 このような背景があることを考えると、「理想のオーディオプラグインフォーマット」のあるべき姿について、われわれの誰もが検討できる時代が到来しているといえるでしょう。いうなれば**オーディオプラグインフォーマットの戦国時代**です。各プラグインフォーマットには背景としてある種の技術的思想があり、それぞれの提唱する方式は少なからず相反するものです。これはある意味では学術的論争があるような状態であり、さまざまな論点を整理してそれぞれの技術的主張の妥当性を評価していくことが意義深いといえます。本書はこのような目的意識に基づいて、筆者なりの視点でそれぞれのプラグインフォーマットの技術的選択（あるいは非選択）の良し悪しを評価します。 ### 本書の内容と想定読者 本書では、主にVST3、AudioUnit (v2/v3)、LV2、CLAPの4種類のポピュラーなプラグインフォーマットの仕様について、さまざまなプラグインフォーマットの機能的側面から長所と短所を、中立的な視点で描き出していきます。これらのプラグインフォーマットに関心があるプラグイン開発者やホスト開発者が、興味本位で手にとって読むような内容を集めているため、本書の想定読者層も必然的にこの方面に関心のあるソフトウェア設計者／開発者となるでしょう。 コード例はほとんど登場しませんが、各フォーマットのAPIのさまざまな要素について言及するので、プログラマー向けの書籍であるというべきでしょう。本書の執筆にあたって、筆者はプラグインホスティングライブラリを試験的に開発していましたが、まだ汎用的に使える状態ではなく、本書に合わせて公開するには至っていません。 本書は包括的なプラグインフォーマット関連技術の解説書ではありません。それぞれの章は、章題に関連する話題を各論的に掘り下げます。第1章はプラグインを利用する前にインストールされているプラグインをスキャンする仕組みにかかる各フォーマットの良し悪しを語ります（この時点で良し悪しがあります）。第2章はプラグインのインスタンス生成からオーディオ処理開始までのライフサイクルに関する各フォーマットの違いに焦点を当てます。第3章はプラグインが提供するパラメーターの機能に関する設計と挙動の違いを議論します。第4章はステート操作に関連する各フォーマットの根本的な設計思想の違いに注目し、その良し悪しを語ります。第5章はプラグインフォーマットの機能を拡張する方式のあるべき姿を検討します。 第2版で加筆された第6章ではGUIを扱います。",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/f42bqd78ywR0K2sa5tFne1?productVariantID=pkeYAvXH367L6j5NvCBsjd": {
     "title": "Linux DTMガイドブック：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/f42bqd78ywR0K2sa5tFne1",
-    "description": "本書は、読者がLinuxデスクトップ環境でいわゆるDTM（デスクトップミュージック、和製英語）を始められるようにしたいという思いから作られた本です。 筆者の日頃からの夢として、LinuxでもなるべくWindows環境やMac環境と比べて難しくないレベルでDTMができるようになってほしいと思っています。それはLinuxで発展してきた難易度がやや高いDTM環境に習熟してから楽曲の打ち込みを始めるとか、Webアプリケーションとして動く範囲のものだけで作曲するといった、特殊な環境に身を置いて「Linuxでも（がんばれば）DTMはできる!」というものから、もう少し一般向けに歩み寄ってみたい、ということです。 現実問題として、LinuxはWindowsやMacではありません。そのため、Windows用ソフトやMac用ソフトは一般的には動きません。しかし、各DAWでLV2のサポートが安定し、LinuxでもVST3が使えるようになり、プラグイン開発フレームワークJUCEがLinuxサポートを拡充してきたりなど、さまざまな事情で以前より改善されてきた状況もあります。 「WindowsでもMacでもこのDAWは使えるし、同じものをLinuxで使えばいいだけなんだ」とか「このプラグインはどの環境でも動かせる」あるいは「このプラグインはWindows版／Mac版しか無いんだけど、Linuxでも使えるこれはそんなに難しくない」といったことを、主にLinux環境で使えるDTM用ソフトを紹介していくことである程度示していければと思います。 (序文より) ※技術書典13で配布するのは無償のベータ版です 【目次】 - 第１章 Linuxとオーディオデバイス - 第2章 Linuxで使えるオーディオプラグインの種類 - 第3章 音楽ソフトの入手方法 - 第4章 Linuxで使えるDAW - 第5章 Linuxで使えるオーディオプラグイン - 第6章 補遺: Linuxで使える歌唱合成ソフト",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/kTbhEYF2YuYFLCefRHjD3z?productVariantID=avuuw5fiHrZZpuEP49jy85": {
     "title": "CLAPオーディオプラグイン開発者ガイド [第2版]：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/kTbhEYF2YuYFLCefRHjD3z",
-    "description": "[2026年4月 第2版まえがきより] 本書の第1版の発行から3年半が経過しました。CLAPプラグインは堅調に存在感を伸ばし、新しいプラグインでCLAPビルドを追加するものが増えてきました。CLAP対応ソフトウェアは約30件から約500件まで拡大し、Reaper、FL Studio、Fender Studio ProといったポピュラーなDAWでも採用されてきています。clap-wrapperを使ったCLAPファーストの隆盛もあってプラグイン開発の基盤として使われることもあり、またWebViewによるGUIの実現や、さらにはWebAssembly技術を活用しWebプラットフォーム上で動作するWebCLAPといった技術も開発されており、オーディオプラグイン技術の進化の牽引役としても重要な存在になっています。 第2版は初版の形式を踏襲したもので、大きなアップデートではありませんが、内容は全面的に最新情報にアップデートしてあり、CLAP関連技術の最先端にキャッチアップできる内容となることを目指して改訂したものです。 ---- CLAPは2022年6月にバージョン1.0が公開されて幅広く認知されるようになった、新しいオーディオプラグイン機構（あるいはオーディオプラグインフォーマット）です。比較できる技術としては、SteinbergのVST (2, 3)、AppleのAudioUnit (v2, v3)、LV2などが挙げられます。本書はCLAPオーディオプラグインの、特にプラグインとホストの開発に興味のあるプログラマーが、読んで参考になるような本を目指して書かれています。 （プラグインやDAWの開発ができるようになるための全ての情報を本書で説明することはありません。特にどのプラグインフォーマットを採用する場合でも不可欠であるDSPやGUIの作り方について、本書では全く言及しません。） 目次より： - 第1章 CLAP について - 1.1 CLAPとは - 1.2 CLAPの特徴 - 1.3 CLAP正式版（バージョン1.0）が登場した背景とその意義 - 1.4 他のプラグインフォーマットとの比較 - 第2章 CLAPを使う - 2.1 CLAPをサポートしているソフトウェアを発見する - 2.2 CLAPプラグインのセットアップ環境 - 2.3 CLAPをサポートするDAW - 2.4 CLAPをサポートするプラグイン - 第3章 CLAP開発ことはじめ - 3.1 開発環境 - 3.2 CLAPプラグイン開発を始めるアプローチ - 第4章 CLAPのコア部分の仕組み - 4.1 オーディオプラグインの一般的な仕組み - 4.2 CLAPプラグインのスキャンとロード - 4.3 CLAPの拡張機構 - 4.4 CLAPプラグインのオーディオ処理 - 4.5 オーディオスレッドとmainスレッドとそれ以外のスレッド - 第5章 CLAPの拡張機能 - 5.1 状態 (state) の保存・復元 - 5.2 プリセットの利用 - 5.3 GUI - 5.4 ホストから提供される「楽曲の」情報 - 5.5 パラメーター設定関連イベント - 5.6 ボイス（発音）数の管理 - 5.7 リアルタイム並列処理の制御 (thread_pool拡張) - 5.8 tuning - 第6章 補遺: WebCLAP - 6.1 Web AudioとAudioWorklet - 6.2 オーディオプラグインにおけるWeb UI技術の取り込み - 6.3 プラグインの実行コードをWebAssemblyで構築する試み - 6.4 WebCLAPを体験する",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbookfest.org/product/q0aTZk8eNmmWxEVpB8ZZg4": {
     "title": "MIDI 2.0 アーキテクチャ ガイドブック：オーディオプラグイン研究所",
     "image": "https://techbookfest.org/api/product/ogp/image/q0aTZk8eNmmWxEVpB8ZZg4",
-    "description": "MIDI 2.0 アーキテクチャ ガイドブック刊行によせて https://atsushieno.hatenablog.com/entry/2025/05/11/194735 以下まえがきより: 本書は主にMIDI 2.0のシステムおよびアプリケーションの開発者が、オーディオアプリケーションが動作するプラットフォームにおいて、MIDI 2.0をサポートするために必要になる技術スタックの全体像を説明し、本書執筆時点ですでに存在する、あるいは今後必要になるソフトウェア構成要素を総合的に解説するものです。特に次のような疑問を解消できることを目的としています。 - MIDIが現在の楽曲制作ワークフローのどこで使われているのかわからない - MIDI 2.0が現在の楽曲制作ワークフローの何を具体的に改善できるのか見えてこない - MIDI 2.0の何がすでに実現していて、何が実現しそうで、何が単なる願望なのかわからない 本書は筆者が2021年に発行した「MIDI 2.0エコシステム構築術」（以降「エコシステム」）で解説した技術領域を、対象をプラットフォームも含むシステム全体に拡大して、フルスクラッチで書き直しました。姉妹書のひとつである「MIDI 2.0 UMPガイドブック」は2023年にMIDI 2.0仕様が刷新された際に、内容を追記するかたちで対応できましたが、「エコシステム」で解説した領域は、当時存在しなかった領域の多くがその後の4年間でかなり実装されてきており、また2023年のMIDI 2.0仕様の抜本的なアップデートによって技術的に古い内容になってしまったので、全面的に仕切り直しています。 本書は主にDAWを使用した楽曲制作のワークフローを念頭に置いて、MIDI 2.0を適用する、あるいは適用する技術的可能性がある技術領域を、システム、DAWやMIDIシーケンサーなどのアプリケーション、オーディオプラグイン、MIDIデバイスの4区分に分けて、それぞれ解説します。MIDI 2.0のエコシステムは、これらの領域を包括的に解説できる程度に成熟してきているということを、本書の全体を通して示していきます。 筆者は米MIDI協会（MIDI Association）のメンバーでも日本のAMEI（音楽電子事業協会）のメンバーでもなく、本書もMIDI 2.0の広告ツールではありません。本書をすべて読み終えても、読者の技術領域ではMIDI 2.0を採用する意味を見いだせず「やはりMIDI 2.0を採用する価値はない」という結論になるかもしれません。本書の目的は、読者がMIDI 2.0について正しい期待値をもって、そこに一定の価値があることを理解してもらえることです。 「エコシステム」執筆当時は、MIDI 2.0のアプリケーションを構築するソフトウェア基盤はほとんど存在せず、多くの領域を自作ライブラリで実現していたため、同書でも自作ソフトウェア・スタックを唯一解として自家撞着のように解説せざるを得なかった部分が多数存在しましたが、本書ではその必然性もなくなりました。本書ではその片鱗をいくつか歴史的記録として残しますが、基本的には本書執筆時点での現状をもとに解説します。 ## 本書の構成について 第1章「MIDIシステムの全体像とMIDI 2.0」は総論です。MIDIが現代の音楽制作のどのソフトウェア領域で使われているのか、それらを開発するために必要になるプラットフォームAPIやライブラリの状況はどうなっているか、MIDI 2.0を採用する意義がどこにあるのか等を解説します。 第2章「プラットフォームのMIDIシステム設計」では、OSプラットフォーム開発者のために、MIDIをサポートするために必要になるソフトウェア構成要素を解説します。読者の大半にとっては、OSプラットフォーム開発者がMIDI 2.0をサポートするために何をやってきたか（何をやっているか）を把握するための章となるでしょう。 第3章「MIDIアプリケーションの開発基盤」では、MIDIアプリケーション開発者のために、MIDIデバイスアクセス、UMPデータ操作、MIDI-CIを用いたデバイス間のやり取り、MIDI楽曲データの作成と再生、といった場面で考慮すべき技術要素と有用なライブラリについて解説します。 第4章「DAWとオーディオプラグインのMIDI 2.0統合」は、MIDI 2.0採用以前のオーディオプラグインがどのようにMIDIを活用してきたかを解説し、2025年内くらいのスパンで実現する見込みであるMIDI 2.0の採用がもたらす技術的展望などを扱います。 第5章「MIDI 2.0デバイスの作成」は、主に仮想MIDIデバイスを作成することで、現在MIDI 2.0アプリケーションのエコシステムで不足しているMIDI入力デバイスや、MIDI 2.0音源デバイスによってDAWのワークフローや楽曲データを標準化するポテンシャルについて議論します。 ## 前提知識・資料 本書の主要な想定読者はMIDIを使用するDAWなどのソフトウェア技術者（アーキテクトやプログラマー）であり、その次に音楽ソフトウェア技術に関心のある一般的なソフトウェア技術者を想定しています。プログラムは少しだけ擬似コードで登場します。 UMP、MIDI-CIといったMIDI 2.0仕様がどのようなものであるか、本書で入念に解説することはありません。これらについては、以下の書籍ですでに入念に解説してあります。 - 「MIDI 2.0 UMPガイドブック（第2版）」（2023年、オーディオプラグイン研究所） - 「MIDI 2.0 MIDI-CIガイドブック」（2024年、オーディオプラグイン研究所）",
     "siteName": "技術書典：技術書オンリーイベント"
   },
   "https://techbooster.booth.pm/items/1485567": {
     "title": "Androidプログラミング短編集：王女とカルテットの宝探し【技術書典7】 - TechBooster - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/1485567/d8ed3bb0-0463-4e11-a27f-fecc700f7aad_base_resized.jpg",
-    "description": "【C96・技術書典7 新刊】 Androidプログラミング短編集：王女とカルテットの宝探し（B5相当116P）は最新のAndroidバージョンであるQをテーマに新機能はもちろんAndroid Studioで使われているデバッグ技術Apply Changesの秘密やKotlinの言語機能であるKotlin Coroutines Flowを取り上げています。プログラミングテクニック短編、全7章からお気に入りの宝物をみつけてください。 また本編中に未承諾広告※"
+    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/1485567/d8ed3bb0-0463-4e11-a27f-fecc700f7aad_base_resized.jpg"
   },
   "https://techbooster.booth.pm/items/1743311": {
     "title": "みんな気になるAndroid開発の最新事情【新刊】 - TechBooster - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/1743311/2f625758-bfc6-43ad-9278-0a9b13ccc31d_base_resized.jpg",
-    "description": "【C97 新刊】 みんな気になるAndroid開発の最新事情（B5相当で120p）は特集記事のJetpack Composeを筆頭にAndroid 10のWi-Fiやin-app updatesなど話題の技術をふんだんに盛り込んでいます。 ※最終2章はJetpack Handbookより最新のアップデートを反映し、実際に業務でハマるポイントを追記したLiveDataやViewModelなど大幅改定版も実施しました。はじめてAACを触る・チームで知識を揃えたい場合に最適です。 Jetpackの最新情報を学べる・今から学ぶのに最適な全8章です 【電子書籍】"
+    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/1743311/2f625758-bfc6-43ad-9278-0a9b13ccc31d_base_resized.jpg"
   },
   "https://techbooster.booth.pm/items/3537802": {
     "title": "アンドロイド・アンサンブル【C99新刊】 - TechBooster - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/3537802/14494f6a-3b7c-405a-a755-b96f493adae9_base_resized.jpg",
-    "description": "【新刊】 アンドロイド・アンサンブル（B5相当で92p）はTechBoosterの新刊です。 【電子書籍】 電子書籍は紙面とは組版が異なり、スマホ・タブレットに最適化したカラー版です。アップデートなどは電子版で対応します。"
+    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/3537802/14494f6a-3b7c-405a-a755-b96f493adae9_base_resized.jpg"
   },
   "https://techbooster.booth.pm/items/4428455": {
     "title": "プロと読み解くモバイル最前線～アプリを支える最新技術～【C101新刊】 - TechBooster - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/4428455/02ffd93a-8b51-4237-8499-d78b8f472e15_base_resized.jpg",
-    "description": "【新刊】 プロと読み解くモバイル最前線～アプリを支える最新技術～（B5相当で172p）はTechBoosterの新刊です。 【電子書籍】 電子書籍は紙面とは組版が異なり、スマホ・タブレットに最適化したカラー版です。アップデートなどは電子版で対応します。"
-  },
-  "https://techbooster.github.io/c88/": {
-    "error": "HTTP Error 404: Not Found"
-  },
-  "https://techbooster.github.io/c91/": {
-    "error": "HTTP Error 404: Not Found"
-  },
-  "https://techbooster.github.io/c93/": {
-    "error": "HTTP Error 404: Not Found"
-  },
-  "https://techbooster.github.io/tbf1/": {
-    "error": "HTTP Error 404: Not Found"
+    "image": "https://booth.pximg.net/c/620x620/dac5443b-c661-4e74-84dd-b914e12fb633/i/4428455/02ffd93a-8b51-4237-8499-d78b8f472e15_base_resized.jpg"
   },
   "https://togetter.com/li/1123468": {
     "title": "ジェネリクス勉強会",
     "image": "https://s.tgstc.com/ogp3/7703e1261c9b9f4d62e1090a78e05409-1200x630.jpeg",
-    "description": "ドワンゴ松竹で開催された「ジェネリクス勉強会」のまとめです",
     "siteName": "posfie",
     "finalUrl": "https://posfie.com/@kekyo2/p/QtrvQYv"
   },
   "https://togetter.com/li/1465363": {
     "title": "Music Tech Tokyo #1 (Night) 追跡記録",
     "image": "https://s.tgstc.com/ogp3/3cdb043cbe3f9a381388651b18c748fb-1200x630.jpeg",
-    "description": "主催によるhashtag追跡まとめです。重複的・定型的な内容のものは省略していますが概ね網羅していると思います。",
     "siteName": "posfie",
     "finalUrl": "https://posfie.com/@atsushieno/p/o696Ai9"
   },
   "https://unreal-instruments.wixsite.com/unreal-instruments": {
     "title": "Unreal Instruments",
-    "description": "Sforzando用のフリーサウンドフォントを製作しています。",
     "siteName": "unreal-instruments"
-  },
-  "https://vcpkg.readthedocs.io/en/latest/specifications/prefab/": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://vital.audio/": {
     "title": "Vital - Spectral Warping Wavetable Synth",
     "image": "https://vital.audio/images/social.png",
-    "description": "Vital - Spectral Warping Wavetable Synth",
     "siteName": "Vital - Spectral Warping Wavetable Synth"
   },
   "https://www.amazon.co.jp/dp/B07539YT44/": {
-    "title": "Essential Xamarin ネイティブからクロスプラットフォームまで モバイル.NETの世界 (技術の泉シリーズ（NextPublishing）) | 榎本 温, 平野 翼, 中村 充志, 奥山 裕紳, 末広 尚義, 中澤 慧 | 工学 | Kindleストア | Amazon",
-    "description": "Amazonで榎本 温, 平野 翼, 中村 充志, 奥山 裕紳, 末広 尚義, 中澤 慧のEssential Xamarin ネイティブからクロスプラットフォームまで モバイル.NETの世界 (技術の泉シリーズ（NextPublishing）)。アマゾンならポイント還元本が多数。一度購入いただいた電子書籍は、KindleおよびFire端末、スマートフォンやタブレットなど、様々な端末でもお楽しみいただけます。"
-  },
-  "https://www.bignerdranch.com/blog/constraintlayout-vs-auto-layout-how-do-they-compare/": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "title": "Essential Xamarin ネイティブからクロスプラットフォームまで モバイル.NETの世界 (技術の泉シリーズ（NextPublishing）) | 榎本 温, 平野 翼, 中村 充志, 奥山 裕紳, 末広 尚義, 中澤 慧 | 工学 | Kindleストア | Amazon"
   },
   "https://www.dtmstation.com/archives/23425.html": {
     "title": "MIDIが38年ぶりのバージョンアップでMIDI 2.0に。従来のMIDI 1.0との互換性を保ちつつ機能強化",
     "image": "https://www.dtmstation.com/wp-content/uploads/2019/01/MIDI2.png",
-    "description": "2019年1月18日、一般社団法人音楽電子事業協会(AMEI)とThe MIDI Manufacturers Association (MMA)(米国MIDI管理団体）は、従来のMIDI規格に、新たに拡張性を持たせたプロトコルなどを含んだ次...",
     "siteName": "DTMステーション"
   },
   "https://www.dtmstation.com/archives/28005.html": {
     "title": "VOCALOIDの対抗馬、Synthesizer Vが無料で使えるWebブラウザ版を公開。2020年、歌声合成はさらに進化する",
     "image": "https://www.dtmstation.com/wp-content/uploads/2019/12/Snap2-6.png",
-    "description": "新年、明けましておめでとうございます。2020年の元旦から歌声合成の世界での新サービスのニュースです。ちょうど1年前「VOCALOIDの競合となるのか？中国人天才少年が開発した歌声合成ソフト、Synthesizer Vの破壊力」という記事と...",
     "siteName": "DTMステーション"
   },
   "https://www.dtmstation.com/archives/71190.html": {
     "title": "ヤマハ、ローランド、コルグ、カワイ、ズーム……楽器メーカーみんな一緒にMIDI 2.0の世界実現に向けて活動中",
     "image": "https://www.dtmstation.com/wp-content/uploads/2025/04/Snap2-2.jpg",
-    "description": "2020年2月にMIDI 2.0が正式規格としてリリースされてから早5年。ローランドからA-88MKII、ヤマハからMONTAGE M、コルグからKeystage、wavestate、opsix……など、MIDI 2.0対応ハードウェアが少...",
     "siteName": "DTMステーション"
   },
   "https://www.gcmstyle.com/vstlovers/": {
     "title": "『VST Lovers ～このVST(i)プラグインが熱い！～』特設サイト | G.C.M Records",
-    "image": "https://www.gcmstyle.com/vstlovers/img/twitter_cards.png",
-    "description": "34名のボカロPら楽曲制作者が、おすすめVSTプラグインを熱く紹介する同人誌です。ぜひあなたの作曲・DTMライフにお役立てください。2017年夏コミ一日目で初頒布します。"
+    "image": "https://www.gcmstyle.com/vstlovers/img/twitter_cards.png"
   },
   "https://www.itmedia.co.jp/news/articles/2205/24/news080.html": {
     "title": "�uiPhone�ɃT�C�h���[�f�B���O������v�����������̂͑Ó���",
     "image": "https://image.itmedia.co.jp/news/articles/2205/24/cover_news080.jpg",
-    "description": "�u���o�C���E�G�R�V�X�e���Ɋւ��鋣���]���@���ԕ񍐁v�ŁA�T�C�h���[�f�B���O�����e����`����@�ɂ���ĉۂ����Ƃ������ۑ肳��Ă���B���̖��������M�ǂ��񂪉���B",
     "siteName": "ITmedia NEWS"
-  },
-  "https://www.kekyo.net/2016/07/20/5955": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://www.kotlinfest.dev/": {
     "title": "Kotlin Fest 2026",
     "image": "https://2026.kotlinfest.dev/img/ogp.png",
-    "description": "Kotlin Festは「Kotlinを愛でる」をビジョンに、Kotlin™に関する知見の共有と、Kotlinファンの交流の場を提供する技術カンファレンスです。",
     "siteName": "Kotlin Fest 2026",
     "finalUrl": "https://2026.kotlinfest.dev/"
   },
   "https://www.kvraudio.com/forum/viewtopic.php?t=478106": {
     "title": "KVR Forum: VST3 Note Expression vs MPE? - Bitwig Forum",
-    "image": "https://static.kvraudio.com/i/b/kvr-logo-grey-on-blue-300x300.png",
-    "description": "KVR Audio Forum - VST3 Note Expression vs MPE? - Bitwig Forum"
+    "image": "https://static.kvraudio.com/i/b/kvr-logo-grey-on-blue-300x300.png"
   },
   "https://www.kvraudio.com/forum/viewtopic.php?t=538083": {
     "title": "KVR Forum: how to work around midi in VST3? - DSP and Plugin Development Forum",
-    "image": "https://static.kvraudio.com/i/b/kvr-logo-grey-on-blue-300x300.png",
-    "description": "KVR Audio Forum - how to work around midi in VST3? - DSP and Plugin Development Forum"
+    "image": "https://static.kvraudio.com/i/b/kvr-logo-grey-on-blue-300x300.png"
   },
   "https://www.midi.org/articles-old/details-about-midi-2-0-midi-ci-profiles-and-property-exchange": {
     "title": "Details about MIDI 2.0, MIDI-CI, Profiles and Property Exchange (Updated June, 2023)",
     "image": "https://midi.org/wp-content/uploads/easyblog_articles/413/MIDI_SONIC_LOGO_ANIMATION.mp4",
-    "description": "This article is for companies looking to develop MIDI 2.0 products, both software developers and hardware manufacturers. If you are a MIDI user looking for the benefits of MIDI 2.0, [...]",
     "siteName": "MIDI.org",
     "finalUrl": "https://midi.org/details-about-midi-2-0-midi-ci-profiles-and-property-exchange-updated-june-2023"
-  },
-  "https://www.midi.org/component/zoo/category/non-commercial-software?Itemid=1423": {
-    "error": "HTTP Error 404: Not Found"
   },
   "https://www.midi.org/midi-articles/details-about-midi-2-0-midi-ci-profiles-and-property-exchange": {
     "title": "Details about MIDI 2.0, MIDI-CI, Profiles and Property Exchange (Updated June, 2023)",
     "image": "https://midi.org/wp-content/uploads/easyblog_articles/413/MIDI_SONIC_LOGO_ANIMATION.mp4",
-    "description": "This article is for companies looking to develop MIDI 2.0 products, both software developers and hardware manufacturers. If you are a MIDI user looking for the benefits of MIDI 2.0, [...]",
     "siteName": "MIDI.org",
     "finalUrl": "https://midi.org/details-about-midi-2-0-midi-ci-profiles-and-property-exchange-updated-june-2023"
   },
   "https://www.nuget.org/packages/name.atsushieno.architecturecomponents/1.0.0-alpha1": {
     "title": "name.atsushieno.architecturecomponents 1.0.0-alpha1",
-    "image": "https://nuget.org/Content/gallery/img/default-package-icon-256x256.png",
-    "description": "API binding and MSBuild tasks to use Android Architecture Components."
+    "image": "https://nuget.org/Content/gallery/img/default-package-icon-256x256.png"
   },
   "https://www.rncbc.org/drupal/comment/8698": {
     "title": "qtractor pitch bend | rncbc.org"
@@ -1727,164 +1385,133 @@
   "https://www.youtube.com/watch?v=7sSr5kyEPAo": {
     "title": "Music Tech Meetup #1 session: Audio Developers Conference 2019で見てきたオーディオ開発最新動向",
     "image": "https://i.ytimg.com/vi/7sSr5kyEPAo/maxresdefault.jpg",
-    "description": "Music Tech Meetup #1 https://music-tech.connpass.com/event/162161/ のセッション「Audio Developers Conference 2019で見てきたオーディオ開発最新動向」にて収録",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=FHtahCOBfgo": {
     "title": "Introduction to CMajor & Soundstacks || Jules Storer + Cesare Ferrari (Soundstacks)",
     "image": "https://i.ytimg.com/vi/FHtahCOBfgo/maxresdefault.jpg",
-    "description": "Jules Storer + Cesare Ferrari (Soundstacks)\"Intro To Soundstacks\"Abstract:\"Sound Stacks is a new company aiming to revolutionise how DSP programmers think an...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=IwHw7vrFwSE": {
     "title": "DroidKaigi 2020 Live",
     "image": "https://i.ytimg.com/vi/IwHw7vrFwSE/maxresdefault.jpg",
-    "description": "タイムテーブル00:00 Opening Talk: 最高のOP動画みてくれよな！08:47 rnakanoさんによるJetpack時代のFragment再入門53:19 Closing Talk: 中止の経緯と今後の展望Timetable00:00 Opening: Best. Opening. Video. ...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=Jyf1OS7CMjQ&feature=youtu.be": {
     "title": "微分音講座入門編-Welcome to Microtonality-",
     "image": "https://i.ytimg.com/vi/Jyf1OS7CMjQ/hqdefault.jpg",
-    "description": "動画内で触れた動画や関連サイトはこちら31平均律のドレミの歌https://www.youtube.com/watch?v=ECr8s5r_UGcヘルムホルツエリスノーテーションhttp://www.marcsabat.com/pdfs/notation.pdfHelmholtz Ellis Notation A...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=bdUzA32up7U": {
     "title": "Sennzai - 緋の青 (Music Video)",
     "image": "https://i.ytimg.com/vi/bdUzA32up7U/maxresdefault.jpg",
-    "description": "✦Streaming / DLhhttps://linkco.re/h84d6p6S✦MV creditProduce / Vocal : Sennzai https://twitter.com/sennzaiMusic/ Lyric：Feryquitous https://x.com/Feryquitous_I...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=cA8qJuAbUVc": {
     "title": "JUCEAAPAudioPluginHost",
     "image": "https://i.ytimg.com/vi/cA8qJuAbUVc/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4Ad4EgAK4CIoCDAgAEAEYTSBiKGUwDw==&rs=AOn4CLBVwcTkX_Qm6aiMMw-ew_Ap-vn2wA",
-    "description": "YouTube でお気に入りの動画や音楽を楽しみ、オリジナルのコンテンツをアップロードして友だちや家族、世界中の人たちと共有しましょう。",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=n0WWWh4tVKc&t=2s": {
     "title": "最強フリーシンセVitalの使い方！【 無料 プラグイン 】",
     "image": "https://i.ytimg.com/vi/n0WWWh4tVKc/maxresdefault.jpg",
-    "description": "⚡VITALベースパッチ集発売中！！👾\"LBTX Psychotic Bass Mod For VITAL\"BOOTH: https://lobotix.booth.pm/items/7204984Gumroad: https://lobotix.gumroad.com/l/nhtyp無料 プラグイン Vita...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=nRp5MyIiEkI": {
     "title": "Atoropa / Miku Hatsune",
     "image": "https://i.ytimg.com/vi/nRp5MyIiEkI/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE4gZShgMA8=&rs=AOn4CLDd4mosAhJv7DbGiMf92Zztbv2HlA",
-    "description": "Vocal : Miku HatsuneMusic, Lyrics & Movie : LemmLemm twitter account : https://twitter.com/lemm_sounds",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=qlinVx60778": {
     "title": "Practical Guide to Optimized High-Quality Wavetable Oscillators - Matt Tytel - ADC21",
     "image": "https://i.ytimg.com/vi/qlinVx60778/maxresdefault.jpg",
-    "description": "Slides: https://data.audio.dev/talks/2021/guide-to-optimized-wavetable-oscillators/slides.pdfhttps://audio.dev/ -- @audiodevconOrganized and produced by JUCE...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=r4dNRVWYaZI": {
     "title": "Panama Update with Maurizio Cimadamore",
     "image": "https://i.ytimg.com/vi/r4dNRVWYaZI/maxresdefault.jpg",
-    "description": "Project Panama re-imagines the way in which Java applications speak toforeign functions and data structures. In Panama, developers generatesuitable Java inte...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=veMsLN5vokk": {
     "title": "DroidKaigi 2025 - [EN] Android Audio: Beyond Winning On It | atsushieno",
     "image": "https://i.ytimg.com/vi/veMsLN5vokk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgYihUMA8=&rs=AOn4CLAwUZfF62k9vSwe2-nthjMPcDXMWA",
-    "description": "List of sessions - https://www.youtube.com/c/DroidKaigi*Android Audio: Beyond Winning On It (atsushieno)*It's 2025 and Android is still way behind iOS in ter...",
     "siteName": "YouTube"
   },
   "https://www.youtube.com/watch?v=xvowEZqgflw": {
     "title": "Virtual Playing Orchestra + making a psytrance track (unfa live 2020-02-02)",
     "image": "https://i.ytimg.com/vi/xvowEZqgflw/maxresdefault.jpg",
-    "description": "--- CHECK OUT MY MUSIC:http://unfa.bandcamp.comhttp://soundcloud.com/unfa--- GET IN TOUCH:https://discord.gg/tgZSvhthttps://mastodon.social/@unfahttps://face...",
     "siteName": "YouTube"
   },
   "https://xamarinformsbookreading.connpass.com/": {
     "title": "XamarinFormsBookReading",
     "image": "https://media.connpass.com/thumbs/24/aa/24aa71584b19ae0cf156ff2e1ca25352.png",
-    "description": "Creating Mobile Apps with Xamarin.Forms （Xamarin.Forms本）の作業中の邦訳の読書会を行うグループです。趣旨等について詳しくはこちらにまとめてあります。 * https://speakerdeck.com/atsushieno/xamarin-dot-formsyi-ben-mian-qiang-hui * http://atsushieno.hatenablog.com/entry/2017/01/07/143232 全部で十数回、毎回、最大10人程度を目安に、いろいろな場所で開催する予定です。 未発行の訳本の該当部分を、...",
     "siteName": "connpass"
-  },
-  "https://xamaritans.booth.pm/": {
-    "error": "HTTP Error 403: Forbidden"
   },
   "https://xamaritans.booth.pm/items/1250711": {
     "title": "mugene fantasy suite - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/1250711/05ab55f0-9d63-432a-b377-2cb3934aeacc_base_resized.jpg",
-    "description": "\"mugene fantasy suite\" - 水中夢幻世界絵巻 ジャンル: Progressive, Instrumental, Orchestral, VGM-like 幻想音楽祭 http://gensouongaku.info/fes/ で頒布したファンタジーテイストの音楽作品集です。 内容: - 楽曲MP3 - MIDIデータ（Roland SC-8820が前提です） - MIDI版を録音したMP3 - Tracktion打ち込みソース（参照用; 各種VST等が前提です） 制作過程はこちらで詳しくまとめてあります:"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/1250711/05ab55f0-9d63-432a-b377-2cb3934aeacc_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/1654220": {
     "title": "DAW・シーケンサーエンジンを支える技術 [紙+DL] - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/1654220/99b99440-ce81-47ee-b541-3ddadd99c089_base_resized.jpg",
-    "description": "※本書はDL版のみ第2版を販売しています。こちらをお買い上げいただいた方にも第2版 PDF版をお渡ししています。価格はDL版と紙+DL版で同一です。第2版の詳細はDL版を参照してください。 ●「DAWを作るために必要な技術」を幅広く解説 本書は、既存のDAW（Digital Audio Workstation）などの音楽シーケンサーをプラグインで拡張したり、新しく自分で音楽シーケンサーを開発したり、といった、単に利用するのを超えるレベルで音楽ソフトを活用したい人にとって、参考となるような情報をまとめたいという思いのもとに生まれました。"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/1654220/99b99440-ce81-47ee-b541-3ddadd99c089_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/2394242": {
     "title": "LV2オーディオプラグイン開発者ガイド [DLのみ版] - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2394242/a759d885-8021-438e-8e0b-bf6f70c33fbf_base_resized.jpg",
-    "description": "LV2はLinuxを中心に使われている、しかしクロスプラットフォームで利用可能な、オーディオプラグインの仕様です。 LV2はオーディオプラグインとしてはかなり多岐にわたる機能を実現しており、加えてコア部分だけでもなかなか難解な仕様であり、LV2にかかる開発はオーディオ専門職であってもなかなか手を出せない領域です。LV2についてはユーザーガイドと言えるものもなかなか無く、特に日本語情報は非常に少ないので、LV2全般について幅広くまとめたものが必要であろう、と筆者は考えました。"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2394242/a759d885-8021-438e-8e0b-bf6f70c33fbf_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/2397203": {
     "title": "DAW・シーケンサーエンジンを支える技術 [第2版] [DLのみ版] - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2397203/bd7021c1-8598-4fdc-989f-875b2d8275a7_base_resized.jpg",
-    "description": "2020/12/23追記: 第2版を改訂版として発行しました。初版を購入いただいた方はダウンロードするだけで最新版を入手できるはずです。以降の説明は一部を除き初版のものです。 ●「DAWを作るために必要な技術」を幅広く解説 本書は、既存のDAW（Digital Audio Workstation）などの音楽シーケンサーをプラグインで拡張したり、新しく自分で音楽シーケンサーを開発したり、といった、単に利用するのを超えるレベルで音楽ソフトを活用したい人にとって、参考となるような情報をまとめたいという思いのもとに生まれました。"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2397203/bd7021c1-8598-4fdc-989f-875b2d8275a7_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/2402666": {
     "title": "MIDI 2.0 UMPガイドブック 第2版 [DLのみ版] - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2402666/c2fec43a-2a2f-4680-9cf5-38ee5753528e_base_resized.jpg",
-    "description": "「MIDI 2.0 UMPガイドブック 第2版」は、2023年6月に正式に公開されたMIDI 2.0仕様の更新版に合わせて、第1版の内容に加筆・修正を加えたものです。付録としてMIDI CLIP FILEフォーマット仕様についても解説しています。 ---- 「MIDI 2.0 UMPガイドブック」は、2020年2月に正式に公開されたMIDI 2.0仕様のうち、もっとも目を引く内容であるMIDI 2.0 UMP（ユニバーサルMIDIパケット）仕様を中心に、MIDI"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2402666/c2fec43a-2a2f-4680-9cf5-38ee5753528e_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/2926293": {
     "title": "MIDI 2.0エコシステム構築術 - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2926293/c65d56b1-021f-466e-aa9d-4704470e8ebe_base_resized.jpg",
-    "description": "※2025年6月に本書の内容を根本的にアップデートした「MIDI 2.0 アーキテクチャガイドブック」の発行に伴い、本書は無償公開に切り替えてあります。 ---- MIDI 2.0アプリケーションを開発するにはどんなことをしたらいいのか? MIDI 2.0をMIDI 1.0を置き換えて採用するには何を作っていけばいいのか? MIDI 2.0アプリケーション開発用ライブラリとその応用でエコシステムを開発する実証実験に基づいて書かれている最先端のMIDI 2.0技術書です。30ページの比較的軽い小冊子です。 以下まえがきより: ---- MIDI"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/2926293/c65d56b1-021f-466e-aa9d-4704470e8ebe_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/4284443": {
     "title": "CLAPオーディオプラグイン開発者ガイド [印刷・デジタル版] （第2版） - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/4284443/738dc22e-a430-4c40-9f61-f35d4aa245f6_base_resized.jpg",
-    "description": "本書はCLAPオーディオプラグイン開発に興味のある、主にプログラマー向けに、その仕様を解説し公式API情報を読み解くうえで参考になる本を目指して書かれたものです。 - 本書にはデジタル版PDFが添付します（「購入特典」）。本書のデジタル版と同等の内容です。 - 64ページ（印刷版・表紙含） ※初版は56ページ（同） - 電子のみ版は https://xamaritans.booth.pm/items/4284477 2026年4月: 第2版PDFを追加してあります"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/4284443/738dc22e-a430-4c40-9f61-f35d4aa245f6_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/4728577": {
     "title": "Audio Plugins For Androidの設計と実装 [PDF] - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/4728577/c6fc568c-346a-4209-aba7-68e749a29cb6_base_resized.jpg",
-    "description": "Audio Plugins For Android (AAP) を設計・実装していく過程で、モバイルプラットフォーム向けに開発するオーディオプラグインの仕組みはこのようになっている必要がある、あるいはモバイルプラットフォーム向けにプラグイン機構を持ち込むにはこうやって実現していく必要がある、といった知見をたくさん得ることが出来たと思っています。"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/4728577/c6fc568c-346a-4209-aba7-68e749a29cb6_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/5685711": {
     "title": "MIDI 2.0 MIDI-CIガイドブック - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/5685711/e3b0f09f-9266-4db0-8df6-c014c6daf56c_base_resized.jpg",
-    "description": "MIDI 2.0を完全に理解する最大の難関となるであろうMIDI-CIについて、その技術的位置付けや目的・用途を、類似技術との比較などを交えつつ、総論と各論に分けて入念に解説した1冊です。まだ実装がほとんどない中で、MIDI-CIの先行実装と、ほぼ同レベルの機能をもつ自作のMIDI-CIツールを相互運用させつつ、MIDI-CIがもたらす機能の詳細を確認できる内容になっています。筆者の知る限りでは、仕様書を除いて世界初のMIDI-CIに関する書籍です。"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/5685711/e3b0f09f-9266-4db0-8df6-c014c6daf56c_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/829977": {
     "title": "MMLコンパイラmugeneによる音楽制作ガイド - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/829977/55eb0349-d283-421c-b47a-d1fbb51fcc48_base_resized.jpg",
-    "description": "MMLコンパイラmugeneは、筆者がC#/.NETで開発したMML to MIDI (SMF) コンパイラです。テキストファイルで命令リストをまとめたものをMIDI楽曲にコンパイルすることができます。本書はこのmugeneを使って、MMLで楽曲制作できるようになるために、MMLとは何なのか、MIDIとは何なのかを解説し、楽曲制作に必要な手順をチュートリアルで追いかけ、MMLの高度な文法を解説し、楽曲のパートごとに打ち込みのTipsをまとめています。 （初出: 技術書典4 / B4, 48ページ）"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/829977/55eb0349-d283-421c-b47a-d1fbb51fcc48_base_resized.jpg"
   },
   "https://xamaritans.booth.pm/items/833234": {
     "title": "Xamarin MythBusters / MonoDevelop Masters Book - atsushieno - BOOTH",
-    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/833234/2a409671-7119-4672-acf0-be2b17dbb32d_base_resized.jpg",
-    "description": "Xamarin MythBusters / MonoDevelop Masters"
+    "image": "https://booth.pximg.net/c/620x620/2db55129-f78d-47b9-8082-df327bff5473/i/833234/2a409671-7119-4672-acf0-be2b17dbb32d_base_resized.jpg"
   },
   "https://youtu.be/1HzlwlekZQk?t=2853": {
     "title": "MIDI Innovation Awards livestream",
     "image": "https://i.ytimg.com/vi/1HzlwlekZQk/hqdefault.jpg",
-    "description": "The MIDI Innovation awards give a platform for MIDI innovation and rewards products, prototypes, installations or concepts that are thought-provoking and ins...",
     "siteName": "YouTube",
     "finalUrl": "https://www.youtube.com/watch?t=2853&v=1HzlwlekZQk&feature=youtu.be"
   },
   "https://youtu.be/NElCHu7wT4s": {
     "title": "augene-ng MML to DAW demo: 2021-10-30",
     "image": "https://i.ytimg.com/vi/NElCHu7wT4s/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGEEgZSg3MA8=&rs=AOn4CLA_-HhdHo2weWI-0EkgpllYHH4VRQ",
-    "description": "augene-ng is a MML compiler and music builder, from MML to MIDI 2.0 UMPs then converted to DAW song format (currently using Tracktion).The sources (both tool...",
     "siteName": "YouTube",
     "finalUrl": "https://www.youtube.com/watch?v=NElCHu7wT4s&feature=youtu.be"
   },
   "https://youtu.be/_-QcC_td3lM": {
     "title": "mugene fantasy suite demo",
     "image": "https://i.ytimg.com/vi/_-QcC_td3lM/hqdefault.jpg",
-    "description": "2019.3.2 幻想音楽祭 [A-4/ginga]details: http://atsushieno.hatenablog.com/entry/2019/02/22/181235 (in Japanese)",
     "siteName": "YouTube",
     "finalUrl": "https://www.youtube.com/watch?v=_-QcC_td3lM&feature=youtu.be"
   },
   "https://youtu.be/zXnHaoN2Cig?t=1315": {
     "title": "Arne Scheffler and Janne Roeper - Support of MIDI2 and MIDI-CI in VST3 instruments",
     "image": "https://i.ytimg.com/vi/zXnHaoN2Cig/maxresdefault.jpg",
-    "description": "Thank you to our VIP patrons:Ahmet Levent TaselArt and LogicAuxyElk AudioFelipe TonelloGlenn KastenInphonikJerry ChanLarry MickieMatt GilgOverloudSimon HoltS...",
     "siteName": "YouTube",
     "finalUrl": "https://www.youtube.com/watch?t=1315&v=zXnHaoN2Cig&feature=youtu.be"
   },
@@ -1961,19 +1588,16 @@
   "https://zenn.dev/atsushieno/books/adc2019-notes": {
     "title": "ADC (Audio Developers Conference) 2019 セッション動画メモ",
     "image": "https://res.cloudinary.com/zenn/image/upload/s--gIcnGPI5--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci83NDJhMzMwMjg3LmpwZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE",
-    "description": "ADC (Audio Developers Conference) 2019のセッション動画を見て把握した内容をメモしてまとめたものです",
     "siteName": "Zenn"
   },
   "https://zenn.dev/atsushieno/scraps/29f318f87978c9": {
     "title": "MIDI 2.0 UMPとByte Order",
     "image": "https://lh3.googleusercontent.com/a-/AOh14GjmVAOrMa9APCzFi4tUKj0vWHvGijIAUoedm3rYUA=s250-c",
-    "description": "Atsushi Enoさんのスクラップ",
     "siteName": "Zenn"
   },
   "https://zenn.dev/atsushieno/scraps/d41cce3fceccb7": {
     "title": "IntelliJ IDEA / Android StudioでCのコードをKotlinに変換する",
     "image": "https://lh3.googleusercontent.com/a-/AOh14GjmVAOrMa9APCzFi4tUKj0vWHvGijIAUoedm3rYUA=s250-c",
-    "description": "Atsushi Enoさんのスクラップ",
     "siteName": "Zenn"
   }
 }

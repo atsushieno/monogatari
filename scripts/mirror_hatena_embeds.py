@@ -24,6 +24,7 @@ LINK_RE = re.compile(r"^\s*\[([^\]]+)\]\((https?://[^)\s]+)\)\s*$")
 IMPORTED_EMBED_RE = re.compile(
     r"^\s*<https?://[^>]+>\[([^\]]+)\]\((https?://[^)\s]+)\)\s*$"
 )
+BARE_URL_RE = re.compile(r"^\s*<?(https?://[^\s<>]+)>?\s*$")
 
 
 class MetadataParser(HTMLParser):
@@ -64,6 +65,31 @@ def normalize_host(hostname: str) -> str:
     return hostname.lower().removeprefix("www.")
 
 
+def normalize_url(value: str) -> str:
+    return value.strip().strip("<>").rstrip("/")
+
+
+def should_skip_url(url: str) -> bool:
+    parsed = urllib.parse.urlparse(url)
+    return normalize_host(parsed.hostname or "") == "b.hatena.ne.jp"
+
+
+def should_discover_bare_urls(path: pathlib.Path) -> bool:
+    try:
+        relative = path.relative_to(POSTS_DIR)
+    except ValueError:
+        return False
+    return relative.parts[:1] == ("monogatari-ng",)
+
+
+def has_useful_metadata(metadata: dict[str, str]) -> bool:
+    return any(metadata.get(key) for key in ("title", "image", "blueskyUri"))
+
+
+def is_url_label(label: str, url: str) -> bool:
+    return normalize_url(label) == normalize_url(url)
+
+
 def discover_urls() -> list[str]:
     urls: dict[str, None] = {}
     for path in POSTS_DIR.rglob("*.md"):
@@ -72,14 +98,28 @@ def discover_urls() -> list[str]:
         except UnicodeDecodeError:
             continue
 
+        discover_bare_urls = should_discover_bare_urls(path)
         for line in text.splitlines():
+            bare_url = BARE_URL_RE.match(line)
+            if bare_url:
+                if discover_bare_urls:
+                    url = bare_url.group(1)
+                    if not should_skip_url(url):
+                        urls[url] = None
+                continue
+
             match = LINK_RE.match(line) or IMPORTED_EMBED_RE.match(line)
             if not match:
                 continue
 
             label, url = match.groups()
+            if should_skip_url(url):
+                continue
+
             parsed = urllib.parse.urlparse(url)
-            if normalize_host(label.strip()) == normalize_host(parsed.hostname or ""):
+            if is_url_label(label, url) or normalize_host(label.strip()) == normalize_host(
+                parsed.hostname or ""
+            ):
                 urls[url] = None
 
     return sorted(urls)
@@ -99,6 +139,53 @@ def first_meta(parser: MetadataParser, *keys: str) -> str | None:
         if value:
             return value
     return None
+
+
+def bluesky_uri(url: str, image: str | None, timeout: float) -> str | None:
+    parsed = urllib.parse.urlparse(url)
+    if parsed.hostname != "bsky.app":
+        return None
+
+    match = re.match(r"^/profile/([^/?#]+)/post/([^/?#]+)$", parsed.path)
+    if not match:
+        return None
+
+    handle_or_did, post_id = match.groups()
+    did = handle_or_did if handle_or_did.startswith("did:") else None
+
+    if not did and image:
+        image_match = re.search(r"/plain/(did:[^/]+)/", image)
+        if image_match:
+            did = image_match.group(1)
+
+    if not did:
+        resolve_url = (
+            "https://bsky.social/xrpc/com.atproto.identity.resolveHandle?handle="
+            + urllib.parse.quote(handle_or_did)
+        )
+        try:
+            request = urllib.request.Request(
+                resolve_url,
+                headers={"User-Agent": "monogatari-mirror/1.0"},
+            )
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                payload = json.loads(response.read(100_000).decode("utf-8"))
+            if isinstance(payload, dict) and isinstance(payload.get("did"), str):
+                did = payload["did"]
+        except (
+            TimeoutError,
+            socket.timeout,
+            urllib.error.HTTPError,
+            urllib.error.URLError,
+            OSError,
+            json.JSONDecodeError,
+        ):
+            did = None
+
+    if not did:
+        return None
+
+    return f"at://{did}/app.bsky.feed.post/{post_id}"
 
 
 def fetch_metadata(url: str, timeout: float) -> tuple[str, dict[str, str] | None, str | None]:
@@ -138,7 +225,6 @@ def fetch_metadata(url: str, timeout: float) -> tuple[str, dict[str, str] | None
 
     title = first_meta(parser, "og:title", "twitter:title") or clean(parser.title)
     image = first_meta(parser, "og:image", "twitter:image", "twitter:image:src")
-    description = first_meta(parser, "og:description", "twitter:description", "description")
     site_name = first_meta(parser, "og:site_name", "application-name")
 
     if image:
@@ -149,8 +235,8 @@ def fetch_metadata(url: str, timeout: float) -> tuple[str, dict[str, str] | None
         for key, value in {
             "title": title,
             "image": image,
-            "description": description,
             "siteName": site_name,
+            "blueskyUri": bluesky_uri(url, image, timeout),
             "finalUrl": final_url if final_url != url else None,
         }.items()
         if value
@@ -175,12 +261,18 @@ def load_existing_manifest() -> dict[str, dict[str, str]]:
 
     manifest: dict[str, dict[str, str]] = {}
     for url, metadata in loaded.items():
-        if isinstance(url, str) and isinstance(metadata, dict):
-            manifest[url] = {
-                str(key): str(value)
-                for key, value in metadata.items()
-                if isinstance(key, str) and isinstance(value, str)
-            }
+        if not isinstance(url, str) or should_skip_url(url) or not isinstance(metadata, dict):
+            continue
+
+        cleaned = {
+            str(key): str(value)
+            for key, value in metadata.items()
+            if isinstance(key, str)
+            and isinstance(value, str)
+            and key not in {"error", "description"}
+        }
+        if has_useful_metadata(cleaned):
+            manifest[url] = cleaned
     return manifest
 
 
@@ -194,6 +286,11 @@ def main() -> int:
         help="Refetch every discovered URL instead of only missing manifest entries.",
     )
     parser.add_argument(
+        "--fetch-missing",
+        action="store_true",
+        help="Fetch discovered URLs that are not already present in the manifest.",
+    )
+    parser.add_argument(
         "--retry-failures",
         action="store_true",
         help="Retry URLs whose previous manifest entry only recorded an error.",
@@ -204,8 +301,14 @@ def main() -> int:
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     results = {} if args.refresh else load_existing_manifest()
-    pending_urls = urls if args.refresh else [url for url in urls if url not in results]
-    if args.retry_failures and not args.refresh:
+    if args.refresh:
+        pending_urls = urls
+    elif args.fetch_missing:
+        pending_urls = [url for url in urls if url not in results]
+    else:
+        pending_urls = []
+
+    if args.retry_failures and not args.refresh and args.fetch_missing:
         pending_urls.extend(
             url
             for url in urls
@@ -219,10 +322,9 @@ def main() -> int:
         }
         for future in as_completed(futures):
             url, metadata, error = future.result()
-            if metadata:
+            if metadata and has_useful_metadata(metadata):
                 results[url] = metadata
             elif error:
-                results[url] = {"error": error}
                 failures.append((url, error))
 
     OUTPUT_PATH.write_text(
@@ -233,10 +335,12 @@ def main() -> int:
     print(f"Discovered {len(urls)} Hatena embed placeholder URLs.")
     if args.refresh:
         print(f"Refreshed {len(pending_urls)} URLs.")
+    elif args.fetch_missing:
+        print(f"Fetched {len(pending_urls)} missing URLs.")
     elif args.retry_failures:
         print(f"Fetched {len(pending_urls)} missing or previously failed URLs.")
     else:
-        print(f"Fetched {len(pending_urls)} missing URLs.")
+        print("Fetched 0 URLs. Use --fetch-missing or --refresh to update metadata.")
     print(f"Wrote {len(results)} total metadata entries to {OUTPUT_PATH.relative_to(ROOT)}.")
     if failures:
         print(f"Skipped {len(failures)} URLs that could not be read:")
