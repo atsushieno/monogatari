@@ -23,12 +23,32 @@ PUBLIC_DIR = REPO / "public" / "hatena-images"
 MANIFEST_PATH = PUBLIC_DIR / "manifest.json"
 TABLE_REPAIRS_PATH = PUBLIC_DIR / "table-repairs.json"
 EXPORT_PATH = REPO / "atsushieno.hatenablog.com.export.txt"
-URL_RE = re.compile(
+HATENA_IMAGE_URL_RE = re.compile(
     r"https://cdn-ak\.f\.st-hatena\.com/images/fotolife/[^\]\)\"'<\s]+"
+)
+IMGUR_IMAGE_URL_RE = re.compile(
+    r"https?://(?:i\.)?imgur\.com/[^\]\)\"'<\s]+\.(?:apng|avif|gif|jpe?g|png|webp)",
+    re.IGNORECASE,
 )
 
 
+def is_hatena_fotolife_url(url: str) -> bool:
+    return url.startswith("https://cdn-ak.f.st-hatena.com/images/fotolife/")
+
+
+def is_imgur_image_url(url: str) -> bool:
+    parsed = urlparse(url)
+    if parsed.scheme not in {"http", "https"}:
+        return False
+    if parsed.netloc not in {"i.imgur.com", "imgur.com"}:
+        return False
+    return bool(re.search(r"\.(?:apng|avif|gif|jpe?g|png|webp)$", parsed.path, re.I))
+
+
 def local_path_for_url(url: str) -> Path:
+    if is_imgur_image_url(url):
+        return local_path_for_external_url(url)
+
     parsed = urlparse(url)
     prefix = "/images/fotolife/"
     if not parsed.path.startswith(prefix):
@@ -61,7 +81,8 @@ def iter_urls() -> list[str]:
         if path.suffix not in {".md", ".mdx"}:
             continue
         text = path.read_text(encoding="utf-8")
-        urls.update(URL_RE.findall(text))
+        urls.update(HATENA_IMAGE_URL_RE.findall(text))
+        urls.update(IMGUR_IMAGE_URL_RE.findall(text))
     return sorted(urls)
 
 

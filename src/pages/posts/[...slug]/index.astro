@@ -293,12 +293,7 @@ const hatenaBasename = post.id
     const images = Array.from(article.querySelectorAll("img"));
     for (const image of images) {
       const src = image.getAttribute("src");
-      if (
-        !src ||
-        !src.startsWith("https://cdn-ak.f.st-hatena.com/images/fotolife/")
-      ) {
-        continue;
-      }
+      if (!src) continue;
 
       const localSrc = manifest[src];
       if (!localSrc) continue;
@@ -313,6 +308,11 @@ const hatenaBasename = post.id
           if (href.hostname === "f.hatena.ne.jp") {
             link.href = localSrc;
             image.classList.add("hatena-fotolife-thumbnail");
+          } else if (
+            href.hostname === "i.imgur.com" ||
+            (href.hostname === "imgur.com" && href.href === src)
+          ) {
+            link.href = localSrc;
           }
         } catch {
           // Leave non-URL links unchanged.
