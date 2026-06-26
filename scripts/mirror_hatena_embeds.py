@@ -90,8 +90,9 @@ def is_url_label(label: str, url: str) -> bool:
     return normalize_url(label) == normalize_url(url)
 
 
-def discover_urls() -> list[str]:
+def discover_urls() -> tuple[list[str], list[str]]:
     urls: dict[str, None] = {}
+    default_fetch_urls: dict[str, None] = {}
     for path in POSTS_DIR.rglob("*.md"):
         try:
             text = path.read_text(encoding="utf-8")
@@ -106,6 +107,7 @@ def discover_urls() -> list[str]:
                     url = bare_url.group(1)
                     if not should_skip_url(url):
                         urls[url] = None
+                        default_fetch_urls[url] = None
                 continue
 
             match = LINK_RE.match(line) or IMPORTED_EMBED_RE.match(line)
@@ -122,7 +124,7 @@ def discover_urls() -> list[str]:
             ):
                 urls[url] = None
 
-    return sorted(urls)
+    return sorted(urls), sorted(default_fetch_urls)
 
 
 def clean(value: str | None) -> str | None:
@@ -297,7 +299,7 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    urls = discover_urls()
+    urls, default_fetch_urls = discover_urls()
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     results = {} if args.refresh else load_existing_manifest()
@@ -306,7 +308,7 @@ def main() -> int:
     elif args.fetch_missing:
         pending_urls = [url for url in urls if url not in results]
     else:
-        pending_urls = []
+        pending_urls = [url for url in default_fetch_urls if url not in results]
 
     if args.retry_failures and not args.refresh and args.fetch_missing:
         pending_urls.extend(
@@ -340,7 +342,7 @@ def main() -> int:
     elif args.retry_failures:
         print(f"Fetched {len(pending_urls)} missing or previously failed URLs.")
     else:
-        print("Fetched 0 URLs. Use --fetch-missing or --refresh to update metadata.")
+        print(f"Fetched {len(pending_urls)} missing native-post URLs.")
     print(f"Wrote {len(results)} total metadata entries to {OUTPUT_PATH.relative_to(ROOT)}.")
     if failures:
         print(f"Skipped {len(failures)} URLs that could not be read:")

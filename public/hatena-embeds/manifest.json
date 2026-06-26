@@ -319,6 +319,12 @@
     "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreigjq724epropcr4u4m7mlltjwnrvmrr6gu43p5npigwsi54dsuwze",
     "siteName": "Bluesky Social"
   },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mkovonfov22b": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreie2rqqfz4kv7zch47wmfpz5ork3xl66cdpryck6wzvxerigb6elu4",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mkovonfov22b"
+  },
   "https://bsky.app/profile/muo.jp/post/3meseushryk2y": {
     "title": "muo (@muo.jp)",
     "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5evvmyjp4eq4645jpfg6u2b7/bafkreidmkgrireua6umgyiya62aj32t6m7ke2ebrbdneh7kdsfvnekqkba",
