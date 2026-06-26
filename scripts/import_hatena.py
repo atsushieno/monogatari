@@ -13,6 +13,7 @@ import html
 import urllib.parse
 import argparse
 from datetime import datetime, timezone, timedelta
+from collections import defaultdict
 
 from bs4 import BeautifulSoup, NavigableString
 from markdownify import markdownify as md
@@ -265,15 +266,36 @@ def slugify_basename(basename):
     return basename.strip("/")
 
 
-def build_markdown(entry, source_name, base_url):
+def comments_markdown(comments):
+    if not comments:
+        return []
+
+    parts = ["\n---\n\n## コメント"]
+    for c in comments:
+        cauthor = c["meta"].get("author", "anonymous")
+        cdate = c["meta"].get("date", "")
+        curl = c["meta"].get("url", "")
+        who = f"[{cauthor}]({curl})" if curl else cauthor
+        header = f"**{who}**" + (f" — {cdate}" if cdate else "")
+        ctext = html_to_markdown(c["text"]) if c["text"].strip() else ""
+        parts.append(f"\n{header}\n\n{ctext}")
+    return parts
+
+
+def entry_body_markdown(entry):
+    body_md = html_to_markdown(entry["body"])
+    if entry["extended"].strip():
+        body_md += "\n\n" + html_to_markdown(entry["extended"])
+    return body_md
+
+
+def build_markdown(entry, source_name, base_url, include_comments=True):
     meta = entry["meta"]
     title = meta.get("TITLE", "").strip()
     dt = parse_mt_date(meta.get("DATE", ""))
     basename = meta.get("BASENAME", "")
 
-    body_md = html_to_markdown(entry["body"])
-    if entry["extended"].strip():
-        body_md += "\n\n" + html_to_markdown(entry["extended"])
+    body_md = entry_body_markdown(entry)
 
     description = make_description(body_md) or title
 
@@ -297,17 +319,59 @@ def build_markdown(entry, source_name, base_url):
     parts = ["\n".join(fm), "", body_md]
 
     # Append original reader comments for preservation.
-    if entry["comments"]:
-        parts.append("\n---\n\n## コメント")
-        for c in entry["comments"]:
-            cauthor = c["meta"].get("author", "anonymous")
-            cdate = c["meta"].get("date", "")
-            curl = c["meta"].get("url", "")
-            who = f"[{cauthor}]({curl})" if curl else cauthor
-            header = f"**{who}**" + (f" — {cdate}" if cdate else "")
-            ctext = html_to_markdown(c["text"]) if c["text"].strip() else ""
-            parts.append(f"\n{header}\n\n{ctext}")
+    if include_comments:
+        parts.extend(comments_markdown(entry["comments"]))
 
+    return "\n".join(parts) + "\n"
+
+
+def diary_day_from_basename(basename):
+    return basename.strip("/").split("/", 1)[0]
+
+
+def build_hatenadiary_day_markdown(day, entries, base_url):
+    dated_entries = [
+        (parse_mt_date(entry["meta"].get("DATE", "")), entry) for entry in entries
+    ]
+    dated_entries = [(dt, entry) for dt, entry in dated_entries if dt is not None]
+    dated_entries.sort(key=lambda item: item[0])
+
+    first_dt = dated_entries[0][0]
+    body_parts = []
+    comments = []
+    tags = []
+    seen_tags = set()
+
+    for _dt, entry in dated_entries:
+        meta = entry["meta"]
+        title = meta.get("TITLE", "").strip() or "■"
+        body_md = entry_body_markdown(entry)
+        body_parts.append(f"## {title}\n\n{body_md}".strip())
+        comments.extend(entry["comments"])
+        for tag in entry["categories"]:
+            if tag and tag not in seen_tags:
+                seen_tags.add(tag)
+                tags.append(tag)
+
+    body_md = "\n\n".join(body_parts)
+    description = make_description(body_md) or day
+
+    fm = ["---"]
+    fm.append(f"title: {yaml_quote(first_dt.strftime('%Y-%m-%d'))}")
+    fm.append(f"pubDatetime: {first_dt.isoformat()}")
+    fm.append("author: atsushieno")
+    fm.append('timezone: "Asia/Tokyo"')
+    if tags:
+        fm.append("tags:")
+        for tag in tags:
+            fm.append(f"  - {yaml_quote(tag)}")
+    fm.append(f"description: {yaml_quote(description)}")
+    if base_url:
+        fm.append(f"canonicalURL: {yaml_quote(base_url.rstrip('/') + '/' + day)}")
+    fm.append("---")
+
+    parts = ["\n".join(fm), "", body_md]
+    parts.extend(comments_markdown(comments))
     return "\n".join(parts) + "\n"
 
 
@@ -328,12 +392,32 @@ def main():
     written = 0
     skipped = 0
     seen = {}
+
+    valid_entries = []
     for entry in entries:
         basename = entry["meta"].get("BASENAME")
         # Skip malformed/truncated entries (must have basename and a valid date).
         if not basename or parse_mt_date(entry["meta"].get("DATE", "")) is None:
             skipped += 1
             continue
+        valid_entries.append(entry)
+
+    diary_days = defaultdict(list)
+    if args.subdir == "hatenadiary":
+        for entry in valid_entries:
+            diary_days[diary_day_from_basename(entry["meta"].get("BASENAME", ""))].append(
+                entry
+            )
+
+    for entry in valid_entries:
+        basename = entry["meta"].get("BASENAME")
+        day = diary_day_from_basename(basename)
+        is_multi_diary_day = args.subdir == "hatenadiary" and len(diary_days[day]) > 1
+        is_day_root_entry = args.subdir == "hatenadiary" and "/" not in basename.strip("/")
+        if is_multi_diary_day and is_day_root_entry:
+            # The day page uses this URL; the root entry remains as a section there.
+            continue
+
         slug = slugify_basename(basename)
         # Ensure unique filenames.
         if slug in seen:
@@ -343,10 +427,27 @@ def main():
             seen[slug] = 0
         out_path = os.path.join(out_root, slug + ".md")
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
-        content = build_markdown(entry, args.subdir, args.base_url)
+        content = build_markdown(
+            entry,
+            args.subdir,
+            args.base_url,
+            include_comments=not is_multi_diary_day,
+        )
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(content)
         written += 1
+
+    if args.subdir == "hatenadiary":
+        for day, day_entries in sorted(diary_days.items()):
+            if len(day_entries) <= 1:
+                continue
+
+            out_path = os.path.join(out_root, day + ".md")
+            os.makedirs(os.path.dirname(out_path), exist_ok=True)
+            content = build_hatenadiary_day_markdown(day, day_entries, args.base_url)
+            with open(out_path, "w", encoding="utf-8") as f:
+                f.write(content)
+            written += 1
 
     print(f"{args.export}: wrote {written} posts, skipped {skipped} into {out_root}")
 
