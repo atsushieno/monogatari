@@ -1,15 +1,16 @@
 import { defineAstroPaperConfig } from "./src/types/config";
 
-const siteUrl = process.env.SITE_URL ?? "https://atsushieno.github.io/";
+const siteUrl =
+  process.env.SITE_URL ?? "http://monogatari.audiopluginlab.com/";
 
 export default defineAstroPaperConfig({
   site: {
     url: siteUrl,
     title: "ものがたり",
-    description: "atsushieno の開発記録。MIDI 2.0、オーディオプラグイン、Android、.NET/mono などの話題。",
+    description: "the daily little nothings by atsushieno",
     author: "atsushieno",
     profile: "https://github.com/atsushieno",
-    ogImage: "default-og.jpg",
+    ogImage: "og.png",
     lang: "ja",
     timezone: "Asia/Tokyo",
     dir: "ltr",
