@@ -82,6 +82,21 @@ def should_discover_bare_urls(path: pathlib.Path) -> bool:
     return relative.parts[:1] == ("monogatari-ng",)
 
 
+# Placeholder titles served to bots/datacenter IPs instead of the real page
+# (e.g. YouTube from GitHub Actions returns "- YouTube"). Never cache them.
+JUNK_TITLE_RE = re.compile(r"^\W*(youtube)?\W*$", re.IGNORECASE)
+
+
+def is_junk_title(title: str | None) -> bool:
+    return bool(title) and bool(JUNK_TITLE_RE.match(title))
+
+
+def drop_junk_title(metadata: dict[str, str]) -> dict[str, str]:
+    if is_junk_title(metadata.get("title")):
+        return {key: value for key, value in metadata.items() if key != "title"}
+    return metadata
+
+
 def has_useful_metadata(metadata: dict[str, str]) -> bool:
     return any(metadata.get(key) for key in ("title", "image", "blueskyUri"))
 
@@ -190,7 +205,61 @@ def bluesky_uri(url: str, image: str | None, timeout: float) -> str | None:
     return f"at://{did}/app.bsky.feed.post/{post_id}"
 
 
+def youtube_video_id(url: str) -> str | None:
+    parsed = urllib.parse.urlparse(url)
+    host = normalize_host(parsed.hostname or "")
+    if host == "youtu.be":
+        video_id = parsed.path.strip("/").split("/")[0]
+    elif host in ("youtube.com", "m.youtube.com"):
+        if parsed.path == "/watch":
+            video_id = urllib.parse.parse_qs(parsed.query).get("v", [""])[0]
+        else:
+            match = re.match(r"^/(?:embed|shorts|live)/([^/?#]+)", parsed.path)
+            video_id = match.group(1) if match else ""
+    else:
+        return None
+    return video_id if re.fullmatch(r"[\w-]{11}", video_id) else None
+
+
+def fetch_youtube_metadata(
+    url: str, video_id: str, timeout: float
+) -> tuple[str, dict[str, str] | None, str | None]:
+    """YouTube serves a bare "- YouTube" page without og:image to datacenter IPs
+    (such as GitHub Actions runners), so build the card from the video id and
+    use oEmbed only for the title."""
+    metadata = {
+        "image": f"https://i.ytimg.com/vi/{video_id}/maxresdefault.jpg",
+        "siteName": "YouTube",
+    }
+    oembed_url = "https://www.youtube.com/oembed?format=json&url=" + urllib.parse.quote(
+        f"https://www.youtube.com/watch?v={video_id}", safe=""
+    )
+    try:
+        request = urllib.request.Request(
+            oembed_url, headers={"User-Agent": "monogatari-mirror/1.0"}
+        )
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            payload = json.loads(response.read(100_000).decode("utf-8"))
+        title = clean(payload.get("title")) if isinstance(payload, dict) else None
+        if title and not is_junk_title(title):
+            metadata["title"] = title
+    except (
+        TimeoutError,
+        socket.timeout,
+        urllib.error.HTTPError,
+        urllib.error.URLError,
+        OSError,
+        json.JSONDecodeError,
+    ):
+        pass
+    return url, metadata, None
+
+
 def fetch_metadata(url: str, timeout: float) -> tuple[str, dict[str, str] | None, str | None]:
+    video_id = youtube_video_id(url)
+    if video_id:
+        return fetch_youtube_metadata(url, video_id, timeout)
+
     request = urllib.request.Request(
         url,
         headers={
@@ -231,6 +300,9 @@ def fetch_metadata(url: str, timeout: float) -> tuple[str, dict[str, str] | None
 
     if image:
         image = urllib.parse.urljoin(final_url, image)
+
+    if is_junk_title(title):
+        title = None
 
     metadata = {
         key: value
@@ -273,6 +345,7 @@ def load_existing_manifest() -> dict[str, dict[str, str]]:
             and isinstance(value, str)
             and key not in {"error", "description"}
         }
+        cleaned = drop_junk_title(cleaned)
         if has_useful_metadata(cleaned):
             manifest[url] = cleaned
     return manifest

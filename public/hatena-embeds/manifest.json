@@ -204,6 +204,9 @@
     "title": "kmdsp: an experimental MIDI 2.0 visual player",
     "finalUrl": "https://atsushieno.github.io/kmdsp/"
   },
+  "https://atsushieno.github.io/uapmd-kmp/": {
+    "title": "uapmd-kmp web"
+  },
   "https://atsushieno.hatenablog.com/entry/2019/07/26/210537": {
     "title": "CircleCI（など）でJUCEアプリケーションをビルドする - ものがたり",
     "image": "https://ogimage.blog.st-hatena.com/12704346814673851983/26006613378128293/1564142737",
@@ -325,6 +328,60 @@
     "siteName": "Bluesky Social",
     "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mkovonfov22b"
   },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mokp45hygc2j": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/avatar_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreidf6vutxmvxhzhwwfyjdymz3nhotfcmknoujvo7qglp3wkj43d3vu",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mokp45hygc2j"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mov5qjwpe227": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/avatar_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreidf6vutxmvxhzhwwfyjdymz3nhotfcmknoujvo7qglp3wkj43d3vu",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mov5qjwpe227"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3moxkahfwts2p": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/avatar_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreidf6vutxmvxhzhwwfyjdymz3nhotfcmknoujvo7qglp3wkj43d3vu",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3moxkahfwts2p"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mqfjgqboak2q": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreib6pyt774hrbektlq4roegvfi4f4bp6pqocm72vnseg7zz2awnaba",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mqfjgqboak2q"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mqrzwg4t7k2r": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreic7saepwoh56dhlsrlujkr6oxylegwfretjsr7ntd4mtmj4lrp6me",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mqrzwg4t7k2r"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mrsmgj5u6c2i": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://video.bsky.app/watch/did%3Aplc%3A2ythpj4pwwpka2ljkabouubm/bafkreic72uchdgay4sf7k3ujm773v6ocfmvws2h3z2i6xwz7r5765gvh3u/thumbnail.jpg",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mrsmgj5u6c2i"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mtqhzgf5fk22": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreibjjpmnp2mlp5lsnfveps4afguujwsqp3kd5bmgx4gpdg43v5zxiu",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mtqhzgf5fk22"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mu65gbhzek2u": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreihzy5il7bvbknqjakk7xpzge7lebqay4batsex6xclma2uzvdiouq",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mu65gbhzek2u"
+  },
+  "https://bsky.app/profile/atsushieno.bsky.social/post/3mu7oqy6uhc2m": {
+    "title": "Atsushi Eno (@atsushieno.bsky.social)",
+    "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2ythpj4pwwpka2ljkabouubm/bafkreicjmwwin6zo5zk7ewtqnxmkzu6qkskctj5j4igpln43rrnfwh2dai",
+    "siteName": "Bluesky Social",
+    "blueskyUri": "at://did:plc:2ythpj4pwwpka2ljkabouubm/app.bsky.feed.post/3mu7oqy6uhc2m"
+  },
   "https://bsky.app/profile/muo.jp/post/3meseushryk2y": {
     "title": "muo (@muo.jp)",
     "image": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5evvmyjp4eq4645jpfg6u2b7/bafkreidmkgrireua6umgyiya62aj32t6m7ke2ebrbdneh7kdsfvnekqkba",
@@ -353,6 +410,12 @@
     "title": "音声信号処理勉強会 (2021/02/05 19:00〜)",
     "image": "https://connpass.com/static/c6bd24e/img/468_468.png",
     "siteName": "connpass"
+  },
+  "https://connpass.com/event/408908/": {
+    "title": "Music Tech Meetup / 音楽技術勉強会 2026.10 (2026/10/27 19:00〜)",
+    "image": "https://media.connpass.com/thumbs/24/6d/246db40ec299607c683c6a38a3a40652.png",
+    "siteName": "connpass",
+    "finalUrl": "https://music-tech.connpass.com/event/408908/"
   },
   "https://connpass.com/event/56773/": {
     "title": "ジェネリクス勉強会 (2017/06/24 13:00〜)",
@@ -401,6 +464,11 @@
     "siteName": "DroidKaigi 2016",
     "finalUrl": "https://2016.droidkaigi.jp/timetable.html"
   },
+  "https://droidknights.dev/": {
+    "title": "Droid Knights 2026",
+    "image": "https://droidknights.dev/2026/opengraph-image.png",
+    "finalUrl": "https://droidknights.dev/en"
+  },
   "https://dtmer.info/vital/": {
     "title": "無料シンセサイザーVitalの使い方やプリセットまとめ！有料版レビューや違いも解説",
     "image": "https://i0.wp.com/dtmer.info/wp-content/uploads/2021/03/vital-audio-vital-thnumbnails-2.jpg?fit=1200%2C675&ssl=1",
@@ -440,6 +508,11 @@
     "title": "Atsushi Eno (@atsushieno@g0v.social)",
     "image": "https://objects.g0v.social/media_attachments/files/115/020/713/885/416/198/original/d28b6f3a99ffe828.png",
     "siteName": "g0v.social"
+  },
+  "https://gihyo.jp/book/2026/978-4-297-15848-4": {
+    "title": "C++でつくる ゲーム、対戦AI、CG、オーディオ、電子工作、競プロ、CI/CD、言語仕様 | 技術評論社",
+    "image": "https://gihyo.jp/assets/images/ogp/2026/9784297158484.jpg",
+    "siteName": "技術評論社"
   },
   "https://github.com/Birch-san/juicysfplugin": {
     "title": "GitHub - Birch-san/juicysfplugin: Audio plugin (e.g. VST, AU) to play soundfonts on macOS, Windows, Linux",
@@ -522,6 +595,16 @@
     "image": "https://opengraph.githubassets.com/964e73c319ca3d8014c55300f56f49d04f6b9549963e83d081c5bee56cdc4eac/atsushieno/JUCE",
     "siteName": "GitHub"
   },
+  "https://github.com/atsushieno/aap-ara": {
+    "title": "GitHub - atsushieno/aap-ara: an experimental AAP extension module for ARA integration (mostly AI slop)",
+    "image": "https://opengraph.githubassets.com/88724d70b2b83e6eecc4b5d7628ebc39d9cd427e282220c63c614d2e11c94313/atsushieno/aap-ara",
+    "siteName": "GitHub"
+  },
+  "https://github.com/atsushieno/aap-clap-hosting-helper": {
+    "title": "GitHub - atsushieno/aap-clap-hosting-helper: AAP (Audio Plugins For Android) hosting helper that treats AAP plugins as CLAP plugins",
+    "image": "https://opengraph.githubassets.com/54c678e2e7c74fbbb71fcbbaa681b100a0ce9f8a3e3aa5852c7fba370b1a6285/atsushieno/aap-clap-hosting-helper",
+    "siteName": "GitHub"
+  },
   "https://github.com/atsushieno/aap-core/blob/3f624bb816436217ca8bf9c8afabe5be522aa741/include/aap/ext/midi.h#L25": {
     "title": "aap-core/include/aap/ext/midi.h at 3f624bb816436217ca8bf9c8afabe5be522aa741 · atsushieno/aap-core",
     "image": "https://opengraph.githubassets.com/6e44370ef646f40c06843d9f3b35f883388f81be395115577c9083aeff8a1055/atsushieno/aap-core",
@@ -552,9 +635,24 @@
     "image": "https://opengraph.githubassets.com/e9faae6a4c220daa875f7cd31f7aa9fc8e4f43cb2fa22f75d68a52b64a67ff95/atsushieno/aap-core/discussions/207",
     "siteName": "GitHub"
   },
+  "https://github.com/atsushieno/aap-integration-tests": {
+    "title": "GitHub - atsushieno/aap-integration-tests",
+    "image": "https://opengraph.githubassets.com/8bd2e299d57741d0c30bfa1dc3ce0be4727ac1af114318698795769a1d47173f/atsushieno/aap-integration-tests",
+    "siteName": "GitHub"
+  },
   "https://github.com/atsushieno/aap-juce": {
     "title": "GitHub - atsushieno/aap-juce: AAP (Audio Plugins For Android) JUCE integration.",
     "image": "https://opengraph.githubassets.com/a51b1b6408d4dae932e52db794f5c01af103bffc3465a8771f9c13fdedf13769/atsushieno/aap-juce",
+    "siteName": "GitHub"
+  },
+  "https://github.com/atsushieno/aap-juce-adlplug-ae": {
+    "title": "GitHub - atsushieno/aap-juce-adlplug-ae: ADLplug-AE ported to AAP (Audio Plugins For Android) using aap-juce",
+    "image": "https://opengraph.githubassets.com/7585a7f2d3c343dc4c970a63793cff621b53c6e7b7119104a14d5f1903827117/atsushieno/aap-juce-adlplug-ae",
+    "siteName": "GitHub"
+  },
+  "https://github.com/atsushieno/aap-juce-altar": {
+    "title": "GitHub - atsushieno/aap-juce-altar: Altar ported to AAP (Audio Plugins For Android)",
+    "image": "https://opengraph.githubassets.com/c76d6bfa0c129471c23b2be338898d6b2b4949019838ae173edd87f00df2e2d0/atsushieno/aap-juce-altar",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce-audible-planets/": {
@@ -577,6 +675,11 @@
     "image": "https://opengraph.githubassets.com/a13fca29a9ee84366bf45b70aa1ddc0e4cfc1e80338db99bb131d6061205b052/atsushieno/aap-juce-hera",
     "siteName": "GitHub"
   },
+  "https://github.com/atsushieno/aap-juce-magda/": {
+    "title": "GitHub - atsushieno/aap-juce-magda: experimental port of TE-based DAW to AAP",
+    "image": "https://opengraph.githubassets.com/f44587c24360ec6adf9752e45c505bb74f4e60042116b5693f3c72cc6309666a/atsushieno/aap-juce-magda",
+    "siteName": "GitHub"
+  },
   "https://github.com/atsushieno/aap-juce-simple-host": {
     "title": "GitHub - atsushieno/aap-juce-simple-host: Audio Plugins For Android (AAP) example simple host for dogfooding aap-juce hosting API",
     "image": "https://opengraph.githubassets.com/e63c2ccb63061cf6e2cc8d7bfd49ce40ac5fc41659ae5829733d6657a3610ecb/atsushieno/aap-juce-simple-host",
@@ -590,6 +693,11 @@
   "https://github.com/atsushieno/aap-juce-vital": {
     "title": "GitHub - atsushieno/aap-juce-vital: port of Vi(t)al to Audio Plugins For Android (AAP)",
     "image": "https://opengraph.githubassets.com/7704e4f007cbbf6a5515b33a6b33832faadfaad4b07655f614b31f654ced8a9f/atsushieno/aap-juce-vital",
+    "siteName": "GitHub"
+  },
+  "https://github.com/atsushieno/aap-juce-vmpc": {
+    "title": "GitHub - atsushieno/aap-juce-vmpc: VMPC-JUCE ported to AAP (Audio Plugins For Android)",
+    "image": "https://opengraph.githubassets.com/1fac3447e27b9663453fe9554727822747fe1583199d7cf8c37dd1bccc2141ec/atsushieno/aap-juce-vmpc",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/aap-juce/": {
@@ -783,9 +891,19 @@
     "image": "https://opengraph.githubassets.com/7e6350d2e6ac60d94f2e55bbd8b3c32f1ea71c8ca717ec4e13f5ece0d24086c9/atsushieno/uapmd-android",
     "siteName": "GitHub"
   },
+  "https://github.com/atsushieno/uapmd-ara": {
+    "title": "GitHub - atsushieno/uapmd-ara: UAPMD extension for ARA support (experimental)",
+    "image": "https://opengraph.githubassets.com/2b9f36a12a41644e068fe7209c93de9ec8fc8813d7b38490002934d737e42293/atsushieno/uapmd-ara",
+    "siteName": "GitHub"
+  },
   "https://github.com/atsushieno/uapmd-kmp": {
     "title": "GitHub - atsushieno/uapmd-kmp: Kotlin bindings and CMP porting experiment for uapmd - not working due to plugin UI hosting",
     "image": "https://opengraph.githubassets.com/e14d6f4b90df8311a3ed6859bf23ee6cfe22f48ad7adc0b2e34dc27b4926b211/atsushieno/uapmd-kmp",
+    "siteName": "GitHub"
+  },
+  "https://github.com/atsushieno/uapmd/releases/tag/0.5.6": {
+    "title": "Release 0.5.6 · atsushieno/uapmd",
+    "image": "https://opengraph.githubassets.com/3e598e1421db86c6c45df7a58853eb533d31f6ba21f609dd9cc7fd1a9fe380cd/atsushieno/uapmd/releases/tag/0.5.6",
     "siteName": "GitHub"
   },
   "https://github.com/atsushieno/vital/tree/batch-import-wavetables": {
@@ -857,6 +975,11 @@
   "https://github.com/juce-framework/JUCE/commit/a9b5fe3a395355af6502fed7d2716825cff5881d": {
     "title": "Tweaks for emscripten support · juce-framework/JUCE@a9b5fe3",
     "image": "https://opengraph.githubassets.com/36b5858cc97f7b7dcecab31ac8376c5d7f85d0ca59503dc16577ae29a3710c84/juce-framework/JUCE/commit/a9b5fe3a395355af6502fed7d2716825cff5881d",
+    "siteName": "GitHub"
+  },
+  "https://github.com/meteaurestudios/greenhouse": {
+    "title": "GitHub - meteaurestudios/greenhouse: Host app for AAP plugins",
+    "image": "https://opengraph.githubassets.com/50c170c01ebc195ca32c44fa3f20ee62a56bcc51603e94aeb35dfedc057b1bc9/meteaurestudios/greenhouse",
     "siteName": "GitHub"
   },
   "https://github.com/michaelwillis/virtual-playing-orchestra-ardour-template": {
@@ -1008,6 +1131,16 @@
   "https://mimium.org/": {
     "title": "https://mimium.org/en/"
   },
+  "https://monogatari.audiopluginlab.com/posts/monogatari-ng/2026/06/20260627/": {
+    "title": "はてなブログから完全移行するためのAstroブログ環境の構築 | ものがたり",
+    "image": "http://monogatari.audiopluginlab.com/posts/monogatari-ng/2026/06/20260627/index.png",
+    "siteName": "ものがたり"
+  },
+  "https://monogatari.audiopluginlab.com/posts/monogatari-ng/2026/09/20260927/": {
+    "title": "AAP 1.0 Preview Post Mortem (ja) | ものがたり",
+    "image": "http://monogatari.audiopluginlab.com/posts/monogatari-ng/2026/09/20260927/index.png",
+    "siteName": "ものがたり"
+  },
   "https://musescore.org/ja/%E3%83%8F%E3%83%B3%E3%83%89%E3%83%96%E3%83%83%E3%82%AF/geci#melisma": {
     "title": "歌詞",
     "image": "https://musescore.org/sites/musescore.org/files/adeste_0.png",
@@ -1045,6 +1178,9 @@
   "https://play.google.com/store/apps/details?id=org.androidaudioplugin.resident_midi_keyboard": {
     "title": "Resident MIDI Keyboard - Google Play のアプリ",
     "image": "https://play-lh.googleusercontent.com/-m2xmQnNS4njkSrNYeZUfRsX4GSoMMaVXzMicY4LLmoVkENyCht9BgPhkDwxX4uLImK5a8809PZZeLY2FW-cAP8"
+  },
+  "https://play.google.com/store/apps/developer?id=atsushieno": {
+    "title": "Google Play での atsushieno の Android アプリ"
   },
   "https://prtimes.jp/main/html/rd/p/000001783.000005875.html": {
     "title": "「技術書典シリーズ」第二弾！ 『Essential Xamarin ネイティブからクロスプラットフォームまで モバイル.NETの世界』発行最先端技術者による全方位の解説書！",
@@ -1101,9 +1237,19 @@
     "image": "https://files.speakerdeck.com/presentations/79f26343f7cb49fe8747028fcae5b1cc/slide_0.jpg?10554566",
     "siteName": "Speaker Deck"
   },
+  "https://speakerdeck.com/atsushieno/design-and-implementation-of-a-next-gen-daw-sequencer-engine-for-desktop-mobile-and-web": {
+    "title": "design and implementation of a next-gen. DAW sequencer engine for desktop, mobile and web",
+    "image": "https://files.speakerdeck.com/presentations/55295165bd4042ef9ac63b8733fbcd21/slide_0.jpg?40239888",
+    "siteName": "Speaker Deck"
+  },
   "https://speakerdeck.com/atsushieno/embeddinator-4000-using-net-libraries-in-android-studio": {
     "title": "Embeddinator-4000: using .NET libraries in Android Studio",
     "image": "https://files.speakerdeck.com/presentations/be51a35a77f24bbfb3f1760a5dd87049/slide_0.jpg?9378342",
+    "siteName": "Speaker Deck"
+  },
+  "https://speakerdeck.com/atsushieno/enabling-text-inputs-on-any-remote-gui-on-android-lt": {
+    "title": "Enabling Text Inputs on Any Remote GUI on Android (LT)",
+    "image": "https://files.speakerdeck.com/presentations/0a06819f837144aa9b6a78700332ba7e/slide_0.jpg?40715006",
     "siteName": "Speaker Deck"
   },
   "https://speakerdeck.com/atsushieno/generics-on-xamarin-products": {
@@ -1369,6 +1515,11 @@
     "title": "KVR Forum: how to work around midi in VST3? - DSP and Plugin Development Forum",
     "image": "https://static.kvraudio.com/i/b/kvr-logo-grey-on-blue-300x300.png"
   },
+  "https://www.kvraudio.com/news/the-aap-project-releases-aap-audio-plugin-for-android-and-uapmd-cross-platform-plugin-host-that-works-as-virtual-midi-2-0-devices-67800": {
+    "title": "The AAP Project releases AAP: Audio Plugin For Android and UAPMD cross-platform plugin host that works as virtual MIDI 2.0 devices",
+    "image": "https://static.kvraudio.com/i/b/kvr-logo-grey-on-blue-300x300.png",
+    "siteName": "KVR Audio"
+  },
   "https://www.midi.org/articles-old/details-about-midi-2-0-midi-ci-profiles-and-property-exchange": {
     "title": "Details about MIDI 2.0, MIDI-CI, Profiles and Property Exchange (Updated June, 2023)",
     "image": "https://midi.org/wp-content/uploads/easyblog_articles/413/MIDI_SONIC_LOGO_ANIMATION.mp4",
@@ -1392,6 +1543,11 @@
     "title": "Music Tech Meetup #1 session: Audio Developers Conference 2019で見てきたオーディオ開発最新動向",
     "image": "https://i.ytimg.com/vi/7sSr5kyEPAo/maxresdefault.jpg",
     "siteName": "YouTube"
+  },
+  "https://www.youtube.com/watch?v=A3txy6caQ2U": {
+    "image": "https://i.ytimg.com/vi/A3txy6caQ2U/maxresdefault.jpg",
+    "siteName": "YouTube",
+    "title": "design and implementation of a next gen DAW sequencer engine for desktop, mobile and web"
   },
   "https://www.youtube.com/watch?v=FHtahCOBfgo": {
     "title": "Introduction to CMajor & Soundstacks || Jules Storer + Cesare Ferrari (Soundstacks)",
@@ -1427,6 +1583,11 @@
     "title": "Atoropa / Miku Hatsune",
     "image": "https://i.ytimg.com/vi/nRp5MyIiEkI/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE4gZShgMA8=&rs=AOn4CLDd4mosAhJv7DbGiMf92Zztbv2HlA",
     "siteName": "YouTube"
+  },
+  "https://www.youtube.com/watch?v=pKiR55SHfXc": {
+    "image": "https://i.ytimg.com/vi/pKiR55SHfXc/maxresdefault.jpg",
+    "siteName": "YouTube",
+    "title": "uapmd mars sforzando"
   },
   "https://www.youtube.com/watch?v=qlinVx60778": {
     "title": "Practical Guide to Optimized High-Quality Wavetable Oscillators - Matt Tytel - ADC21",
@@ -1584,6 +1745,11 @@
   "https://zenn.dev/atsushieno/articles/d6959fd8f714f2": {
     "title": "2024年のオーディオアプリケーション開発技術の動向に関する私的見解 (1)",
     "image": "https://res.cloudinary.com/zenn/image/upload/s--svEe2XvA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:2024%25E5%25B9%25B4%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%25BC%25E3%2583%2587%25E3%2582%25A3%25E3%2582%25AA%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E9%2596%258B%25E7%2599%25BA%25E6%258A%2580%25E8%25A1%2593%25E3%2581%25AE%25E5%258B%2595%25E5%2590%2591%25E3%2581%25AB%25E9%2596%25A2%25E3%2581%2599%25E3%2582%258B%25E7%25A7%2581%25E7%259A%2584%25E8%25A6%258B%25E8%25A7%25A3%2520%25281%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Atsushi%2520Eno%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2ptVkFPck1hOUFQQ3pGaTR0VUtqMHZXSHZHaWpJQVVvZWRtM3JZVUE9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+    "siteName": "Zenn"
+  },
+  "https://zenn.dev/atsushieno/articles/fbf5b7e782fbe2": {
+    "title": "ADC Japan 2026 Recap",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s---AZseWd1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:ADC%2520Japan%25202026%2520Recap%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Atsushi%2520Eno%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2ptVkFPck1hOUFQQ3pGaTR0VUtqMHZXSHZHaWpJQVVvZWRtM3JZVUE9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
     "siteName": "Zenn"
   },
   "https://zenn.dev/atsushieno/articles/kotlin-runtest": {
