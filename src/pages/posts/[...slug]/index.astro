@@ -222,6 +222,83 @@ const hatenaBasename = post.id
   }
   addHeadingLinks();
 
+  // The embed manifest is a nice-to-have. Content blockers and privacy
+  // extensions can make this request fail, or leave it pending forever, so
+  // nothing may wait on it for longer than EMBED_MANIFEST_WAIT_MS.
+  const EMBED_MANIFEST_WAIT_MS = 1500;
+  const EMBED_MANIFEST_CACHE_KEY = "hatena-embed-manifest-v1";
+
+  function readCachedEmbedManifest() {
+    try {
+      const cached = window.localStorage.getItem(EMBED_MANIFEST_CACHE_KEY);
+      const parsed = cached ? JSON.parse(cached) : null;
+      return parsed && typeof parsed === "object" ? parsed : {};
+    } catch {
+      return {};
+    }
+  }
+
+  // Resolves to the fetched manifest, or null on any failure. Never rejects.
+  function requestEmbedManifest() {
+    if (window.__embedManifestRequest) return window.__embedManifestRequest;
+
+    window.__embedManifestRequest = new Promise(resolve => {
+      let controller = null;
+      try {
+        controller = new AbortController();
+        setTimeout(() => controller.abort(), 20000);
+      } catch {
+        controller = null;
+      }
+
+      try {
+        fetch(
+          "/hatena-embeds/manifest.json",
+          controller ? { signal: controller.signal } : undefined
+        )
+          .then(response => (response.ok ? response.json() : null))
+          .then(manifest => {
+            if (!manifest || typeof manifest !== "object") {
+              resolve(null);
+              return;
+            }
+            try {
+              window.localStorage.setItem(
+                EMBED_MANIFEST_CACHE_KEY,
+                JSON.stringify(manifest)
+              );
+            } catch {
+              // Storage can be blocked or full; the fetched manifest is enough.
+            }
+            resolve(manifest);
+          })
+          .catch(() => resolve(null));
+      } catch {
+        resolve(null);
+      }
+    });
+    return window.__embedManifestRequest;
+  }
+
+  // Resolves within EMBED_MANIFEST_WAIT_MS with the best manifest available.
+  // `fresh` is false when the fetch has not finished yet.
+  function getEmbedManifest() {
+    return new Promise(resolve => {
+      const timer = setTimeout(
+        () => resolve({ manifest: readCachedEmbedManifest(), fresh: false }),
+        EMBED_MANIFEST_WAIT_MS
+      );
+      requestEmbedManifest().then(manifest => {
+        clearTimeout(timer);
+        resolve(
+          manifest
+            ? { manifest, fresh: true }
+            : { manifest: readCachedEmbedManifest(), fresh: false }
+        );
+      });
+    });
+  }
+
   async function enhanceBlueskyEmbeds() {
     const article = document.getElementById("article");
     if (!article) return;
@@ -243,16 +320,6 @@ const hatenaBasename = post.id
           manifest[normalizedCardUrl(url.href)] ||
           {}
         );
-      } catch {
-        return {};
-      }
-    }
-
-    async function loadEmbedManifest() {
-      try {
-        const response = await fetch("/hatena-embeds/manifest.json");
-        if (!response.ok) return {};
-        return await response.json();
       } catch {
         return {};
       }
@@ -295,7 +362,7 @@ const hatenaBasename = post.id
       }
     }
 
-    const manifest = await loadEmbedManifest();
+    const { manifest } = await getEmbedManifest();
     const standaloneLinks = Array.from(
       article.querySelectorAll('p > a[href*="bsky.app/"][href*="/post/"]')
     );
@@ -674,36 +741,6 @@ const hatenaBasename = post.id
   enhanceImgurEmbeds();
 
   async function enhanceHatenaEmbeds() {
-    const manifestCacheKey = "hatena-embed-manifest-v1";
-
-    async function loadEmbedManifest() {
-      let cachedManifest = {};
-
-      try {
-        const cachedValue = window.localStorage?.getItem(manifestCacheKey);
-        if (cachedValue) cachedManifest = JSON.parse(cachedValue);
-      } catch {
-        cachedManifest = {};
-      }
-
-      try {
-        const response = await fetch("/hatena-embeds/manifest.json");
-        if (!response.ok) return cachedManifest;
-        const manifest = await response.json();
-        try {
-          window.localStorage?.setItem(
-            manifestCacheKey,
-            JSON.stringify(manifest)
-          );
-        } catch {
-          // localStorage can be unavailable or full; the fetched manifest is enough.
-        }
-        return manifest;
-      } catch {
-        return cachedManifest;
-      }
-    }
-
     function normalizedCardUrl(value) {
       return String(value || "")
         .trim()
@@ -739,39 +776,27 @@ const hatenaBasename = post.id
       }
     }
 
-    const manifest = await loadEmbedManifest();
-    const embeds = Array.from(
-      document.querySelectorAll("a.hatena-embed, #article p > a")
-    ).filter(embed => {
+    function lookupMetadata(manifest, info) {
+      if (info.metadataHref) return manifest[info.metadataHref] || {};
       return (
-        !embed.closest("section.footnotes, [data-footnotes]") &&
-        (embed.classList.contains("hatena-embed") || isStandaloneLinkCard(embed))
+        manifest[info.href] ||
+        manifest[info.url.href] ||
+        manifest[normalizedCardUrl(info.href)] ||
+        manifest[normalizedCardUrl(info.url.href)] ||
+        {}
       );
-    });
+    }
 
-    for (const embed of embeds) {
-      const href = embed.getAttribute("href");
-      if (!href) continue;
-      const url = new URL(href, window.location.href);
-      const metadataHref = embed.getAttribute("data-hatena-embed-url");
-      const metadata = metadataHref
-        ? manifest[metadataHref] || {}
-        : manifest[href] ||
-          manifest[url.href] ||
-          manifest[normalizedCardUrl(href)] ||
-          manifest[normalizedCardUrl(url.href)] ||
-          {};
+    function safeDecode(value) {
+      try {
+        return decodeURIComponent(value);
+      } catch {
+        return value;
+      }
+    }
 
-      const title =
-        embed.querySelector(".hatena-embed-title")?.textContent?.trim() ||
-        embed.textContent?.trim() ||
-        href;
-      const domain =
-        embed.querySelector(".hatena-embed-domain")?.textContent?.trim() ||
-        url.hostname;
-      const path = decodeURIComponent(url.pathname)
-        .replace(/^\/|\/$/g, "")
-        .replaceAll("/", " / ");
+    function createCard(info, metadata) {
+      const { href, title, domain, path } = info;
       const cardTitle =
         metadata.title ||
         (title.replace(/^www\./, "") === domain.replace(/^www\./, "") && path
@@ -832,11 +857,70 @@ const hatenaBasename = post.id
 
       footer.append(favicon, domainEl);
       card.append(body, footer);
+      return card;
+    }
 
-      const replaceTarget = isStandaloneLinkCard(embed)
-        ? embed.parentElement
-        : embed;
-      replaceTarget?.replaceWith(card);
+    // Collect everything about each link before touching the DOM, then render
+    // right away: link cards must appear even if the manifest never arrives.
+    const embeds = Array.from(
+      document.querySelectorAll("a.hatena-embed, #article p > a")
+    ).filter(embed => {
+      return (
+        !embed.closest("section.footnotes, [data-footnotes]") &&
+        (embed.classList.contains("hatena-embed") || isStandaloneLinkCard(embed))
+      );
+    });
+
+    const { manifest, fresh } = await getEmbedManifest();
+    const rendered = [];
+
+    for (const embed of embeds) {
+      try {
+        const href = embed.getAttribute("href");
+        if (!href) continue;
+        const url = new URL(href, window.location.href);
+        const info = {
+          href,
+          url,
+          metadataHref: embed.getAttribute("data-hatena-embed-url"),
+          title:
+            embed.querySelector(".hatena-embed-title")?.textContent?.trim() ||
+            embed.textContent?.trim() ||
+            href,
+          domain:
+            embed.querySelector(".hatena-embed-domain")?.textContent?.trim() ||
+            url.hostname,
+          path: safeDecode(url.pathname)
+            .replace(/^\/|\/$/g, "")
+            .split("/")
+            .join(" / "),
+        };
+
+        const card = createCard(info, lookupMetadata(manifest, info));
+        const replaceTarget = isStandaloneLinkCard(embed)
+          ? embed.parentElement
+          : embed;
+        replaceTarget?.replaceWith(card);
+        rendered.push({ info, card });
+      } catch {
+        // Leave this one link as it is and carry on with the others.
+      }
+    }
+
+    // The manifest was too slow (or blocked): fill in titles and images if it
+    // turns up later.
+    if (!fresh && rendered.length) {
+      requestEmbedManifest().then(lateManifest => {
+        if (!lateManifest) return;
+        for (const { info, card } of rendered) {
+          try {
+            const upgraded = createCard(info, lookupMetadata(lateManifest, info));
+            if (card.isConnected) card.replaceWith(upgraded);
+          } catch {
+            // Keep the plain card.
+          }
+        }
+      });
     }
   }
   blueskyEnhancement.finally(() => enhanceHatenaEmbeds());
